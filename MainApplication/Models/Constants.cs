@@ -34,5 +34,7 @@
         public const int CHANGEPASSWORD_OLDPASS = 0;
         public const int CHANGEPASSWORD_NEWPASS = 1;
         public const int CHANGEPASSWORD_CONNEWPASS = 2;
+
+        public const string MAIN_ADMIN = "d.fatkhullin@mail.ru";
     }
 }

@@ -3,6 +3,7 @@ using AthletesRating.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.Configuration;
 using System.Data;
 using System.Drawing;
 using System.Text;
@@ -25,6 +26,10 @@ namespace MainApplication.ChildForms.Settings
             passConCorrect = false;
             newPassConError.Text = "";
             newPassError.Text = "";
+            BirthDateChange.Value = this.athlete.GetBirthDate();
+
+            if (this.athlete.GetAccountInfo().GetEmail() == Constants.MAIN_ADMIN) 
+                deleteAccountBut.Enabled = false;
         }
 
         private void Close_Click(object sender, EventArgs e)

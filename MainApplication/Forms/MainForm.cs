@@ -12,7 +12,9 @@ using MainApplication.ChildForms.Profile;
 using MainApplication.ChildForms.Search;
 using MainApplication.ChildForms.Settings;
 using MainApplication.GeneralFunctionality;
+using MainApplication.ChildForms.Admin.View;
 using SportsmansRating;
+using MainApplication.ChildForms.Admin.Edit;
 
 namespace MainApplication.Forms
 {
@@ -24,10 +26,12 @@ namespace MainApplication.Forms
         {
             InitializeComponent();
             athlete = AuthorizationForm.GetAthlete();
-            submenu = new Panel[] { panelAchivementsSubmenu};
+            submenu = new Panel[] { panelAchivementsSubmenu, submenuAccountsAdministration};
             Submenu.customizeDesign(submenu);
             athlete = Functionality.GetAtheleteInfo(athlete);
             if (Functionality.connection.State == ConnectionState.Closed) Functionality.connection.Open();
+
+            if (!athlete.GetAccountInfo().IsAdmin()) menuAccountsAdministration.Visible = false;
 
             if (athlete == null)
             {
@@ -82,6 +86,23 @@ namespace MainApplication.Forms
         private void menuExit_Click(object sender, EventArgs e)
         {
             Functionality.AccountExit(this);
+        }
+
+        private void menuAccountsAdministration_Click(object sender, EventArgs e)
+        {
+            Submenu.showSubmenu(submenuAccountsAdministration, submenu);
+        }
+
+        private void AccountsAdministrationView_Click(object sender, EventArgs e)
+        {
+            Submenu.hideSubmenu(submenu);
+            ChildForm.openChildForm(new AccountsViewForm(), panelChildForm);
+        }
+
+        private void AccountsAdministrationEdit_Click(object sender, EventArgs e)
+        {
+            Submenu.hideSubmenu(submenu);
+            ChildForm.openChildForm(new AccountsEditForm(), panelChildForm);
         }
     }
 }

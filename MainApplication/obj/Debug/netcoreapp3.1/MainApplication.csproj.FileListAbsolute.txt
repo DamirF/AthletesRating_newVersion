@@ -1,9 +1,7 @@
 D:\Projects\SportsmensRating\MainApplication\obj\Debug\netcoreapp3.1\MainApplication.csproj.AssemblyReference.cache
-D:\Projects\SportsmensRating\MainApplication\obj\Debug\netcoreapp3.1\AthletesRating.Forms.AdminForm_oldVersion.resources
 D:\Projects\SportsmensRating\MainApplication\obj\Debug\netcoreapp3.1\SportsmansRating.AuthorizationForm.resources
 D:\Projects\SportsmensRating\MainApplication\obj\Debug\netcoreapp3.1\MainApplication.Forms.MainForm.resources
 D:\Projects\SportsmensRating\MainApplication\obj\Debug\netcoreapp3.1\AthletesRating.Forms.RegistrationForm.resources
-D:\Projects\SportsmensRating\MainApplication\obj\Debug\netcoreapp3.1\AthletesRating.Forms.UserForm_oldVersion.resources
 D:\Projects\SportsmensRating\MainApplication\obj\Debug\netcoreapp3.1\MainApplication.csproj.GenerateResource.cache
 D:\Projects\SportsmensRating\MainApplication\obj\Debug\netcoreapp3.1\MainApplication.GeneratedMSBuildEditorConfig.editorconfig
 D:\Projects\SportsmensRating\MainApplication\obj\Debug\netcoreapp3.1\MainApplication.AssemblyInfoInputs.cache
@@ -32,3 +30,5 @@ D:\Projects\SportsmensRating\MainApplication\obj\Debug\netcoreapp3.1\MainApplica
 D:\Projects\SportsmensRating\MainApplication\obj\Debug\netcoreapp3.1\MainApplication.ChildForms.Achivements.View.AchivementsViewForm.resources
 D:\Projects\SportsmensRating\MainApplication\obj\Debug\netcoreapp3.1\MainApplication.ChildForms.Search.AthletesSearchForm.resources
 D:\Projects\SportsmensRating\MainApplication\obj\Debug\netcoreapp3.1\MainApplication.ChildForms.Settings.AccountSettingsForm.resources
+D:\Projects\SportsmensRating\MainApplication\obj\Debug\netcoreapp3.1\MainApplication.ChildForms.Admin.View.AccountsViewForm.resources
+D:\Projects\SportsmensRating\MainApplication\obj\Debug\netcoreapp3.1\MainApplication.ChildForms.Admin.Edit.AccountsEditForm.resources

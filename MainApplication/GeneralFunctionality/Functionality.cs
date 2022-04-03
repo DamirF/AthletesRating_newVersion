@@ -166,20 +166,6 @@ namespace AthletesRating.GeneralFunctionality
             main.Hide();
         }
 
-        public static void AccountExit(AdminForm_oldVersion admin)
-        {
-            AuthorizationForm authorization = new AuthorizationForm();
-            authorization.Show();
-            admin.Hide();
-        }
-
-        public static void AccountExit(UserForm_oldVersion user)
-        {
-            AuthorizationForm authorization = new AuthorizationForm();
-            authorization.Show();
-            user.Hide();
-        }
-
         public static AthleteCard ParametersChange(AthleteCard card, TextBox height, TextBox weight)
         {
             if (connection.State == ConnectionState.Closed) connection.Open();
@@ -207,14 +193,13 @@ namespace AthletesRating.GeneralFunctionality
         public static AthleteCard BirthDateChange(AthleteCard card, DateTimePicker timePicker)
         {
             if (connection.State == ConnectionState.Closed) connection.Open();
-            if (card.GetBirthDate() != timePicker.Value)
-            {
+            
                 SqlCommand birthDateChange = new SqlCommand("UPDATE Athletes SET BirthDate = @birthDate WHERE Id = @id", connection);
                 birthDateChange.Parameters.AddWithValue("birthDate", timePicker.Value);
                 birthDateChange.Parameters.AddWithValue("id", card.GetID());
                 birthDateChange.ExecuteNonQuery();
                 card.SetBirthDate(timePicker.Value);
-            }
+            
             return card;
         }
     }

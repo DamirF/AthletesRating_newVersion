@@ -31,7 +31,6 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.Header = new System.Windows.Forms.Label();
             this.Close = new System.Windows.Forms.Button();
-            this.label7 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.patronymicChangeTB = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
@@ -42,23 +41,18 @@
             this.lastNameChangeTB = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.WeightChangeTB = new System.Windows.Forms.TextBox();
             this.HeightChangeTB = new System.Windows.Forms.TextBox();
             this.ConfirmParametersChange = new System.Windows.Forms.Button();
             this.label23 = new System.Windows.Forms.Label();
             this.label22 = new System.Windows.Forms.Label();
-            this.label24 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
             this.ConfirmNewBirthDate = new System.Windows.Forms.Button();
-            this.BirthDateChange = new System.Windows.Forms.DateTimePicker();
-            this.label15 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
             this.label14 = new System.Windows.Forms.Label();
             this.deleteAccountPassTB = new System.Windows.Forms.TextBox();
             this.deleteAccountBut = new System.Windows.Forms.Button();
-            this.label8 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.newPassConError = new System.Windows.Forms.Label();
             this.newPassError = new System.Windows.Forms.Label();
@@ -71,7 +65,17 @@
             this.label4 = new System.Windows.Forms.Label();
             this.panel7 = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.BirthDateChange = new System.Windows.Forms.DateTimePicker();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.label15 = new System.Windows.Forms.Label();
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.label7 = new System.Windows.Forms.Label();
+            this.panel10 = new System.Windows.Forms.Panel();
+            this.label8 = new System.Windows.Forms.Label();
+            this.panel11 = new System.Windows.Forms.Panel();
+            this.label21 = new System.Windows.Forms.Label();
+            this.panel12 = new System.Windows.Forms.Panel();
+            this.label24 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -79,6 +83,11 @@
             this.panel6.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel7.SuspendLayout();
+            this.panel8.SuspendLayout();
+            this.panel9.SuspendLayout();
+            this.panel10.SuspendLayout();
+            this.panel11.SuspendLayout();
+            this.panel12.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -123,18 +132,10 @@
             this.Close.UseVisualStyleBackColor = true;
             this.Close.Click += new System.EventHandler(this.Close_Click);
             // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label7.Location = new System.Drawing.Point(503, 74);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(183, 29);
-            this.label7.TabIndex = 34;
-            this.label7.Text = "Смена имени";
-            // 
             // panel2
             // 
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel2.Controls.Add(this.patronymicChangeTB);
             this.panel2.Controls.Add(this.label16);
@@ -147,15 +148,17 @@
             this.panel2.Controls.Add(this.label2);
             this.panel2.Location = new System.Drawing.Point(300, 117);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(579, 422);
+            this.panel2.Size = new System.Drawing.Size(474, 422);
             this.panel2.TabIndex = 33;
             // 
             // patronymicChangeTB
             // 
+            this.patronymicChangeTB.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.patronymicChangeTB.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(206)))), ((int)(((byte)(228)))));
             this.patronymicChangeTB.Location = new System.Drawing.Point(13, 207);
             this.patronymicChangeTB.Name = "patronymicChangeTB";
-            this.patronymicChangeTB.Size = new System.Drawing.Size(545, 36);
+            this.patronymicChangeTB.Size = new System.Drawing.Size(440, 36);
             this.patronymicChangeTB.TabIndex = 14;
             // 
             // label16
@@ -170,12 +173,14 @@
             // 
             // nameChangeConfirmTB
             // 
+            this.nameChangeConfirmTB.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.nameChangeConfirmTB.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(206)))), ((int)(((byte)(228)))));
             this.nameChangeConfirmTB.Location = new System.Drawing.Point(13, 290);
             this.nameChangeConfirmTB.MaxLength = 10;
             this.nameChangeConfirmTB.Name = "nameChangeConfirmTB";
             this.nameChangeConfirmTB.PasswordChar = '*';
-            this.nameChangeConfirmTB.Size = new System.Drawing.Size(545, 36);
+            this.nameChangeConfirmTB.Size = new System.Drawing.Size(440, 36);
             this.nameChangeConfirmTB.TabIndex = 12;
             // 
             // label9
@@ -190,13 +195,15 @@
             // 
             // nameChangeBut
             // 
+            this.nameChangeBut.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.nameChangeBut.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(206)))), ((int)(((byte)(228)))));
             this.nameChangeBut.FlatAppearance.BorderSize = 4;
             this.nameChangeBut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.nameChangeBut.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.nameChangeBut.Location = new System.Drawing.Point(13, 360);
             this.nameChangeBut.Name = "nameChangeBut";
-            this.nameChangeBut.Size = new System.Drawing.Size(545, 41);
+            this.nameChangeBut.Size = new System.Drawing.Size(440, 41);
             this.nameChangeBut.TabIndex = 11;
             this.nameChangeBut.Text = "Применить";
             this.nameChangeBut.UseVisualStyleBackColor = true;
@@ -204,18 +211,22 @@
             // 
             // firstNameChangeTB
             // 
+            this.firstNameChangeTB.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.firstNameChangeTB.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(206)))), ((int)(((byte)(228)))));
             this.firstNameChangeTB.Location = new System.Drawing.Point(13, 123);
             this.firstNameChangeTB.Name = "firstNameChangeTB";
-            this.firstNameChangeTB.Size = new System.Drawing.Size(545, 36);
+            this.firstNameChangeTB.Size = new System.Drawing.Size(440, 36);
             this.firstNameChangeTB.TabIndex = 0;
             // 
             // lastNameChangeTB
             // 
+            this.lastNameChangeTB.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lastNameChangeTB.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(206)))), ((int)(((byte)(228)))));
             this.lastNameChangeTB.Location = new System.Drawing.Point(13, 46);
             this.lastNameChangeTB.Name = "lastNameChangeTB";
-            this.lastNameChangeTB.Size = new System.Drawing.Size(545, 36);
+            this.lastNameChangeTB.Size = new System.Drawing.Size(440, 36);
             this.lastNameChangeTB.TabIndex = 1;
             // 
             // label1
@@ -238,18 +249,10 @@
             this.label2.TabIndex = 7;
             this.label2.Text = "Фамилия";
             // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label21.Location = new System.Drawing.Point(429, 1047);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(343, 29);
-            this.label21.TabIndex = 40;
-            this.label21.Text = "Изменить характеристики";
-            // 
             // panel4
             // 
+            this.panel4.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel4.Controls.Add(this.WeightChangeTB);
             this.panel4.Controls.Add(this.HeightChangeTB);
@@ -258,36 +261,42 @@
             this.panel4.Controls.Add(this.label22);
             this.panel4.Location = new System.Drawing.Point(300, 1089);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(579, 272);
+            this.panel4.Size = new System.Drawing.Size(495, 272);
             this.panel4.TabIndex = 39;
             // 
             // WeightChangeTB
             // 
+            this.WeightChangeTB.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.WeightChangeTB.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(206)))), ((int)(((byte)(228)))));
             this.WeightChangeTB.Location = new System.Drawing.Point(13, 139);
             this.WeightChangeTB.Name = "WeightChangeTB";
-            this.WeightChangeTB.Size = new System.Drawing.Size(545, 36);
+            this.WeightChangeTB.Size = new System.Drawing.Size(461, 36);
             this.WeightChangeTB.TabIndex = 4;
             this.WeightChangeTB.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.HeightChangeTB_KeyPress);
             // 
             // HeightChangeTB
             // 
+            this.HeightChangeTB.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.HeightChangeTB.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(206)))), ((int)(((byte)(228)))));
             this.HeightChangeTB.Location = new System.Drawing.Point(13, 57);
             this.HeightChangeTB.Name = "HeightChangeTB";
-            this.HeightChangeTB.Size = new System.Drawing.Size(545, 36);
+            this.HeightChangeTB.Size = new System.Drawing.Size(461, 36);
             this.HeightChangeTB.TabIndex = 3;
             this.HeightChangeTB.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.HeightChangeTB_KeyPress);
             // 
             // ConfirmParametersChange
             // 
+            this.ConfirmParametersChange.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.ConfirmParametersChange.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(206)))), ((int)(((byte)(228)))));
             this.ConfirmParametersChange.FlatAppearance.BorderSize = 4;
             this.ConfirmParametersChange.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ConfirmParametersChange.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.ConfirmParametersChange.Location = new System.Drawing.Point(13, 208);
             this.ConfirmParametersChange.Name = "ConfirmParametersChange";
-            this.ConfirmParametersChange.Size = new System.Drawing.Size(545, 41);
+            this.ConfirmParametersChange.Size = new System.Drawing.Size(461, 41);
             this.ConfirmParametersChange.TabIndex = 2;
             this.ConfirmParametersChange.Text = "Применить";
             this.ConfirmParametersChange.UseVisualStyleBackColor = true;
@@ -311,25 +320,14 @@
             this.label22.TabIndex = 0;
             this.label22.Text = "Рост";
             // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label24.Location = new System.Drawing.Point(429, 1426);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(334, 29);
-            this.label24.TabIndex = 42;
-            this.label24.Text = "Изменить дату рождения";
-            // 
             // panel5
             // 
             this.panel5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel5.Controls.Add(this.ConfirmNewBirthDate);
-            this.panel5.Controls.Add(this.BirthDateChange);
-            this.panel5.Location = new System.Drawing.Point(300, 4426);
+            this.panel5.Location = new System.Drawing.Point(300, 13415);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(432, 131);
+            this.panel5.Size = new System.Drawing.Size(0, 131);
             this.panel5.TabIndex = 41;
             // 
             // ConfirmNewBirthDate
@@ -345,34 +343,17 @@
             this.ConfirmNewBirthDate.Text = "Применить";
             this.ConfirmNewBirthDate.UseVisualStyleBackColor = true;
             // 
-            // BirthDateChange
-            // 
-            this.BirthDateChange.CalendarMonthBackground = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(206)))), ((int)(((byte)(228)))));
-            this.BirthDateChange.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.BirthDateChange.Location = new System.Drawing.Point(13, 22);
-            this.BirthDateChange.Name = "BirthDateChange";
-            this.BirthDateChange.Size = new System.Drawing.Size(545, 32);
-            this.BirthDateChange.TabIndex = 0;
-            // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label15.Location = new System.Drawing.Point(429, 1659);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(340, 29);
-            this.label15.TabIndex = 44;
-            this.label15.Text = "Удаление учетной записи";
-            // 
             // panel6
             // 
+            this.panel6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel6.Controls.Add(this.label14);
             this.panel6.Controls.Add(this.deleteAccountPassTB);
             this.panel6.Controls.Add(this.deleteAccountBut);
             this.panel6.Location = new System.Drawing.Point(300, 1702);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(579, 198);
+            this.panel6.Size = new System.Drawing.Size(495, 198);
             this.panel6.TabIndex = 43;
             // 
             // label14
@@ -387,40 +368,36 @@
             // 
             // deleteAccountPassTB
             // 
+            this.deleteAccountPassTB.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.deleteAccountPassTB.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(206)))), ((int)(((byte)(228)))));
             this.deleteAccountPassTB.Location = new System.Drawing.Point(13, 66);
             this.deleteAccountPassTB.MaxLength = 10;
             this.deleteAccountPassTB.Name = "deleteAccountPassTB";
             this.deleteAccountPassTB.PasswordChar = '*';
-            this.deleteAccountPassTB.Size = new System.Drawing.Size(545, 36);
+            this.deleteAccountPassTB.Size = new System.Drawing.Size(461, 36);
             this.deleteAccountPassTB.TabIndex = 2;
             // 
             // deleteAccountBut
             // 
+            this.deleteAccountBut.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.deleteAccountBut.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(206)))), ((int)(((byte)(228)))));
             this.deleteAccountBut.FlatAppearance.BorderSize = 4;
             this.deleteAccountBut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.deleteAccountBut.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.deleteAccountBut.Location = new System.Drawing.Point(13, 132);
             this.deleteAccountBut.Name = "deleteAccountBut";
-            this.deleteAccountBut.Size = new System.Drawing.Size(545, 41);
+            this.deleteAccountBut.Size = new System.Drawing.Size(461, 41);
             this.deleteAccountBut.TabIndex = 1;
             this.deleteAccountBut.Text = "Удалить";
             this.deleteAccountBut.UseVisualStyleBackColor = true;
             this.deleteAccountBut.Click += new System.EventHandler(this.deleteAccountBut_Click);
             // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label8.Location = new System.Drawing.Point(503, 592);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(194, 29);
-            this.label8.TabIndex = 46;
-            this.label8.Text = "Смена пароля";
-            // 
             // panel3
             // 
+            this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel3.Controls.Add(this.newPassConError);
             this.panel3.Controls.Add(this.newPassError);
@@ -433,7 +410,7 @@
             this.panel3.Controls.Add(this.label4);
             this.panel3.Location = new System.Drawing.Point(300, 635);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(579, 352);
+            this.panel3.Size = new System.Drawing.Size(495, 352);
             this.panel3.TabIndex = 45;
             // 
             // newPassConError
@@ -470,24 +447,28 @@
             // 
             // oldPassTB
             // 
+            this.oldPassTB.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.oldPassTB.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(206)))), ((int)(((byte)(228)))));
             this.oldPassTB.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.oldPassTB.Location = new System.Drawing.Point(13, 53);
             this.oldPassTB.MaxLength = 10;
             this.oldPassTB.Name = "oldPassTB";
             this.oldPassTB.PasswordChar = '*';
-            this.oldPassTB.Size = new System.Drawing.Size(545, 36);
+            this.oldPassTB.Size = new System.Drawing.Size(461, 36);
             this.oldPassTB.TabIndex = 3;
             // 
             // passChangeBut
             // 
+            this.passChangeBut.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.passChangeBut.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(206)))), ((int)(((byte)(228)))));
             this.passChangeBut.FlatAppearance.BorderSize = 4;
             this.passChangeBut.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.passChangeBut.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.passChangeBut.Location = new System.Drawing.Point(13, 287);
             this.passChangeBut.Name = "passChangeBut";
-            this.passChangeBut.Size = new System.Drawing.Size(545, 41);
+            this.passChangeBut.Size = new System.Drawing.Size(461, 41);
             this.passChangeBut.TabIndex = 12;
             this.passChangeBut.Text = "Сохранить";
             this.passChangeBut.UseVisualStyleBackColor = true;
@@ -495,13 +476,15 @@
             // 
             // newPassTB
             // 
+            this.newPassTB.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.newPassTB.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(206)))), ((int)(((byte)(228)))));
             this.newPassTB.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.newPassTB.Location = new System.Drawing.Point(13, 127);
             this.newPassTB.MaxLength = 10;
             this.newPassTB.Name = "newPassTB";
             this.newPassTB.PasswordChar = '*';
-            this.newPassTB.Size = new System.Drawing.Size(545, 36);
+            this.newPassTB.Size = new System.Drawing.Size(461, 36);
             this.newPassTB.TabIndex = 4;
             this.newPassTB.TextChanged += new System.EventHandler(this.newPassTB_TextChanged);
             // 
@@ -517,13 +500,15 @@
             // 
             // newPassConfirmTB
             // 
+            this.newPassConfirmTB.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.newPassConfirmTB.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(206)))), ((int)(((byte)(228)))));
             this.newPassConfirmTB.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.newPassConfirmTB.Location = new System.Drawing.Point(13, 221);
             this.newPassConfirmTB.MaxLength = 10;
             this.newPassConfirmTB.Name = "newPassConfirmTB";
             this.newPassConfirmTB.PasswordChar = '*';
-            this.newPassConfirmTB.Size = new System.Drawing.Size(545, 36);
+            this.newPassConfirmTB.Size = new System.Drawing.Size(461, 36);
             this.newPassConfirmTB.TabIndex = 5;
             this.newPassConfirmTB.TextChanged += new System.EventHandler(this.newPassConfirmTB_TextChanged);
             // 
@@ -539,35 +524,146 @@
             // 
             // panel7
             // 
+            this.panel7.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.panel7.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel7.Controls.Add(this.button1);
-            this.panel7.Controls.Add(this.dateTimePicker1);
+            this.panel7.Controls.Add(this.BirthDateChange);
             this.panel7.Location = new System.Drawing.Point(300, 1470);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(579, 126);
+            this.panel7.Size = new System.Drawing.Size(495, 126);
             this.panel7.TabIndex = 47;
             // 
             // button1
             // 
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(178)))), ((int)(((byte)(206)))), ((int)(((byte)(228)))));
             this.button1.FlatAppearance.BorderSize = 4;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.button1.Location = new System.Drawing.Point(13, 70);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(545, 41);
+            this.button1.Size = new System.Drawing.Size(461, 41);
             this.button1.TabIndex = 1;
             this.button1.Text = "Применить";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // dateTimePicker1
+            // BirthDateChange
             // 
-            this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.dateTimePicker1.Location = new System.Drawing.Point(13, 22);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(545, 32);
-            this.dateTimePicker1.TabIndex = 0;
+            this.BirthDateChange.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.BirthDateChange.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.BirthDateChange.Location = new System.Drawing.Point(13, 22);
+            this.BirthDateChange.Name = "BirthDateChange";
+            this.BirthDateChange.Size = new System.Drawing.Size(461, 32);
+            this.BirthDateChange.TabIndex = 0;
+            // 
+            // panel8
+            // 
+            this.panel8.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel8.Controls.Add(this.label15);
+            this.panel8.Location = new System.Drawing.Point(300, 1631);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(495, 65);
+            this.panel8.TabIndex = 48;
+            // 
+            // label15
+            // 
+            this.label15.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label15.Location = new System.Drawing.Point(0, 0);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(495, 65);
+            this.label15.TabIndex = 45;
+            this.label15.Text = "Удаление учетной записи";
+            this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // panel9
+            // 
+            this.panel9.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel9.Controls.Add(this.label7);
+            this.panel9.Location = new System.Drawing.Point(300, 47);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(476, 65);
+            this.panel9.TabIndex = 49;
+            // 
+            // label7
+            // 
+            this.label7.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label7.Location = new System.Drawing.Point(0, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(476, 65);
+            this.label7.TabIndex = 35;
+            this.label7.Text = "Смена имени";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // panel10
+            // 
+            this.panel10.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel10.Controls.Add(this.label8);
+            this.panel10.Location = new System.Drawing.Point(301, 560);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(494, 65);
+            this.panel10.TabIndex = 50;
+            // 
+            // label8
+            // 
+            this.label8.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label8.Location = new System.Drawing.Point(0, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(494, 65);
+            this.label8.TabIndex = 47;
+            this.label8.Text = "Смена пароля";
+            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // panel11
+            // 
+            this.panel11.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel11.Controls.Add(this.label21);
+            this.panel11.Location = new System.Drawing.Point(300, 1018);
+            this.panel11.Name = "panel11";
+            this.panel11.Size = new System.Drawing.Size(495, 65);
+            this.panel11.TabIndex = 51;
+            // 
+            // label21
+            // 
+            this.label21.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label21.Location = new System.Drawing.Point(0, 0);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(495, 65);
+            this.label21.TabIndex = 41;
+            this.label21.Text = "Изменить характеристики";
+            this.label21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // panel12
+            // 
+            this.panel12.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel12.Controls.Add(this.label24);
+            this.panel12.Location = new System.Drawing.Point(300, 1399);
+            this.panel12.Name = "panel12";
+            this.panel12.Size = new System.Drawing.Size(495, 65);
+            this.panel12.TabIndex = 52;
+            // 
+            // label24
+            // 
+            this.label24.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label24.Location = new System.Drawing.Point(0, 0);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(495, 65);
+            this.label24.TabIndex = 43;
+            this.label24.Text = "Изменить дату рождения";
+            this.label24.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // AccountSettingsForm
             // 
@@ -576,16 +672,16 @@
             this.AutoScroll = true;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(34)))), ((int)(((byte)(48)))));
             this.ClientSize = new System.Drawing.Size(1200, 1055);
+            this.Controls.Add(this.panel12);
+            this.Controls.Add(this.panel11);
+            this.Controls.Add(this.panel10);
+            this.Controls.Add(this.panel9);
+            this.Controls.Add(this.panel8);
             this.Controls.Add(this.panel7);
-            this.Controls.Add(this.label8);
             this.Controls.Add(this.panel3);
-            this.Controls.Add(this.label15);
             this.Controls.Add(this.panel6);
-            this.Controls.Add(this.label24);
-            this.Controls.Add(this.label21);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel5);
-            this.Controls.Add(this.label7);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
@@ -606,8 +702,12 @@
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panel7.ResumeLayout(false);
+            this.panel8.ResumeLayout(false);
+            this.panel9.ResumeLayout(false);
+            this.panel10.ResumeLayout(false);
+            this.panel11.ResumeLayout(false);
+            this.panel12.ResumeLayout(false);
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -616,7 +716,6 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button Close;
         private System.Windows.Forms.Label Header;
-        private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.TextBox patronymicChangeTB;
         private System.Windows.Forms.Label label16;
@@ -627,23 +726,18 @@
         private System.Windows.Forms.TextBox lastNameChangeTB;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.TextBox WeightChangeTB;
         private System.Windows.Forms.TextBox HeightChangeTB;
         private System.Windows.Forms.Button ConfirmParametersChange;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Label label22;
-        private System.Windows.Forms.Label label24;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.Button ConfirmNewBirthDate;
-        private System.Windows.Forms.DateTimePicker BirthDateChange;
-        private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.TextBox deleteAccountPassTB;
         private System.Windows.Forms.Button deleteAccountBut;
-        private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label newPassConError;
         private System.Windows.Forms.Label newPassError;
@@ -656,6 +750,16 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.DateTimePicker BirthDateChange;
+        private System.Windows.Forms.Panel panel8;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Panel panel9;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Panel panel10;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Panel panel11;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Panel panel12;
+        private System.Windows.Forms.Label label24;
     }
 }

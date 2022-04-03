@@ -7,6 +7,12 @@
     <Compile Update="ChildForms\Achivements\View\AchivementsViewForm.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="ChildForms\Admin\Edit\AccountsEditForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="ChildForms\Admin\View\AccountsViewForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="ChildForms\Profile\ProfileForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -16,9 +22,6 @@
     <Compile Update="ChildForms\Settings\AccountSettingsForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="Forms\AdminForm_oldVersion.cs">
-      <SubType>Form</SubType>
-    </Compile>
     <Compile Update="Forms\AuthorizationForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -26,9 +29,6 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Forms\RegistrationForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="Forms\UserForm_oldVersion.cs">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>
