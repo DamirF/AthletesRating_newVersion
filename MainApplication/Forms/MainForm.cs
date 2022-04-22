@@ -31,7 +31,7 @@ namespace MainApplication.Forms
             athlete = Functionality.GetAtheleteInfo(athlete);
             if (Functionality.connection.State == ConnectionState.Closed) Functionality.connection.Open();
 
-            if (!athlete.GetAccountInfo().IsAdmin()) menuAccountsAdministration.Visible = false;
+            if (!athlete.accountInfo.IsAdmin()) menuAccountsAdministration.Visible = false;
 
             if (athlete == null)
             {
@@ -41,6 +41,18 @@ namespace MainApplication.Forms
                 Close();
                 return;
             }
+        }
+
+        public MainForm(string withoutAccountMode)
+        {
+            InitializeComponent();
+            submenu = new Panel[] { panelAchivementsSubmenu, submenuAccountsAdministration };
+            Submenu.customizeDesign(submenu);
+            if (Functionality.connection.State == ConnectionState.Closed) Functionality.connection.Open();
+            menuProfile.Visible = false;
+            menuSettings.Visible = false;
+            menuAchivements.Visible = false;
+            menuAccountsAdministration.Visible = false;
         }
 
         private void menuAchivements_Click(object sender, EventArgs e)

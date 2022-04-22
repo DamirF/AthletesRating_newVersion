@@ -45,16 +45,18 @@
             this.profileTextBirthDate = new System.Windows.Forms.Label();
             this.profileTextGender = new System.Windows.Forms.Label();
             this.profileTextEmail = new System.Windows.Forms.Label();
-            this.profileTextHeight = new System.Windows.Forms.Label();
-            this.profileTextWeight = new System.Windows.Forms.Label();
+            this.profileTextDateReg = new System.Windows.Forms.Label();
+            this.profileTextDateOnlain = new System.Windows.Forms.Label();
             this.profileInfoSurname = new System.Windows.Forms.Label();
             this.profileInfoName = new System.Windows.Forms.Label();
             this.profileInfoPatronymic = new System.Windows.Forms.Label();
             this.profileInfoBirthDate = new System.Windows.Forms.Label();
             this.profileInfoGender = new System.Windows.Forms.Label();
             this.profileInfoEmail = new System.Windows.Forms.Label();
-            this.profileInfoHeight = new System.Windows.Forms.Label();
-            this.profileInfoWeight = new System.Windows.Forms.Label();
+            this.profileInfoDateReg = new System.Windows.Forms.Label();
+            this.profileInfoDateOnlain = new System.Windows.Forms.Label();
+            this.profileTextIsAdmin = new System.Windows.Forms.Label();
+            this.profileInfoIsAdmin = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -195,31 +197,34 @@
             this.tableLayoutPanel1.Controls.Add(this.profileTextBirthDate, 1, 4);
             this.tableLayoutPanel1.Controls.Add(this.profileTextGender, 1, 5);
             this.tableLayoutPanel1.Controls.Add(this.profileTextEmail, 1, 6);
-            this.tableLayoutPanel1.Controls.Add(this.profileTextHeight, 1, 7);
-            this.tableLayoutPanel1.Controls.Add(this.profileTextWeight, 1, 8);
+            this.tableLayoutPanel1.Controls.Add(this.profileTextDateReg, 1, 7);
+            this.tableLayoutPanel1.Controls.Add(this.profileTextDateOnlain, 1, 8);
             this.tableLayoutPanel1.Controls.Add(this.profileInfoSurname, 2, 1);
             this.tableLayoutPanel1.Controls.Add(this.profileInfoName, 2, 2);
             this.tableLayoutPanel1.Controls.Add(this.profileInfoPatronymic, 2, 3);
             this.tableLayoutPanel1.Controls.Add(this.profileInfoBirthDate, 2, 4);
             this.tableLayoutPanel1.Controls.Add(this.profileInfoGender, 2, 5);
             this.tableLayoutPanel1.Controls.Add(this.profileInfoEmail, 2, 6);
-            this.tableLayoutPanel1.Controls.Add(this.profileInfoHeight, 2, 7);
-            this.tableLayoutPanel1.Controls.Add(this.profileInfoWeight, 2, 8);
+            this.tableLayoutPanel1.Controls.Add(this.profileInfoDateReg, 2, 7);
+            this.tableLayoutPanel1.Controls.Add(this.profileInfoDateOnlain, 2, 8);
+            this.tableLayoutPanel1.Controls.Add(this.profileTextIsAdmin, 1, 9);
+            this.tableLayoutPanel1.Controls.Add(this.profileInfoIsAdmin, 2, 9);
             this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.tableLayoutPanel1.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.tableLayoutPanel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(115)))), ((int)(((byte)(149)))));
             this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 0);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 10;
+            this.tableLayoutPanel1.RowCount = 11;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
+            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 11.11111F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
             this.tableLayoutPanel1.Size = new System.Drawing.Size(750, 790);
             this.tableLayoutPanel1.TabIndex = 2;
@@ -231,7 +236,7 @@
             this.profileTextSurname.Dock = System.Windows.Forms.DockStyle.Fill;
             this.profileTextSurname.Location = new System.Drawing.Point(18, 40);
             this.profileTextSurname.Name = "profileTextSurname";
-            this.profileTextSurname.Size = new System.Drawing.Size(282, 88);
+            this.profileTextSurname.Size = new System.Drawing.Size(282, 78);
             this.profileTextSurname.TabIndex = 0;
             this.profileTextSurname.Text = "Фамилия:";
             this.profileTextSurname.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -241,9 +246,9 @@
             this.profileTextName.AutoSize = true;
             this.profileTextName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.profileTextName.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.profileTextName.Location = new System.Drawing.Point(18, 128);
+            this.profileTextName.Location = new System.Drawing.Point(18, 118);
             this.profileTextName.Name = "profileTextName";
-            this.profileTextName.Size = new System.Drawing.Size(282, 88);
+            this.profileTextName.Size = new System.Drawing.Size(282, 78);
             this.profileTextName.TabIndex = 1;
             this.profileTextName.Text = "Имя:";
             this.profileTextName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -253,9 +258,9 @@
             this.profileTextPatronymic.AutoSize = true;
             this.profileTextPatronymic.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.profileTextPatronymic.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.profileTextPatronymic.Location = new System.Drawing.Point(18, 216);
+            this.profileTextPatronymic.Location = new System.Drawing.Point(18, 196);
             this.profileTextPatronymic.Name = "profileTextPatronymic";
-            this.profileTextPatronymic.Size = new System.Drawing.Size(282, 88);
+            this.profileTextPatronymic.Size = new System.Drawing.Size(282, 78);
             this.profileTextPatronymic.TabIndex = 2;
             this.profileTextPatronymic.Text = "Отчество:";
             this.profileTextPatronymic.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -265,9 +270,9 @@
             this.profileTextBirthDate.AutoSize = true;
             this.profileTextBirthDate.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.profileTextBirthDate.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.profileTextBirthDate.Location = new System.Drawing.Point(18, 304);
+            this.profileTextBirthDate.Location = new System.Drawing.Point(18, 274);
             this.profileTextBirthDate.Name = "profileTextBirthDate";
-            this.profileTextBirthDate.Size = new System.Drawing.Size(282, 88);
+            this.profileTextBirthDate.Size = new System.Drawing.Size(282, 78);
             this.profileTextBirthDate.TabIndex = 3;
             this.profileTextBirthDate.Text = "Дата рождения:";
             this.profileTextBirthDate.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -277,9 +282,9 @@
             this.profileTextGender.AutoSize = true;
             this.profileTextGender.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.profileTextGender.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.profileTextGender.Location = new System.Drawing.Point(18, 392);
+            this.profileTextGender.Location = new System.Drawing.Point(18, 352);
             this.profileTextGender.Name = "profileTextGender";
-            this.profileTextGender.Size = new System.Drawing.Size(282, 88);
+            this.profileTextGender.Size = new System.Drawing.Size(282, 78);
             this.profileTextGender.TabIndex = 4;
             this.profileTextGender.Text = "Пол:";
             this.profileTextGender.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -289,36 +294,36 @@
             this.profileTextEmail.AutoSize = true;
             this.profileTextEmail.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.profileTextEmail.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.profileTextEmail.Location = new System.Drawing.Point(18, 480);
+            this.profileTextEmail.Location = new System.Drawing.Point(18, 430);
             this.profileTextEmail.Name = "profileTextEmail";
-            this.profileTextEmail.Size = new System.Drawing.Size(282, 88);
+            this.profileTextEmail.Size = new System.Drawing.Size(282, 78);
             this.profileTextEmail.TabIndex = 5;
             this.profileTextEmail.Text = "E-mail:";
             this.profileTextEmail.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // profileTextHeight
+            // profileTextDateReg
             // 
-            this.profileTextHeight.AutoSize = true;
-            this.profileTextHeight.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.profileTextHeight.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.profileTextHeight.Location = new System.Drawing.Point(18, 568);
-            this.profileTextHeight.Name = "profileTextHeight";
-            this.profileTextHeight.Size = new System.Drawing.Size(282, 88);
-            this.profileTextHeight.TabIndex = 6;
-            this.profileTextHeight.Text = "Рост:";
-            this.profileTextHeight.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.profileTextDateReg.AutoSize = true;
+            this.profileTextDateReg.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.profileTextDateReg.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.profileTextDateReg.Location = new System.Drawing.Point(18, 508);
+            this.profileTextDateReg.Name = "profileTextDateReg";
+            this.profileTextDateReg.Size = new System.Drawing.Size(282, 78);
+            this.profileTextDateReg.TabIndex = 6;
+            this.profileTextDateReg.Text = "Дата регистрации";
+            this.profileTextDateReg.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // profileTextWeight
+            // profileTextDateOnlain
             // 
-            this.profileTextWeight.AutoSize = true;
-            this.profileTextWeight.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.profileTextWeight.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.profileTextWeight.Location = new System.Drawing.Point(18, 656);
-            this.profileTextWeight.Name = "profileTextWeight";
-            this.profileTextWeight.Size = new System.Drawing.Size(282, 88);
-            this.profileTextWeight.TabIndex = 7;
-            this.profileTextWeight.Text = "Вес:";
-            this.profileTextWeight.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.profileTextDateOnlain.AutoSize = true;
+            this.profileTextDateOnlain.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.profileTextDateOnlain.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.profileTextDateOnlain.Location = new System.Drawing.Point(18, 586);
+            this.profileTextDateOnlain.Name = "profileTextDateOnlain";
+            this.profileTextDateOnlain.Size = new System.Drawing.Size(282, 78);
+            this.profileTextDateOnlain.TabIndex = 7;
+            this.profileTextDateOnlain.Text = "Последний вход";
+            this.profileTextDateOnlain.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // profileInfoSurname
             // 
@@ -327,9 +332,9 @@
             this.profileInfoSurname.Dock = System.Windows.Forms.DockStyle.Fill;
             this.profileInfoSurname.Location = new System.Drawing.Point(306, 40);
             this.profileInfoSurname.Name = "profileInfoSurname";
-            this.profileInfoSurname.Size = new System.Drawing.Size(426, 88);
+            this.profileInfoSurname.Size = new System.Drawing.Size(426, 78);
             this.profileInfoSurname.TabIndex = 8;
-            this.profileInfoSurname.Text = "label9";
+            this.profileInfoSurname.Text = ".";
             this.profileInfoSurname.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // profileInfoName
@@ -337,11 +342,11 @@
             this.profileInfoName.AutoSize = true;
             this.profileInfoName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.profileInfoName.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.profileInfoName.Location = new System.Drawing.Point(306, 128);
+            this.profileInfoName.Location = new System.Drawing.Point(306, 118);
             this.profileInfoName.Name = "profileInfoName";
-            this.profileInfoName.Size = new System.Drawing.Size(426, 88);
+            this.profileInfoName.Size = new System.Drawing.Size(426, 78);
             this.profileInfoName.TabIndex = 9;
-            this.profileInfoName.Text = "label10";
+            this.profileInfoName.Text = ".";
             this.profileInfoName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // profileInfoPatronymic
@@ -349,11 +354,11 @@
             this.profileInfoPatronymic.AutoSize = true;
             this.profileInfoPatronymic.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.profileInfoPatronymic.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.profileInfoPatronymic.Location = new System.Drawing.Point(306, 216);
+            this.profileInfoPatronymic.Location = new System.Drawing.Point(306, 196);
             this.profileInfoPatronymic.Name = "profileInfoPatronymic";
-            this.profileInfoPatronymic.Size = new System.Drawing.Size(426, 88);
+            this.profileInfoPatronymic.Size = new System.Drawing.Size(426, 78);
             this.profileInfoPatronymic.TabIndex = 10;
-            this.profileInfoPatronymic.Text = "label11";
+            this.profileInfoPatronymic.Text = ".";
             this.profileInfoPatronymic.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // profileInfoBirthDate
@@ -361,11 +366,11 @@
             this.profileInfoBirthDate.AutoSize = true;
             this.profileInfoBirthDate.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.profileInfoBirthDate.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.profileInfoBirthDate.Location = new System.Drawing.Point(306, 304);
+            this.profileInfoBirthDate.Location = new System.Drawing.Point(306, 274);
             this.profileInfoBirthDate.Name = "profileInfoBirthDate";
-            this.profileInfoBirthDate.Size = new System.Drawing.Size(426, 88);
+            this.profileInfoBirthDate.Size = new System.Drawing.Size(426, 78);
             this.profileInfoBirthDate.TabIndex = 11;
-            this.profileInfoBirthDate.Text = "label12";
+            this.profileInfoBirthDate.Text = ".";
             this.profileInfoBirthDate.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // profileInfoGender
@@ -373,11 +378,11 @@
             this.profileInfoGender.AutoSize = true;
             this.profileInfoGender.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.profileInfoGender.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.profileInfoGender.Location = new System.Drawing.Point(306, 392);
+            this.profileInfoGender.Location = new System.Drawing.Point(306, 352);
             this.profileInfoGender.Name = "profileInfoGender";
-            this.profileInfoGender.Size = new System.Drawing.Size(426, 88);
+            this.profileInfoGender.Size = new System.Drawing.Size(426, 78);
             this.profileInfoGender.TabIndex = 12;
-            this.profileInfoGender.Text = "label13";
+            this.profileInfoGender.Text = ".";
             this.profileInfoGender.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // profileInfoEmail
@@ -385,36 +390,56 @@
             this.profileInfoEmail.AutoSize = true;
             this.profileInfoEmail.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.profileInfoEmail.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.profileInfoEmail.Location = new System.Drawing.Point(306, 480);
+            this.profileInfoEmail.Location = new System.Drawing.Point(306, 430);
             this.profileInfoEmail.Name = "profileInfoEmail";
-            this.profileInfoEmail.Size = new System.Drawing.Size(426, 88);
+            this.profileInfoEmail.Size = new System.Drawing.Size(426, 78);
             this.profileInfoEmail.TabIndex = 13;
-            this.profileInfoEmail.Text = "label14";
+            this.profileInfoEmail.Text = ".";
             this.profileInfoEmail.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // profileInfoHeight
+            // profileInfoDateReg
             // 
-            this.profileInfoHeight.AutoSize = true;
-            this.profileInfoHeight.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.profileInfoHeight.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.profileInfoHeight.Location = new System.Drawing.Point(306, 568);
-            this.profileInfoHeight.Name = "profileInfoHeight";
-            this.profileInfoHeight.Size = new System.Drawing.Size(426, 88);
-            this.profileInfoHeight.TabIndex = 14;
-            this.profileInfoHeight.Text = "label15";
-            this.profileInfoHeight.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.profileInfoDateReg.AutoSize = true;
+            this.profileInfoDateReg.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.profileInfoDateReg.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.profileInfoDateReg.Location = new System.Drawing.Point(306, 508);
+            this.profileInfoDateReg.Name = "profileInfoDateReg";
+            this.profileInfoDateReg.Size = new System.Drawing.Size(426, 78);
+            this.profileInfoDateReg.TabIndex = 14;
+            this.profileInfoDateReg.Text = ".";
+            this.profileInfoDateReg.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // profileInfoWeight
+            // profileInfoDateOnlain
             // 
-            this.profileInfoWeight.AutoSize = true;
-            this.profileInfoWeight.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.profileInfoWeight.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.profileInfoWeight.Location = new System.Drawing.Point(306, 656);
-            this.profileInfoWeight.Name = "profileInfoWeight";
-            this.profileInfoWeight.Size = new System.Drawing.Size(426, 88);
-            this.profileInfoWeight.TabIndex = 15;
-            this.profileInfoWeight.Text = "label16";
-            this.profileInfoWeight.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.profileInfoDateOnlain.AutoSize = true;
+            this.profileInfoDateOnlain.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.profileInfoDateOnlain.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.profileInfoDateOnlain.Location = new System.Drawing.Point(306, 586);
+            this.profileInfoDateOnlain.Name = "profileInfoDateOnlain";
+            this.profileInfoDateOnlain.Size = new System.Drawing.Size(426, 78);
+            this.profileInfoDateOnlain.TabIndex = 15;
+            this.profileInfoDateOnlain.Text = ".";
+            this.profileInfoDateOnlain.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // profileTextIsAdmin
+            // 
+            this.profileTextIsAdmin.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.profileTextIsAdmin.Location = new System.Drawing.Point(18, 664);
+            this.profileTextIsAdmin.Name = "profileTextIsAdmin";
+            this.profileTextIsAdmin.Size = new System.Drawing.Size(282, 78);
+            this.profileTextIsAdmin.TabIndex = 16;
+            this.profileTextIsAdmin.Text = "Админ";
+            this.profileTextIsAdmin.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // profileInfoIsAdmin
+            // 
+            this.profileInfoIsAdmin.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.profileInfoIsAdmin.Location = new System.Drawing.Point(306, 664);
+            this.profileInfoIsAdmin.Name = "profileInfoIsAdmin";
+            this.profileInfoIsAdmin.Size = new System.Drawing.Size(426, 78);
+            this.profileInfoIsAdmin.TabIndex = 17;
+            this.profileInfoIsAdmin.Text = ".";
+            this.profileInfoIsAdmin.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // AccountsEditForm
             // 
@@ -459,15 +484,17 @@
         private System.Windows.Forms.Label profileTextBirthDate;
         private System.Windows.Forms.Label profileTextGender;
         private System.Windows.Forms.Label profileTextEmail;
-        private System.Windows.Forms.Label profileTextHeight;
-        private System.Windows.Forms.Label profileTextWeight;
+        private System.Windows.Forms.Label profileTextDateReg;
+        private System.Windows.Forms.Label profileTextDateOnlain;
         private System.Windows.Forms.Label profileInfoSurname;
         private System.Windows.Forms.Label profileInfoName;
         private System.Windows.Forms.Label profileInfoPatronymic;
         private System.Windows.Forms.Label profileInfoBirthDate;
         private System.Windows.Forms.Label profileInfoGender;
         private System.Windows.Forms.Label profileInfoEmail;
-        private System.Windows.Forms.Label profileInfoHeight;
-        private System.Windows.Forms.Label profileInfoWeight;
+        private System.Windows.Forms.Label profileInfoDateReg;
+        private System.Windows.Forms.Label profileInfoDateOnlain;
+        private System.Windows.Forms.Label profileTextIsAdmin;
+        private System.Windows.Forms.Label profileInfoIsAdmin;
     }
 }

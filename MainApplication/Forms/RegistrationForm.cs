@@ -14,6 +14,7 @@ namespace AthletesRating.Forms
 {
     public partial class RegistrationForm : Form
     {
+        #region Fields
         private SqlConnection connection = null;
         private Regex passCheck = new Regex(@"^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[a-zA-Z0-9]{6,}$");
         private readonly string symbols = "ABCDEFGHIJKLMNOPQRSTUWXYZabcdefghijklmnopqrstuwxyz";
@@ -22,6 +23,7 @@ namespace AthletesRating.Forms
         private Timer timer;
         private int sendInterval;
         private bool mailIsCorrect, passIsCorrect;
+        #endregion
         public RegistrationForm()
         {
             InitializeComponent();
@@ -60,6 +62,22 @@ namespace AthletesRating.Forms
                 timerLabel.Text = "";
             }
         }
+
+        private bool CheckFields(params string[] fields)
+        {
+            bool allowRegistration = true;
+            foreach (string field in fields)
+            {
+                if (string.IsNullOrEmpty(field))
+                {
+                    allowRegistration = false;
+                    break;
+                }
+            }
+            return allowRegistration;
+        }
+
+        #region TextChanged Events
 
         private void EmailTB_TextChanged(object sender, EventArgs e)
         {
@@ -101,17 +119,44 @@ namespace AthletesRating.Forms
             }
         }
 
-        //-overwrite-// completed
+        private void conPassTB_TextChanged(object sender, EventArgs e)
+        {
+            if (conPassTB.Text != passwordTB.Text)
+            {
+                conPassError.Text = "Пароди не совпадают!";
+                passIsCorrect = false;
+            }
+            else
+            {
+                conPassError.Text = "";
+                passIsCorrect = true;
+            }
+            if (conPassTB.TextLength == 0)
+            {
+                conPassError.Text = "";
+            }
+        }
+        #endregion
+
+        #region Click Events
         private void EmailVerification_Click(object sender, EventArgs e)
         {
             if (!CheckFields(UserSurname.Text, UserName.Text, EmailTB.Text) || !passIsCorrect || !mailIsCorrect) return;
 
-            SqlCommand emailCount = new SqlCommand($"SELECT COUNT(Email) FROM Accounts WHERE Email = @email", connection);
+            SqlCommand emailCount = new SqlCommand("SELECT COUNT(Email) FROM Accounts WHERE Email = @email", connection);
             emailCount.Parameters.AddWithValue("@email", EmailTB.Text);
+
+            SqlCommand loginCount = new SqlCommand("SELECT COUNT(Login) FROM Accounts WHERE Login = @log", connection);
+            loginCount.Parameters.AddWithValue("@log", loginTB.Text);
 
             if (Convert.ToUInt32(emailCount.ExecuteScalar()) > 0)
             {
                 MessageBox.Show("Пользователь с таким E-mail уже зарегистрирован!");
+                return;
+            }
+            else if(Convert.ToUInt32(loginCount.ExecuteScalar()) > 0)
+            {
+                MessageBox.Show("Логин занят!");
                 return;
             }
 
@@ -140,39 +185,6 @@ namespace AthletesRating.Forms
             }
         }
 
-        private void conPassTB_TextChanged(object sender, EventArgs e)
-        {
-            if (conPassTB.Text != passwordTB.Text)
-            {
-                conPassError.Text = "Пароди не совпадают!";
-                passIsCorrect = false;
-            }
-            else
-            {
-                conPassError.Text = "";
-                passIsCorrect = true;
-            }
-            if (conPassTB.TextLength == 0)
-            {
-                conPassError.Text = "";
-            }
-        }
-
-        private bool CheckFields(params string[] fields)
-        {
-            bool allowRegistration = true;
-            foreach (string field in fields)
-            {
-                if(string.IsNullOrEmpty(field))
-                {
-                    allowRegistration = false;
-                    break;
-                }
-            }
-            return allowRegistration;
-        }
-
-        //-overwrite-//
         private void RegBut_Click(object sender, EventArgs e)
         {
             if (EmailVerificationTB.Text == "") return;
@@ -189,5 +201,28 @@ namespace AthletesRating.Forms
             }
 
         }
+        #endregion
+
+        #region Password Visible
+        private void passView_MouseDown(object sender, MouseEventArgs e)
+        {
+            passwordTB.UseSystemPasswordChar = false;
+        }
+
+        private void passView_MouseUp(object sender, MouseEventArgs e)
+        {
+            passwordTB.UseSystemPasswordChar = true;
+        }
+
+        private void passConView_MouseDown(object sender, MouseEventArgs e)
+        {
+            conPassTB.UseSystemPasswordChar = false;
+        }
+
+        private void passConView_MouseUp(object sender, MouseEventArgs e)
+        {
+            conPassTB.UseSystemPasswordChar = true;
+        }
+        #endregion
     }
 }

@@ -26,9 +26,9 @@ namespace MainApplication.ChildForms.Settings
             passConCorrect = false;
             newPassConError.Text = "";
             newPassError.Text = "";
-            BirthDateChange.Value = this.athlete.GetBirthDate();
+            BirthDateChange.Value = this.athlete.BirthDate;
 
-            if (this.athlete.GetAccountInfo().GetEmail() == Constants.MAIN_ADMIN) 
+            if (this.athlete.accountInfo.GetEmail() == Constants.MAIN_ADMIN) 
                 deleteAccountBut.Enabled = false;
         }
 
@@ -39,7 +39,7 @@ namespace MainApplication.ChildForms.Settings
 
         private void deleteAccountBut_Click(object sender, EventArgs e)
         {
-            if (athlete.GetAccountInfo().GetPassword() + Security.AddSult() == Security.GenerateHash(deleteAccountPassTB.Text) + Security.AddSult())
+            if (athlete.accountInfo.GetPassword() + Security.AddSult() == Security.GenerateHash(deleteAccountPassTB.Text) + Security.AddSult())
             {
                 Functionality.DeleteAccount(athlete);
                 Application.Exit();
@@ -52,7 +52,7 @@ namespace MainApplication.ChildForms.Settings
 
         private void nameChangeBut_Click(object sender, EventArgs e)
         {
-            if (Security.GenerateHash(nameChangeConfirmTB.Text) + Security.AddSult() == athlete.GetAccountInfo().GetPassword() + Security.AddSult())
+            if (Security.GenerateHash(nameChangeConfirmTB.Text) + Security.AddSult() == athlete.accountInfo.GetPassword() + Security.AddSult())
             {
                 athlete = Functionality.ChangeFullName(athlete, lastNameChangeTB, firstNameChangeTB, patronymicChangeTB);
                 nameChangeConfirmTB.Text = "";

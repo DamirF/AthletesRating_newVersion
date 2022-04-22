@@ -11,21 +11,44 @@ using System.Globalization;
 
 public class AthleteCard
 {
-	private int ID;
-	private Account accountInfo;
-	private FullName fullName;
-	private string Gender;
-	private DateTime BirthDate;
-	private int Height;
-	private int Weight;
+    #region Fields and Options
+	public Account accountInfo { get; private set; }
+	public FullName fullName { get; private set; }
+	public string Gender { get; private set; }
+	public DateTime BirthDate { get; private set; }
+	public int Height { get; private set; }
+	public int Weight { get; private set; }
 	private List<Medal> AthleteMedals;
+	public string sportType { get; private set; }
+	public string nationality { get; private set; }
+	#endregion
 
-	public AthleteCard(int id, string email, string login, string password, bool isAdmin)
+	#region Constructors
+
+	/// <summary>
+	/// Конструктор для авторизации
+	/// </summary>
+	/// <param name="email"></param>
+	/// <param name="login"></param>
+	/// <param name="password"></param>
+	/// <param name="isAdmin"></param>
+	public AthleteCard(string email, string login, string password, bool isAdmin)
     {
-		ID = id;
 		accountInfo = new Account(email, login, password, isAdmin);
     }
 
+	/// <summary>
+	/// Конструктор для регистрации
+	/// </summary>
+	/// <param name="surname"></param>
+	/// <param name="name"></param>
+	/// <param name="patronymic"></param>
+	/// <param name="gender"></param>
+	/// <param name="birthDate"></param>
+	/// <param name="email"></param>
+	/// <param name="login"></param>
+	/// <param name="password"></param>
+	/// <param name="isAdmin"></param>
 	public AthleteCard(string surname, string name, string patronymic, string gender, DateTime birthDate, string email, string login, string password, bool isAdmin)
 	{
 		accountInfo = new Account(email, login, password, isAdmin);
@@ -37,21 +60,23 @@ public class AthleteCard
 		AthleteMedals = new List<Medal>();
 	}
 
-	public AthleteCard(int id, string surname, string name, string patronymic, string gender, DateTime birthDate, int height, int weight, List<Medal> medals, string email, string login, string password, bool isAdmin)
-    {
-		ID = id;
-		accountInfo = new Account(email, login, password, isAdmin);
-		fullName = new FullName(surname, name, patronymic);
-		Gender = gender;
-		BirthDate = birthDate;
-		Height = height;
-		Weight = weight;
-		AthleteMedals = medals;
-    }
-
-	public AthleteCard(int id, string surname, string name, string patronymic, string gender, DateTime birthDate, int height, int weight, string medals, string email, string login, string password, bool isAdmin)
+	/// <summary>
+	/// Полный конструктор
+	/// </summary>
+	/// <param name="surname"></param>
+	/// <param name="name"></param>
+	/// <param name="patronymic"></param>
+	/// <param name="gender"></param>
+	/// <param name="birthDate"></param>
+	/// <param name="height"></param>
+	/// <param name="weight"></param>
+	/// <param name="medals"></param>
+	/// <param name="email"></param>
+	/// <param name="login"></param>
+	/// <param name="password"></param>
+	/// <param name="isAdmin"></param>
+	public AthleteCard(string surname, string name, string patronymic, string gender, DateTime birthDate, int height, int weight, string medals, string nationality, string sportType, string email, string login, string password, bool isAdmin)
 	{
-		ID = id;
 		accountInfo = new Account(email, login, password, isAdmin);
 		fullName = new FullName(surname, name, patronymic);
 		Gender = gender;
@@ -59,23 +84,21 @@ public class AthleteCard
 		Height = height;
 		Weight = weight;
 		AthleteMedals = DeserializeAchievements(medals);
+		this.nationality = nationality;
+		this.sportType = sportType;
 	}
+    #endregion
 
-	public int GetID() => ID;
-	public Account GetAccountInfo() => accountInfo;
-	public void SetAccountInfo(Account account) => accountInfo = account;
-	public FullName GetFullName() => fullName;
+    #region Setters
+    public void SetAccountInfo(Account account) => accountInfo = account;
 	public void SetFullName(FullName newFullName) => fullName = newFullName;
 	public void SetFullName(string surname, string name, string patronymic) =>
 		fullName = new FullName(surname, name, patronymic);
-	public DateTime GetBirthDate() => BirthDate;
 	public void SetBirthDate(DateTime newBirthDate) => BirthDate = newBirthDate;
-	public string GetGender() => Gender;
 	public void SetHeight(int height) => Height = height;
-	public int GetHeight() => Height;
 	public void SetWeight(int weight) => Weight = weight;
-	public int GetWeight() => Weight;
-	public List<Medal> GetAchievements() => AthleteMedals;
+    #endregion
+    public List<Medal> GetAchievements() => AthleteMedals;
 
 	public int CalculateAge()
 	{
@@ -93,29 +116,23 @@ public class AthleteCard
 	public void NewUserRegistration(SqlConnection connection)
     {
 		SqlCommand registrationAccounts = new SqlCommand("INSERT INTO [Accounts] (Email, Login, Password, IsAdmin) VALUES (@email, @login, @password, @isAdmin)", connection);
-		registrationAccounts.Parameters.AddWithValue("@email", accountInfo.GetEmail());
-		registrationAccounts.Parameters.AddWithValue("@login", accountInfo.GetLogin());
-		registrationAccounts.Parameters.AddWithValue("@password", accountInfo.GetPassword());
-		registrationAccounts.Parameters.AddWithValue("@isAdmin", Convert.ToInt32(accountInfo.IsAdmin()));
+		registrationAccounts.Parameters.AddWithValue("@email", accountInfo.Email);
+		registrationAccounts.Parameters.AddWithValue("@login", accountInfo.Login);
+		registrationAccounts.Parameters.AddWithValue("@password", accountInfo.Password);
+		registrationAccounts.Parameters.AddWithValue("@isAdmin", Convert.ToInt32(accountInfo.isAdmin));
 
-		SqlCommand registrationAthletes = new SqlCommand("INSERT INTO [Athletes] (Surname, Name, Patronymic, Gender, BirthDate, Height, Weight, Achievements) VALUES (@surname, @name, @patronymic, @gender, @birthDate, @null, @null, @nullList)", connection);
-		registrationAthletes.Parameters.AddWithValue("@surname", fullName.GetSurname());
-		registrationAthletes.Parameters.AddWithValue("@name", fullName.GetName());
-		registrationAthletes.Parameters.AddWithValue("@patronymic", fullName.GetPatronymic());
+		SqlCommand registrationAthletes = new SqlCommand("INSERT INTO [Athletes] (Surname, Name, Patronymic, Gender, BirthDate, Height, Weight, Achievements, Nationality, SportType, Login) VALUES (@surname, @name, @patronymic, @gender, @birthDate, @null, @null, @nullList, @nullstr, @nullstr, @log)", connection);
+		registrationAthletes.Parameters.AddWithValue("@surname", fullName.Surname);
+		registrationAthletes.Parameters.AddWithValue("@name", fullName.Name);
+		registrationAthletes.Parameters.AddWithValue("@patronymic", fullName.Patronymic);
 		registrationAthletes.Parameters.AddWithValue("@gender", Gender);
 		registrationAthletes.Parameters.AddWithValue("@birthDate", BirthDate);
 		registrationAthletes.Parameters.AddWithValue("@null", 0);
 		registrationAthletes.Parameters.AddWithValue("@nullList", SerializeAchievements());
+		registrationAthletes.Parameters.AddWithValue("@nullstr", "");
+		registrationAthletes.Parameters.AddWithValue("@log", accountInfo.Login);
 
 		registrationAccounts.ExecuteNonQuery();
 		registrationAthletes.ExecuteNonQuery();
     }
-
-	/*
-	 Необходимые доработки:
-	1) Функция считывания данных с БД
-	2) Конструктор для считывания данных с БД (?)
-	3) Десериализация списка достижений
-	4) Добавление медали/достижения (?)
-	 */
 }

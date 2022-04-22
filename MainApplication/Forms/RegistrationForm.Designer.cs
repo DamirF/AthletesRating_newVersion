@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RegistrationForm));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.UserName = new System.Windows.Forms.TextBox();
@@ -57,6 +58,8 @@
             this.label8 = new System.Windows.Forms.Label();
             this.GenderCB = new System.Windows.Forms.ComboBox();
             this.PasswordPanel = new System.Windows.Forms.Panel();
+            this.passConView = new System.Windows.Forms.Button();
+            this.passView = new System.Windows.Forms.Button();
             this.UserInfoPanel.SuspendLayout();
             this.PasswordPanel.SuspendLayout();
             this.SuspendLayout();
@@ -165,7 +168,6 @@
             this.loginTB.Margin = new System.Windows.Forms.Padding(2);
             this.loginTB.MaxLength = 50;
             this.loginTB.Name = "loginTB";
-            this.loginTB.ReadOnly = true;
             this.loginTB.Size = new System.Drawing.Size(527, 38);
             this.loginTB.TabIndex = 9;
             // 
@@ -176,9 +178,9 @@
             this.passwordTB.Margin = new System.Windows.Forms.Padding(2);
             this.passwordTB.MaxLength = 10;
             this.passwordTB.Name = "passwordTB";
-            this.passwordTB.PasswordChar = '*';
-            this.passwordTB.Size = new System.Drawing.Size(525, 38);
+            this.passwordTB.Size = new System.Drawing.Size(482, 38);
             this.passwordTB.TabIndex = 10;
+            this.passwordTB.UseSystemPasswordChar = true;
             this.passwordTB.TextChanged += new System.EventHandler(this.passwordTB_TextChanged);
             // 
             // conPassTB
@@ -188,9 +190,9 @@
             this.conPassTB.Margin = new System.Windows.Forms.Padding(2);
             this.conPassTB.MaxLength = 10;
             this.conPassTB.Name = "conPassTB";
-            this.conPassTB.PasswordChar = '*';
-            this.conPassTB.Size = new System.Drawing.Size(525, 38);
+            this.conPassTB.Size = new System.Drawing.Size(482, 38);
             this.conPassTB.TabIndex = 11;
+            this.conPassTB.UseSystemPasswordChar = true;
             this.conPassTB.TextChanged += new System.EventHandler(this.conPassTB_TextChanged);
             // 
             // EmailVerificationBut
@@ -364,6 +366,8 @@
             // 
             // PasswordPanel
             // 
+            this.PasswordPanel.Controls.Add(this.passConView);
+            this.PasswordPanel.Controls.Add(this.passView);
             this.PasswordPanel.Controls.Add(this.conPassTB);
             this.PasswordPanel.Controls.Add(this.label5);
             this.PasswordPanel.Controls.Add(this.passError);
@@ -374,6 +378,34 @@
             this.PasswordPanel.Name = "PasswordPanel";
             this.PasswordPanel.Size = new System.Drawing.Size(562, 192);
             this.PasswordPanel.TabIndex = 26;
+            // 
+            // passConView
+            // 
+            this.passConView.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("passConView.BackgroundImage")));
+            this.passConView.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.passConView.FlatAppearance.BorderSize = 0;
+            this.passConView.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.passConView.Location = new System.Drawing.Point(502, 122);
+            this.passConView.Name = "passConView";
+            this.passConView.Size = new System.Drawing.Size(38, 38);
+            this.passConView.TabIndex = 22;
+            this.passConView.UseVisualStyleBackColor = true;
+            this.passConView.MouseDown += new System.Windows.Forms.MouseEventHandler(this.passConView_MouseDown);
+            this.passConView.MouseUp += new System.Windows.Forms.MouseEventHandler(this.passConView_MouseUp);
+            // 
+            // passView
+            // 
+            this.passView.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("passView.BackgroundImage")));
+            this.passView.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.passView.FlatAppearance.BorderSize = 0;
+            this.passView.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.passView.Location = new System.Drawing.Point(502, 31);
+            this.passView.Name = "passView";
+            this.passView.Size = new System.Drawing.Size(38, 38);
+            this.passView.TabIndex = 21;
+            this.passView.UseVisualStyleBackColor = true;
+            this.passView.MouseDown += new System.Windows.Forms.MouseEventHandler(this.passView_MouseDown);
+            this.passView.MouseUp += new System.Windows.Forms.MouseEventHandler(this.passView_MouseUp);
             // 
             // RegistrationForm
             // 
@@ -439,5 +471,7 @@
         private System.Windows.Forms.Panel PasswordPanel;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.DateTimePicker BirthDateTP;
+        private System.Windows.Forms.Button passConView;
+        private System.Windows.Forms.Button passView;
     }
 }

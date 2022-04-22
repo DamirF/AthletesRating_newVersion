@@ -1,20 +1,24 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace AthletesRating.Models
 {
 	public class Medal
 	{
-		private int Place;
-		private int ReceiveYear;
+		#region Fields and Options
+		public int Place { get; private set; }
+		public string Name { get; private set; }
+		public string Lavel { get; private set; }
+		public DateTime ReceiveYear { get; private set; }
+		#endregion
 
-		public Medal(int place, int receiveYear)
+		public Medal(int place, string name, string level, DateTime receiveYear)
 		{
 			Place = place;
+			Name = name;
+			Lavel = level;
 			ReceiveYear = receiveYear;
 		}
-
-		public int GetPlace() => Place;
-		public int GetReceiveYear() => ReceiveYear;
 
 		public static List<Medal> ToList(Medal[] medals)
         {

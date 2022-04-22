@@ -18,7 +18,7 @@ namespace MainApplication.ChildForms.Admin.Edit
         public AccountsEditForm()
         {
             InitializeComponent();
-            labels = new Label[] { profileInfoSurname, profileInfoName, profileInfoPatronymic, profileInfoBirthDate, profileInfoGender, profileInfoEmail, profileInfoHeight, profileInfoWeight };
+            labels = new Label[] { profileInfoSurname, profileInfoName, profileInfoPatronymic, profileInfoBirthDate, profileInfoGender, profileInfoEmail, profileInfoDateReg, profileInfoDateOnlain, profileInfoIsAdmin };
             AthletesComboBoxStuff();
         }
 
@@ -77,7 +77,6 @@ namespace MainApplication.ChildForms.Admin.Edit
                 {
                     athlete = new AthleteCard
                         (
-                        (int)dataReader.GetValue(Constants.ID_FIELD),
                         (string)dataReader.GetValue(Constants.ACCOUNT_TABLE_EMAIL),
                         (string)dataReader.GetValue(Constants.ACCOUNT_TABLE_LOGIN),
                         (string)dataReader.GetValue(Constants.ACCOUNT_TABLE_PASSWORD),

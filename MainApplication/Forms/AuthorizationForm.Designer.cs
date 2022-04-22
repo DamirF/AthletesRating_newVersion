@@ -28,8 +28,21 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AuthorizationForm));
             this.MainPanel = new System.Windows.Forms.Panel();
+            this.passView = new System.Windows.Forms.Button();
+            this.passwordRecovery = new System.Windows.Forms.LinkLabel();
+            this.registrationLink = new System.Windows.Forms.LinkLabel();
+            this.label3 = new System.Windows.Forms.Label();
+            this.signINbut = new System.Windows.Forms.Button();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.passwordTB = new System.Windows.Forms.TextBox();
+            this.loginTB = new System.Windows.Forms.TextBox();
+            this.withoutAccBut = new System.Windows.Forms.Button();
             this.RecoveryPanel = new System.Windows.Forms.Panel();
+            this.passRecConView = new System.Windows.Forms.Panel();
+            this.passRecView = new System.Windows.Forms.Panel();
             this.CancelBut = new System.Windows.Forms.Button();
             this.ConPassError = new System.Windows.Forms.Label();
             this.PassError = new System.Windows.Forms.Label();
@@ -46,14 +59,6 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.passwordRecovery = new System.Windows.Forms.LinkLabel();
-            this.registrationLink = new System.Windows.Forms.LinkLabel();
-            this.label3 = new System.Windows.Forms.Label();
-            this.signINbut = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.passwordTB = new System.Windows.Forms.TextBox();
-            this.loginTB = new System.Windows.Forms.TextBox();
             this.MainPanel.SuspendLayout();
             this.RecoveryPanel.SuspendLayout();
             this.SuspendLayout();
@@ -61,6 +66,8 @@
             // MainPanel
             // 
             this.MainPanel.Controls.Add(this.RecoveryPanel);
+            this.MainPanel.Controls.Add(this.withoutAccBut);
+            this.MainPanel.Controls.Add(this.passView);
             this.MainPanel.Controls.Add(this.passwordRecovery);
             this.MainPanel.Controls.Add(this.registrationLink);
             this.MainPanel.Controls.Add(this.label3);
@@ -75,8 +82,118 @@
             this.MainPanel.Size = new System.Drawing.Size(569, 495);
             this.MainPanel.TabIndex = 0;
             // 
+            // passView
+            // 
+            this.passView.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("passView.BackgroundImage")));
+            this.passView.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.passView.FlatAppearance.BorderSize = 0;
+            this.passView.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.passView.Location = new System.Drawing.Point(468, 214);
+            this.passView.Name = "passView";
+            this.passView.Size = new System.Drawing.Size(43, 43);
+            this.passView.TabIndex = 18;
+            this.passView.UseVisualStyleBackColor = true;
+            this.passView.MouseDown += new System.Windows.Forms.MouseEventHandler(this.passView_MouseDown);
+            this.passView.MouseUp += new System.Windows.Forms.MouseEventHandler(this.passView_MouseUp);
+            // 
+            // passwordRecovery
+            // 
+            this.passwordRecovery.AutoSize = true;
+            this.passwordRecovery.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.passwordRecovery.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(34)))), ((int)(((byte)(48)))));
+            this.passwordRecovery.Location = new System.Drawing.Point(299, 353);
+            this.passwordRecovery.Name = "passwordRecovery";
+            this.passwordRecovery.Size = new System.Drawing.Size(163, 28);
+            this.passwordRecovery.TabIndex = 16;
+            this.passwordRecovery.TabStop = true;
+            this.passwordRecovery.Text = "Забыли пароль?";
+            this.passwordRecovery.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.passwordRecovery_LinkClicked);
+            // 
+            // registrationLink
+            // 
+            this.registrationLink.AutoSize = true;
+            this.registrationLink.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.registrationLink.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(34)))), ((int)(((byte)(48)))));
+            this.registrationLink.Location = new System.Drawing.Point(107, 353);
+            this.registrationLink.Name = "registrationLink";
+            this.registrationLink.Size = new System.Drawing.Size(126, 28);
+            this.registrationLink.TabIndex = 15;
+            this.registrationLink.TabStop = true;
+            this.registrationLink.Text = "Регистрация";
+            this.registrationLink.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.registrationLink_LinkClicked);
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.ForeColor = System.Drawing.Color.Red;
+            this.label3.Location = new System.Drawing.Point(107, 214);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(0, 20);
+            this.label3.TabIndex = 14;
+            // 
+            // signINbut
+            // 
+            this.signINbut.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.signINbut.Location = new System.Drawing.Point(107, 298);
+            this.signINbut.Name = "signINbut";
+            this.signINbut.Size = new System.Drawing.Size(355, 52);
+            this.signINbut.TabIndex = 13;
+            this.signINbut.Text = "Войти";
+            this.signINbut.UseVisualStyleBackColor = true;
+            this.signINbut.Click += new System.EventHandler(this.signINbut_Click);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label2.Location = new System.Drawing.Point(107, 174);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(120, 38);
+            this.label2.TabIndex = 12;
+            this.label2.Text = "Пароль";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label1.Location = new System.Drawing.Point(107, 61);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(100, 38);
+            this.label1.TabIndex = 11;
+            this.label1.Text = "Логин";
+            // 
+            // passwordTB
+            // 
+            this.passwordTB.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.passwordTB.Location = new System.Drawing.Point(107, 214);
+            this.passwordTB.Name = "passwordTB";
+            this.passwordTB.Size = new System.Drawing.Size(355, 43);
+            this.passwordTB.TabIndex = 10;
+            this.passwordTB.UseSystemPasswordChar = true;
+            // 
+            // loginTB
+            // 
+            this.loginTB.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.loginTB.Location = new System.Drawing.Point(107, 102);
+            this.loginTB.Name = "loginTB";
+            this.loginTB.Size = new System.Drawing.Size(355, 43);
+            this.loginTB.TabIndex = 9;
+            // 
+            // withoutAccBut
+            // 
+            this.withoutAccBut.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.withoutAccBut.Location = new System.Drawing.Point(107, 405);
+            this.withoutAccBut.Name = "withoutAccBut";
+            this.withoutAccBut.Size = new System.Drawing.Size(355, 52);
+            this.withoutAccBut.TabIndex = 19;
+            this.withoutAccBut.Text = "Продолжить без аккаунта";
+            this.withoutAccBut.UseVisualStyleBackColor = true;
+            this.withoutAccBut.Click += new System.EventHandler(this.withoutAccBut_Click);
+            // 
             // RecoveryPanel
             // 
+            this.RecoveryPanel.Controls.Add(this.passRecConView);
+            this.RecoveryPanel.Controls.Add(this.passRecView);
             this.RecoveryPanel.Controls.Add(this.CancelBut);
             this.RecoveryPanel.Controls.Add(this.ConPassError);
             this.RecoveryPanel.Controls.Add(this.PassError);
@@ -97,7 +214,29 @@
             this.RecoveryPanel.Location = new System.Drawing.Point(0, 0);
             this.RecoveryPanel.Name = "RecoveryPanel";
             this.RecoveryPanel.Size = new System.Drawing.Size(569, 495);
-            this.RecoveryPanel.TabIndex = 17;
+            this.RecoveryPanel.TabIndex = 20;
+            // 
+            // passRecConView
+            // 
+            this.passRecConView.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("passRecConView.BackgroundImage")));
+            this.passRecConView.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.passRecConView.Location = new System.Drawing.Point(448, 368);
+            this.passRecConView.Name = "passRecConView";
+            this.passRecConView.Size = new System.Drawing.Size(34, 34);
+            this.passRecConView.TabIndex = 17;
+            this.passRecConView.MouseDown += new System.Windows.Forms.MouseEventHandler(this.passRecConView_MouseDown);
+            this.passRecConView.MouseUp += new System.Windows.Forms.MouseEventHandler(this.passRecConView_MouseUp);
+            // 
+            // passRecView
+            // 
+            this.passRecView.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("passRecView.BackgroundImage")));
+            this.passRecView.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.passRecView.Location = new System.Drawing.Point(448, 275);
+            this.passRecView.Name = "passRecView";
+            this.passRecView.Size = new System.Drawing.Size(34, 34);
+            this.passRecView.TabIndex = 16;
+            this.passRecView.MouseDown += new System.Windows.Forms.MouseEventHandler(this.passRecView_MouseDown);
+            this.passRecView.MouseUp += new System.Windows.Forms.MouseEventHandler(this.passRecView_MouseUp);
             // 
             // CancelBut
             // 
@@ -199,9 +338,9 @@
             this.newPassConTB.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.newPassConTB.Location = new System.Drawing.Point(120, 368);
             this.newPassConTB.Name = "newPassConTB";
-            this.newPassConTB.PasswordChar = '*';
             this.newPassConTB.Size = new System.Drawing.Size(322, 34);
             this.newPassConTB.TabIndex = 5;
+            this.newPassConTB.UseSystemPasswordChar = true;
             this.newPassConTB.TextChanged += new System.EventHandler(this.newPassConTB_TextChanged);
             // 
             // newPassTB
@@ -209,9 +348,9 @@
             this.newPassTB.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.newPassTB.Location = new System.Drawing.Point(120, 275);
             this.newPassTB.Name = "newPassTB";
-            this.newPassTB.PasswordChar = '*';
             this.newPassTB.Size = new System.Drawing.Size(322, 34);
             this.newPassTB.TabIndex = 4;
+            this.newPassTB.UseSystemPasswordChar = true;
             this.newPassTB.TextChanged += new System.EventHandler(this.newPassTB_TextChanged);
             // 
             // EmailTB
@@ -253,89 +392,6 @@
             this.label4.TabIndex = 0;
             this.label4.Text = "E-mail";
             // 
-            // passwordRecovery
-            // 
-            this.passwordRecovery.AutoSize = true;
-            this.passwordRecovery.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.passwordRecovery.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(34)))), ((int)(((byte)(48)))));
-            this.passwordRecovery.Location = new System.Drawing.Point(299, 405);
-            this.passwordRecovery.Name = "passwordRecovery";
-            this.passwordRecovery.Size = new System.Drawing.Size(163, 28);
-            this.passwordRecovery.TabIndex = 16;
-            this.passwordRecovery.TabStop = true;
-            this.passwordRecovery.Text = "Забыли пароль?";
-            this.passwordRecovery.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.passwordRecovery_LinkClicked);
-            // 
-            // registrationLink
-            // 
-            this.registrationLink.AutoSize = true;
-            this.registrationLink.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.registrationLink.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(34)))), ((int)(((byte)(48)))));
-            this.registrationLink.Location = new System.Drawing.Point(107, 405);
-            this.registrationLink.Name = "registrationLink";
-            this.registrationLink.Size = new System.Drawing.Size(126, 28);
-            this.registrationLink.TabIndex = 15;
-            this.registrationLink.TabStop = true;
-            this.registrationLink.Text = "Регистрация";
-            this.registrationLink.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.registrationLink_LinkClicked);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.ForeColor = System.Drawing.Color.Red;
-            this.label3.Location = new System.Drawing.Point(107, 214);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(0, 20);
-            this.label3.TabIndex = 14;
-            // 
-            // signINbut
-            // 
-            this.signINbut.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.signINbut.Location = new System.Drawing.Point(107, 315);
-            this.signINbut.Name = "signINbut";
-            this.signINbut.Size = new System.Drawing.Size(355, 52);
-            this.signINbut.TabIndex = 13;
-            this.signINbut.Text = "Войти";
-            this.signINbut.UseVisualStyleBackColor = true;
-            this.signINbut.Click += new System.EventHandler(this.signINbut_Click);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(107, 174);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(120, 38);
-            this.label2.TabIndex = 12;
-            this.label2.Text = "Пароль";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(107, 61);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(100, 38);
-            this.label1.TabIndex = 11;
-            this.label1.Text = "Логин";
-            // 
-            // passwordTB
-            // 
-            this.passwordTB.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.passwordTB.Location = new System.Drawing.Point(107, 214);
-            this.passwordTB.Name = "passwordTB";
-            this.passwordTB.PasswordChar = '*';
-            this.passwordTB.Size = new System.Drawing.Size(355, 43);
-            this.passwordTB.TabIndex = 10;
-            // 
-            // loginTB
-            // 
-            this.loginTB.Font = new System.Drawing.Font("Segoe UI", 16.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.loginTB.Location = new System.Drawing.Point(107, 102);
-            this.loginTB.Name = "loginTB";
-            this.loginTB.Size = new System.Drawing.Size(355, 43);
-            this.loginTB.TabIndex = 9;
-            // 
             // AuthorizationForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -368,7 +424,12 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox passwordTB;
         private System.Windows.Forms.TextBox loginTB;
+        private System.Windows.Forms.Button passView;
+        private System.Windows.Forms.Button withoutAccBut;
         private System.Windows.Forms.Panel RecoveryPanel;
+        private System.Windows.Forms.Panel passRecConView;
+        private System.Windows.Forms.Panel passRecView;
+        private System.Windows.Forms.Button CancelBut;
         private System.Windows.Forms.Label ConPassError;
         private System.Windows.Forms.Label PassError;
         private System.Windows.Forms.Label EmailErrorLabel;
@@ -384,6 +445,5 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button CancelBut;
     }
 }

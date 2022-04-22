@@ -17,6 +17,8 @@
         public const int ATHLETES_TABLE_HEIGHT = 6;
         public const int ATHLETES_TABLE_WEIGHT = 7;
         public const int ATHLETES_TABLE_ACHIEVEMENTS = 8;
+        public const int ATHLETES_TABLE_NATIONALITY = 9;
+        public const int ATHLETES_TABLE_SPORT_TYPE = 10;
 
         public const int LABEL_USERINFO_SURNAME = 0;
         public const int LABEL_USERINFO_NAME = 1;

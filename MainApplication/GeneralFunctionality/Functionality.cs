@@ -21,15 +21,14 @@ namespace AthletesRating.GeneralFunctionality
 
         public static AthleteCard GetAtheleteInfo(AthleteCard card)
         {
-            SqlCommand getInfo = new SqlCommand("SELECT * FROM [Athletes] WHERE Id = @id", connection);
-            getInfo.Parameters.AddWithValue("@id", card.GetID());
+            SqlCommand getInfo = new SqlCommand("SELECT * FROM [Athletes] WHERE Login = @log", connection);
+            getInfo.Parameters.AddWithValue("@log", card.accountInfo.Login);
             SqlDataReader reader = getInfo.ExecuteReader();
             if(reader.HasRows)
             {
                 while (reader.Read())
                 {
                     card = new AthleteCard(
-                        card.GetID(),
                         (string)reader.GetValue(Constants.ATHLETES_TABLE_SURNAME),
                         (string)reader.GetValue(Constants.ATHLETES_TABLE_NAME),
                         (string)reader.GetValue(Constants.ATHLETES_TABLE_PATRONYMIC),
@@ -38,17 +37,19 @@ namespace AthletesRating.GeneralFunctionality
                         (int)reader.GetValue(Constants.ATHLETES_TABLE_HEIGHT),
                         (int)reader.GetValue(Constants.ATHLETES_TABLE_WEIGHT),
                         (string)reader.GetValue(Constants.ATHLETES_TABLE_ACHIEVEMENTS),
-                        card.GetAccountInfo().GetEmail(),
-                        card.GetAccountInfo().GetLogin(),
-                        card.GetAccountInfo().GetPassword(),
-                        card.GetAccountInfo().IsAdmin()
+                        (string)reader.GetValue(Constants.ATHLETES_TABLE_NATIONALITY),
+                        (string)reader.GetValue(Constants.ATHLETES_TABLE_SPORT_TYPE),
+                        card.accountInfo.Email,
+                        card.accountInfo.Login,
+                        card.accountInfo.Password,
+                        card.accountInfo.isAdmin
                         );
                 }
             }
             else
             {
-                SqlCommand delete = new SqlCommand("DELETE FROM [Accounts] WHERE Id = @id", connection);
-                delete.Parameters.AddWithValue("@id", card.GetID());
+                SqlCommand delete = new SqlCommand("DELETE FROM [Accounts] WHERE Login = @log", connection);
+                delete.Parameters.AddWithValue("@log", card.accountInfo.Login);
                 delete.ExecuteNonQuery();
                 return null;
             }
@@ -59,14 +60,14 @@ namespace AthletesRating.GeneralFunctionality
         public static void FillUserInfo(AthleteCard athlete, params Label[] labels)
         {
             if (athlete == null || labels.Length < 8) return;
-            labels[Constants.LABEL_USERINFO_SURNAME].Text = athlete.GetFullName().GetSurname();
-            labels[Constants.LABEL_USERINFO_NAME].Text = athlete.GetFullName().GetName();
-            labels[Constants.LABEL_USERINFO_PATRONYMIC].Text = athlete.GetFullName().GetPatronymic();
-            labels[Constants.LABEL_USERINFO_BIRTHDATE].Text = athlete.GetBirthDate().ToShortDateString();
-            labels[Constants.LABEL_USERINFO_GENDER].Text = athlete.GetGender();
-            labels[Constants.LABEL_USERINFO_EMAIL].Text = athlete.GetAccountInfo().GetEmail();
-            labels[Constants.LABEL_USERINFO_HEIGHT].Text = athlete.GetHeight().ToString() + " см";
-            labels[Constants.LABEL_USERINFO_WEIGHT].Text = athlete.GetWeight().ToString() + " кг";
+            labels[Constants.LABEL_USERINFO_SURNAME].Text = athlete.fullName.Surname;
+            labels[Constants.LABEL_USERINFO_NAME].Text = athlete.fullName.Name;
+            labels[Constants.LABEL_USERINFO_PATRONYMIC].Text = athlete.fullName.Patronymic;
+            labels[Constants.LABEL_USERINFO_BIRTHDATE].Text = athlete.BirthDate.ToShortDateString();
+            labels[Constants.LABEL_USERINFO_GENDER].Text = athlete.Gender;
+            labels[Constants.LABEL_USERINFO_EMAIL].Text = athlete.accountInfo.Email;
+            labels[Constants.LABEL_USERINFO_HEIGHT].Text = athlete.Height.ToString() + " см";
+            labels[Constants.LABEL_USERINFO_WEIGHT].Text = athlete.Weight.ToString() + " кг";
         }
 
         public static AthleteCard ChangeFullName(AthleteCard card, params TextBox[] boxes)
@@ -75,30 +76,30 @@ namespace AthletesRating.GeneralFunctionality
             SqlCommand command = null;
             if(!String.IsNullOrEmpty(boxes[Constants.CHANGEFULLNAME_SURNAME].Text))
             {
-                command = new SqlCommand("UPDATE Athletes SET Surname = @value WHERE Id = @id", connection);
+                command = new SqlCommand("UPDATE Athletes SET Surname = @value  WHERE Login = @log", connection);
                 command.Parameters.AddWithValue("@value", boxes[Constants.CHANGEFULLNAME_SURNAME].Text);
-                command.Parameters.AddWithValue("@id", card.GetID());
+                command.Parameters.AddWithValue("@log", card.accountInfo.Login);
                 command.ExecuteNonQuery();
 
-                card.SetFullName(new FullName(boxes[Constants.CHANGEFULLNAME_SURNAME].Text, card.GetFullName().GetName(), card.GetFullName().GetPatronymic()));
+                card.SetFullName(new FullName(boxes[Constants.CHANGEFULLNAME_SURNAME].Text, card.fullName.Name, card.fullName.Patronymic));
             }
             if (!String.IsNullOrEmpty(boxes[Constants.CHANGEFULLNAME_NAME].Text))
             {
-                command = new SqlCommand("UPDATE Athletes SET Name = @value WHERE Id = @id", connection);
+                command = new SqlCommand("UPDATE Athletes SET Name = @value  WHERE Login = @log", connection);
                 command.Parameters.AddWithValue("@value", boxes[Constants.CHANGEFULLNAME_NAME].Text);
-                command.Parameters.AddWithValue("@id", card.GetID());
+                command.Parameters.AddWithValue("@log", card.accountInfo.Login);
                 command.ExecuteNonQuery();
 
-                card.SetFullName(new FullName(card.GetFullName().GetSurname(), boxes[Constants.CHANGEFULLNAME_NAME].Text, card.GetFullName().GetPatronymic()));
+                card.SetFullName(new FullName(card.fullName.Surname, boxes[Constants.CHANGEFULLNAME_NAME].Text, card.fullName.Patronymic));
             }
             if (!String.IsNullOrEmpty(boxes[Constants.CHANGEFULLNAME_PATRONYMIC].Text))
             {
-                command = new SqlCommand("UPDATE Athletes SET Patronymic = @value WHERE Id = @id", connection);
+                command = new SqlCommand("UPDATE Athletes SET Patronymic = @value  WHERE Login = @log", connection);
                 command.Parameters.AddWithValue("@value", boxes[Constants.CHANGEFULLNAME_PATRONYMIC].Text);
-                command.Parameters.AddWithValue("@id", card.GetID());
+                command.Parameters.AddWithValue("@log", card.accountInfo.Login);
                 command.ExecuteNonQuery();
 
-                card.SetFullName(new FullName(card.GetFullName().GetSurname(), card.GetFullName().GetName(), boxes[Constants.CHANGEFULLNAME_PATRONYMIC].Text));
+                card.SetFullName(new FullName(card.fullName.Surname, card.fullName.Name, boxes[Constants.CHANGEFULLNAME_PATRONYMIC].Text));
             }
             foreach (TextBox box in boxes) box.Text = "";
             return card;
@@ -132,12 +133,12 @@ namespace AthletesRating.GeneralFunctionality
 
         public static AthleteCard ChangePassword(AthleteCard card, params TextBox[] boxes)
         {
-            if(card.GetAccountInfo().GetPassword() + Security.AddSult() == Security.GenerateHash(boxes[Constants.CHANGEPASSWORD_OLDPASS].Text).ToString() + Security.AddSult())
+            if(card.accountInfo.Password + Security.AddSult() == Security.GenerateHash(boxes[Constants.CHANGEPASSWORD_OLDPASS].Text).ToString() + Security.AddSult())
             {
                 if (connection.State == ConnectionState.Closed) connection.Open();
-                SqlCommand changePass = new SqlCommand("UPDATE Accounts SET Password = @pass WHERE Id = @id", connection);
+                SqlCommand changePass = new SqlCommand("UPDATE Accounts SET Password = @pass WHERE Login = @log", connection);
                 changePass.Parameters.AddWithValue("@pass", Security.GenerateHash(boxes[Constants.CHANGEPASSWORD_NEWPASS].Text).ToString());
-                changePass.Parameters.AddWithValue("@id", card.GetID());
+                changePass.Parameters.AddWithValue("@log", card.accountInfo.Login);
                 changePass.ExecuteNonQuery();
             }
             else
@@ -151,10 +152,10 @@ namespace AthletesRating.GeneralFunctionality
         public static void DeleteAccount(AthleteCard card)
         {
             if (connection.State == ConnectionState.Closed) connection.Open();
-            SqlCommand deleteFromAccounts = new SqlCommand("DELETE FROM Accounts WHERE Id = @id", connection);
-            deleteFromAccounts.Parameters.AddWithValue("@id", card.GetID());
-            SqlCommand deleteFromAthletes = new SqlCommand("DELETE FROM Athletes WHERE Id = @id", connection);
-            deleteFromAthletes.Parameters.AddWithValue("@id", card.GetID());
+            SqlCommand deleteFromAccounts = new SqlCommand("DELETE FROM Accounts WHERE Login = @log", connection);
+            deleteFromAccounts.Parameters.AddWithValue("@log", card.accountInfo.Login);
+            SqlCommand deleteFromAthletes = new SqlCommand("DELETE FROM Athletes WHERE Login = @log", connection);
+            deleteFromAthletes.Parameters.AddWithValue("@log", card.accountInfo.Login);
             deleteFromAccounts.ExecuteNonQuery();
             deleteFromAthletes.ExecuteNonQuery();
         }
@@ -171,17 +172,17 @@ namespace AthletesRating.GeneralFunctionality
             if (connection.State == ConnectionState.Closed) connection.Open();
             if (!String.IsNullOrEmpty(height.Text))
             {
-                SqlCommand heightChange = new SqlCommand("UPDATE Athletes SET Height = @height WHERE Id = @id", connection);
+                SqlCommand heightChange = new SqlCommand("UPDATE Athletes SET Height = @height WHERE Login = @log", connection);
                 heightChange.Parameters.AddWithValue("height", height.Text);
-                heightChange.Parameters.AddWithValue("id", card.GetID());
+                heightChange.Parameters.AddWithValue("@log", card.accountInfo.Login);
                 heightChange.ExecuteNonQuery();
                 card.SetHeight(Convert.ToInt32(height.Text));
             }
             if (!String.IsNullOrEmpty(weight.Text))
             {
-                SqlCommand weightChange = new SqlCommand("UPDATE Athletes SET Weight = @weight WHERE Id = @id", connection);
+                SqlCommand weightChange = new SqlCommand("UPDATE Athletes SET Weight = @weight WHERE Login = @log", connection);
                 weightChange.Parameters.AddWithValue("weight", weight.Text);
-                weightChange.Parameters.AddWithValue("id", card.GetID());
+                weightChange.Parameters.AddWithValue("@log", card.accountInfo.Login);
                 weightChange.ExecuteNonQuery();
                 card.SetWeight(Convert.ToInt32(weight.Text));
             }
@@ -194,9 +195,9 @@ namespace AthletesRating.GeneralFunctionality
         {
             if (connection.State == ConnectionState.Closed) connection.Open();
             
-                SqlCommand birthDateChange = new SqlCommand("UPDATE Athletes SET BirthDate = @birthDate WHERE Id = @id", connection);
+                SqlCommand birthDateChange = new SqlCommand("UPDATE Athletes SET BirthDate = @birthDate WHERE Login = @log", connection);
                 birthDateChange.Parameters.AddWithValue("birthDate", timePicker.Value);
-                birthDateChange.Parameters.AddWithValue("id", card.GetID());
+                birthDateChange.Parameters.AddWithValue("@log", card.accountInfo.Login);
                 birthDateChange.ExecuteNonQuery();
                 card.SetBirthDate(timePicker.Value);
             

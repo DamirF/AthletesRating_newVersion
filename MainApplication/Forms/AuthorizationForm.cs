@@ -95,7 +95,6 @@ namespace SportsmansRating
                     {
                         athlete = new AthleteCard
                             (
-                                (int)accountsReader.GetValue(Constants.ID_FIELD),
                                 (string)accountsReader.GetValue(Constants.ACCOUNT_TABLE_EMAIL),
                                 (string)accountsReader.GetValue(Constants.ACCOUNT_TABLE_LOGIN),
                                 (string)accountsReader.GetValue(Constants.ACCOUNT_TABLE_PASSWORD),
@@ -248,6 +247,43 @@ namespace SportsmansRating
         private void AuthorizationForm_FormClosed(object sender, FormClosedEventArgs e)
         {
             Application.Exit();
+        }
+
+        private void passRecView_MouseDown(object sender, MouseEventArgs e)
+        {
+            newPassTB.UseSystemPasswordChar = false;
+        }
+
+        private void passRecView_MouseUp(object sender, MouseEventArgs e)
+        {
+            newPassTB.UseSystemPasswordChar = true;
+        }
+
+        private void passRecConView_MouseDown(object sender, MouseEventArgs e)
+        {
+            newPassConTB.UseSystemPasswordChar=false;
+        }
+
+        private void passRecConView_MouseUp(object sender, MouseEventArgs e)
+        {
+            newPassConTB.UseSystemPasswordChar = true;
+        }
+
+        private void passView_MouseDown(object sender, MouseEventArgs e)
+        {
+            passwordTB.UseSystemPasswordChar = false;
+        }
+
+        private void passView_MouseUp(object sender, MouseEventArgs e)
+        {
+            passwordTB.UseSystemPasswordChar = true;
+        }
+
+        private void withoutAccBut_Click(object sender, EventArgs e)
+        {
+            MainForm mainForm = new MainForm("withoutAccount");
+            mainForm.Show();
+            Hide();
         }
 
         private void timer_Tick(object sender, EventArgs e)
