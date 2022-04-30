@@ -28,8 +28,28 @@ namespace MainApplication.ChildForms.Settings
             newPassError.Text = "";
             BirthDateChange.Value = this.athlete.BirthDate;
 
-            if (this.athlete.accountInfo.GetEmail() == Constants.MAIN_ADMIN) 
+            if (this.athlete.accountInfo.Email == Constants.MAIN_ADMIN) 
                 deleteAccountBut.Enabled = false;
+
+            ComboBoxStuff(ref natCB, ref Constants.Countries);
+            if(!String.IsNullOrEmpty(athlete.nationality))natCB.SelectedIndex = natCB.Items.IndexOf(athlete.nationality);
+            else natCB.SelectedIndex = 0;
+
+            ComboBoxStuff(ref STCB, ref Constants.SportTypes);
+            if (!String.IsNullOrEmpty(athlete.sportType)) STCB.SelectedIndex = STCB.Items.IndexOf(athlete.sportType);
+            else STCB.SelectedIndex = 0;
+
+            natCB.Text = natCB.Items[natCB.SelectedIndex].ToString();
+            STCB.Text = STCB.Items[STCB.SelectedIndex].ToString();
+        }
+
+        private void ComboBoxStuff(ref ComboBox cb, ref string[] data)
+        {
+            cb.Items.Clear();
+            for(int i = 0; i < data.Length; i++)
+            {
+                cb.Items.Add(data[i]);
+            }
         }
 
         private void Close_Click(object sender, EventArgs e)
@@ -37,9 +57,15 @@ namespace MainApplication.ChildForms.Settings
             Close();
         }
 
+        private void HeightChangeTB_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!Char.IsNumber(e.KeyChar)) e.Handled = true;
+        }
+
+        #region Click Events
         private void deleteAccountBut_Click(object sender, EventArgs e)
         {
-            if (athlete.accountInfo.GetPassword() + Security.AddSult() == Security.GenerateHash(deleteAccountPassTB.Text) + Security.AddSult())
+            if (athlete.accountInfo.Password + Security.AddSult() == Security.GenerateHash(deleteAccountPassTB.Text) + Security.AddSult())
             {
                 Functionality.DeleteAccount(athlete);
                 Application.Exit();
@@ -52,7 +78,7 @@ namespace MainApplication.ChildForms.Settings
 
         private void nameChangeBut_Click(object sender, EventArgs e)
         {
-            if (Security.GenerateHash(nameChangeConfirmTB.Text) + Security.AddSult() == athlete.accountInfo.GetPassword() + Security.AddSult())
+            if (Security.GenerateHash(nameChangeConfirmTB.Text) + Security.AddSult() == athlete.accountInfo.Password + Security.AddSult())
             {
                 athlete = Functionality.ChangeFullName(athlete, lastNameChangeTB, firstNameChangeTB, patronymicChangeTB);
                 nameChangeConfirmTB.Text = "";
@@ -61,11 +87,6 @@ namespace MainApplication.ChildForms.Settings
             {
                 MessageBox.Show("Неверный пароль!");
             }
-        }
-
-        private void HeightChangeTB_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (!Char.IsNumber(e.KeyChar)) e.Handled = true;
         }
 
         private void ConfirmParametersChange_Click(object sender, EventArgs e)
@@ -77,6 +98,52 @@ namespace MainApplication.ChildForms.Settings
         private void button1_Click(object sender, EventArgs e)
         {
             athlete = Functionality.BirthDateChange(athlete, BirthDateChange);
+        }
+
+        private void passChangeBut_Click(object sender, EventArgs e)
+        {
+            if (passCorrect && passConCorrect)
+            {
+                athlete = Functionality.ChangePassword(athlete, oldPassTB, newPassTB, newPassConfirmTB);
+            }
+        }
+
+        private void natChangeBut_Click(object sender, EventArgs e)
+        {
+            if (natCB.SelectedIndex == -1) return;
+            athlete = Functionality.NationalityChange(athlete, natCB);
+        }
+
+        private void spChangeBut_Click(object sender, EventArgs e)
+        {
+            if (STCB.SelectedIndex == -1) return;
+            athlete = Functionality.SportTypeChange(athlete, STCB);
+        }
+        #endregion
+
+        #region TextChanged Events
+        private void newPassConfirmTB_TextChanged(object sender, EventArgs e)
+        {
+            if (!passCheck.IsMatch(newPassConfirmTB.Text) || newPassConfirmTB.Text != newPassTB.Text)
+            {
+                passConCorrect = false;
+                newPassConError.Text = "Пароли не совпадают!";
+            }
+            else
+            {
+                passConCorrect = true;
+                newPassConError.Text = "";
+            }
+            if (newPassConfirmTB.TextLength == 0)
+            {
+                passConCorrect = false;
+                newPassConError.Text = "";
+            }
+        }
+
+        private void natCB_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
         }
 
         private void newPassTB_TextChanged(object sender, EventArgs e)
@@ -97,32 +164,6 @@ namespace MainApplication.ChildForms.Settings
                 newPassError.Text = "";
             }
         }
-
-        private void passChangeBut_Click(object sender, EventArgs e)
-        {
-            if (passCorrect && passConCorrect)
-            {
-                athlete = Functionality.ChangePassword(athlete, oldPassTB, newPassTB, newPassConfirmTB);
-            }
-        }
-
-        private void newPassConfirmTB_TextChanged(object sender, EventArgs e)
-        {
-            if (!passCheck.IsMatch(newPassConfirmTB.Text) || newPassConfirmTB.Text != newPassTB.Text)
-            {
-                passConCorrect = false;
-                newPassConError.Text = "Пароли не совпадают!";
-            }
-            else
-            {
-                passConCorrect = true;
-                newPassConError.Text = "";
-            }
-            if (newPassConfirmTB.TextLength == 0)
-            {
-                passConCorrect = false;
-                newPassConError.Text = "";
-            }
-        }
+        #endregion
     }
 }

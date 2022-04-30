@@ -87,6 +87,32 @@ public class AthleteCard
 		this.nationality = nationality;
 		this.sportType = sportType;
 	}
+
+	/// <summary>
+	/// Конструктор для поисковика
+	/// </summary>
+	/// <param name="surname"></param>
+	/// <param name="name"></param>
+	/// <param name="patronymic"></param>
+	/// <param name="gender"></param>
+	/// <param name="birthDate"></param>
+	/// <param name="height"></param>
+	/// <param name="weight"></param>
+	/// <param name="medals"></param>
+	/// <param name="nationality"></param>
+	/// <param name="sportType"></param>
+	public AthleteCard(string surname, string name, string patronymic, string gender, DateTime birthDate, int height, int weight, string medals, string nationality, string sportType)
+    {
+		accountInfo = new Account("", "", "", false);
+		fullName = new FullName(surname, name, patronymic);
+		Gender = gender;
+		BirthDate = birthDate;
+		Height = height;
+		Weight = weight;
+		AthleteMedals = DeserializeAchievements(medals);
+		this.nationality = nationality;
+		this.sportType = sportType;
+	}
     #endregion
 
     #region Setters
@@ -97,6 +123,9 @@ public class AthleteCard
 	public void SetBirthDate(DateTime newBirthDate) => BirthDate = newBirthDate;
 	public void SetHeight(int height) => Height = height;
 	public void SetWeight(int weight) => Weight = weight;
+	public void SetSportType(string _sportType) => sportType = _sportType;
+	public void SetNationality(string _nationality) => nationality = _nationality;
+
     #endregion
     public List<Medal> GetAchievements() => AthleteMedals;
 
@@ -104,7 +133,7 @@ public class AthleteCard
 	{
 		int age = DateTime.Now.Year - BirthDate.Year;
 		if (DateTime.Now.DayOfYear < BirthDate.DayOfYear)
-			age++;
+			age--;
 		return age;
 	}
 

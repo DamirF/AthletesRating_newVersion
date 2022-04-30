@@ -28,341 +28,455 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.panelInfo = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.Header = new System.Windows.Forms.Label();
-            this.Close = new System.Windows.Forms.Button();
-            this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
-            this.profileTextSurname = new System.Windows.Forms.Label();
-            this.profileTextName = new System.Windows.Forms.Label();
-            this.profileTextPatronymic = new System.Windows.Forms.Label();
-            this.profileTextBirthDate = new System.Windows.Forms.Label();
-            this.profileTextGender = new System.Windows.Forms.Label();
-            this.profileTextEmail = new System.Windows.Forms.Label();
-            this.profileTextHeight = new System.Windows.Forms.Label();
-            this.profileTextWeight = new System.Windows.Forms.Label();
-            this.profileInfoSurname = new System.Windows.Forms.Label();
-            this.profileInfoName = new System.Windows.Forms.Label();
-            this.profileInfoPatronymic = new System.Windows.Forms.Label();
-            this.profileInfoBirthDate = new System.Windows.Forms.Label();
-            this.profileInfoGender = new System.Windows.Forms.Label();
-            this.profileInfoEmail = new System.Windows.Forms.Label();
-            this.profileInfoHeight = new System.Windows.Forms.Label();
-            this.profileInfoWeight = new System.Windows.Forms.Label();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.UserInfoRating = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.UserInfoEmail = new System.Windows.Forms.Label();
+            this.label15 = new System.Windows.Forms.Label();
+            this.UserInfoWeight = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.UserInfoHeight = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.UserInfoSportType = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.UserInfoNationality = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.UserInfoAge = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.UserInfoBirthDate = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.UserInfoGender = new System.Windows.Forms.Label();
+            this.UserInfoPatronymic = new System.Windows.Forms.Label();
+            this.UserInfoName = new System.Windows.Forms.Label();
+            this.UserInfoSurname = new System.Windows.Forms.Label();
+            this.UserInfoPhoto = new System.Windows.Forms.PictureBox();
+            this.panelControls = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.EditAchivement = new yt_DesignUI.yt_Button();
+            this.DeleteAchivementBtn = new yt_DesignUI.yt_Button();
+            this.AddAchivementBtn = new yt_DesignUI.yt_Button();
+            this.panelAchivements = new System.Windows.Forms.Panel();
+            this.panelInfo.SuspendLayout();
             this.panel1.SuspendLayout();
-            this.tableLayoutPanel1.SuspendLayout();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.UserInfoPhoto)).BeginInit();
+            this.panelControls.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // panelInfo
+            // 
+            this.panelInfo.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panelInfo.Controls.Add(this.panel1);
+            this.panelInfo.Controls.Add(this.UserInfoGender);
+            this.panelInfo.Controls.Add(this.UserInfoPatronymic);
+            this.panelInfo.Controls.Add(this.UserInfoName);
+            this.panelInfo.Controls.Add(this.UserInfoSurname);
+            this.panelInfo.Controls.Add(this.UserInfoPhoto);
+            this.panelInfo.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panelInfo.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.panelInfo.Location = new System.Drawing.Point(0, 0);
+            this.panelInfo.Name = "panelInfo";
+            this.panelInfo.Size = new System.Drawing.Size(835, 846);
+            this.panelInfo.TabIndex = 0;
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(115)))), ((int)(((byte)(149)))));
-            this.panel1.Controls.Add(this.Header);
-            this.panel1.Controls.Add(this.Close);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel1.Controls.Add(this.panel2);
+            this.panel1.Controls.Add(this.UserInfoEmail);
+            this.panel1.Controls.Add(this.label15);
+            this.panel1.Controls.Add(this.UserInfoWeight);
+            this.panel1.Controls.Add(this.label13);
+            this.panel1.Controls.Add(this.UserInfoHeight);
+            this.panel1.Controls.Add(this.label11);
+            this.panel1.Controls.Add(this.UserInfoSportType);
+            this.panel1.Controls.Add(this.label7);
+            this.panel1.Controls.Add(this.UserInfoNationality);
+            this.panel1.Controls.Add(this.label5);
+            this.panel1.Controls.Add(this.UserInfoAge);
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.UserInfoBirthDate);
+            this.panel1.Controls.Add(this.label1);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel1.Location = new System.Drawing.Point(0, 444);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1200, 40);
-            this.panel1.TabIndex = 0;
+            this.panel1.Size = new System.Drawing.Size(831, 398);
+            this.panel1.TabIndex = 6;
             // 
-            // Header
+            // panel2
             // 
-            this.Header.AutoSize = true;
-            this.Header.Dock = System.Windows.Forms.DockStyle.Left;
-            this.Header.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.Header.Location = new System.Drawing.Point(0, 0);
-            this.Header.Name = "Header";
-            this.Header.Size = new System.Drawing.Size(192, 35);
-            this.Header.TabIndex = 2;
-            this.Header.Text = "Мой Профиль";
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel2.Controls.Add(this.UserInfoRating);
+            this.panel2.Controls.Add(this.label9);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel2.Location = new System.Drawing.Point(0, 321);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(827, 73);
+            this.panel2.TabIndex = 16;
             // 
-            // Close
+            // UserInfoRating
             // 
-            this.Close.Dock = System.Windows.Forms.DockStyle.Right;
-            this.Close.FlatAppearance.BorderSize = 0;
-            this.Close.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Red;
-            this.Close.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Close.Location = new System.Drawing.Point(1160, 0);
-            this.Close.Name = "Close";
-            this.Close.Size = new System.Drawing.Size(40, 40);
-            this.Close.TabIndex = 0;
-            this.Close.Text = "<-";
-            this.Close.UseVisualStyleBackColor = true;
-            this.Close.Click += new System.EventHandler(this.Close_Click);
+            this.UserInfoRating.AutoSize = true;
+            this.UserInfoRating.Location = new System.Drawing.Point(228, 20);
+            this.UserInfoRating.Name = "UserInfoRating";
+            this.UserInfoRating.Size = new System.Drawing.Size(30, 35);
+            this.UserInfoRating.TabIndex = 11;
+            this.UserInfoRating.Text = "...";
             // 
-            // tableLayoutPanel1
+            // label9
             // 
-            this.tableLayoutPanel1.ColumnCount = 4;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 150F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 40F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 60F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 150F));
-            this.tableLayoutPanel1.Controls.Add(this.profileTextSurname, 1, 1);
-            this.tableLayoutPanel1.Controls.Add(this.profileTextName, 1, 2);
-            this.tableLayoutPanel1.Controls.Add(this.profileTextPatronymic, 1, 3);
-            this.tableLayoutPanel1.Controls.Add(this.profileTextBirthDate, 1, 4);
-            this.tableLayoutPanel1.Controls.Add(this.profileTextGender, 1, 5);
-            this.tableLayoutPanel1.Controls.Add(this.profileTextEmail, 1, 6);
-            this.tableLayoutPanel1.Controls.Add(this.profileTextHeight, 1, 7);
-            this.tableLayoutPanel1.Controls.Add(this.profileTextWeight, 1, 8);
-            this.tableLayoutPanel1.Controls.Add(this.profileInfoSurname, 2, 1);
-            this.tableLayoutPanel1.Controls.Add(this.profileInfoName, 2, 2);
-            this.tableLayoutPanel1.Controls.Add(this.profileInfoPatronymic, 2, 3);
-            this.tableLayoutPanel1.Controls.Add(this.profileInfoBirthDate, 2, 4);
-            this.tableLayoutPanel1.Controls.Add(this.profileInfoGender, 2, 5);
-            this.tableLayoutPanel1.Controls.Add(this.profileInfoEmail, 2, 6);
-            this.tableLayoutPanel1.Controls.Add(this.profileInfoHeight, 2, 7);
-            this.tableLayoutPanel1.Controls.Add(this.profileInfoWeight, 2, 8);
-            this.tableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel1.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.tableLayoutPanel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(91)))), ((int)(((byte)(115)))), ((int)(((byte)(149)))));
-            this.tableLayoutPanel1.Location = new System.Drawing.Point(0, 40);
-            this.tableLayoutPanel1.Name = "tableLayoutPanel1";
-            this.tableLayoutPanel1.RowCount = 10;
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
-            this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(1200, 860);
-            this.tableLayoutPanel1.TabIndex = 1;
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(24, 20);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(111, 35);
+            this.label9.TabIndex = 10;
+            this.label9.Text = "Рейтинг:";
             // 
-            // profileTextSurname
+            // UserInfoEmail
             // 
-            this.profileTextSurname.AutoSize = true;
-            this.profileTextSurname.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.profileTextSurname.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.profileTextSurname.Location = new System.Drawing.Point(153, 40);
-            this.profileTextSurname.Name = "profileTextSurname";
-            this.profileTextSurname.Size = new System.Drawing.Size(354, 97);
-            this.profileTextSurname.TabIndex = 0;
-            this.profileTextSurname.Text = "Фамилия:";
-            this.profileTextSurname.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.UserInfoEmail.AutoSize = true;
+            this.UserInfoEmail.Location = new System.Drawing.Point(228, 21);
+            this.UserInfoEmail.Name = "UserInfoEmail";
+            this.UserInfoEmail.Size = new System.Drawing.Size(30, 35);
+            this.UserInfoEmail.TabIndex = 15;
+            this.UserInfoEmail.Text = "...";
             // 
-            // profileTextName
+            // label15
             // 
-            this.profileTextName.AutoSize = true;
-            this.profileTextName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.profileTextName.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.profileTextName.Location = new System.Drawing.Point(153, 137);
-            this.profileTextName.Name = "profileTextName";
-            this.profileTextName.Size = new System.Drawing.Size(354, 97);
-            this.profileTextName.TabIndex = 1;
-            this.profileTextName.Text = "Имя:";
-            this.profileTextName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label15.AutoSize = true;
+            this.label15.Location = new System.Drawing.Point(24, 21);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(90, 35);
+            this.label15.TabIndex = 14;
+            this.label15.Text = "E-mail:";
             // 
-            // profileTextPatronymic
+            // UserInfoWeight
             // 
-            this.profileTextPatronymic.AutoSize = true;
-            this.profileTextPatronymic.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.profileTextPatronymic.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.profileTextPatronymic.Location = new System.Drawing.Point(153, 234);
-            this.profileTextPatronymic.Name = "profileTextPatronymic";
-            this.profileTextPatronymic.Size = new System.Drawing.Size(354, 97);
-            this.profileTextPatronymic.TabIndex = 2;
-            this.profileTextPatronymic.Text = "Отчество:";
-            this.profileTextPatronymic.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.UserInfoWeight.AutoSize = true;
+            this.UserInfoWeight.Location = new System.Drawing.Point(228, 274);
+            this.UserInfoWeight.Name = "UserInfoWeight";
+            this.UserInfoWeight.Size = new System.Drawing.Size(30, 35);
+            this.UserInfoWeight.TabIndex = 13;
+            this.UserInfoWeight.Text = "...";
             // 
-            // profileTextBirthDate
+            // label13
             // 
-            this.profileTextBirthDate.AutoSize = true;
-            this.profileTextBirthDate.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.profileTextBirthDate.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.profileTextBirthDate.Location = new System.Drawing.Point(153, 331);
-            this.profileTextBirthDate.Name = "profileTextBirthDate";
-            this.profileTextBirthDate.Size = new System.Drawing.Size(354, 97);
-            this.profileTextBirthDate.TabIndex = 3;
-            this.profileTextBirthDate.Text = "Дата рождения:";
-            this.profileTextBirthDate.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(24, 274);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(59, 35);
+            this.label13.TabIndex = 12;
+            this.label13.Text = "Вес:";
             // 
-            // profileTextGender
+            // UserInfoHeight
             // 
-            this.profileTextGender.AutoSize = true;
-            this.profileTextGender.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.profileTextGender.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.profileTextGender.Location = new System.Drawing.Point(153, 428);
-            this.profileTextGender.Name = "profileTextGender";
-            this.profileTextGender.Size = new System.Drawing.Size(354, 97);
-            this.profileTextGender.TabIndex = 4;
-            this.profileTextGender.Text = "Пол:";
-            this.profileTextGender.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.UserInfoHeight.AutoSize = true;
+            this.UserInfoHeight.Location = new System.Drawing.Point(228, 221);
+            this.UserInfoHeight.Name = "UserInfoHeight";
+            this.UserInfoHeight.Size = new System.Drawing.Size(30, 35);
+            this.UserInfoHeight.TabIndex = 11;
+            this.UserInfoHeight.Text = "...";
             // 
-            // profileTextEmail
+            // label11
             // 
-            this.profileTextEmail.AutoSize = true;
-            this.profileTextEmail.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.profileTextEmail.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.profileTextEmail.Location = new System.Drawing.Point(153, 525);
-            this.profileTextEmail.Name = "profileTextEmail";
-            this.profileTextEmail.Size = new System.Drawing.Size(354, 97);
-            this.profileTextEmail.TabIndex = 5;
-            this.profileTextEmail.Text = "E-mail:";
-            this.profileTextEmail.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(24, 221);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(71, 35);
+            this.label11.TabIndex = 10;
+            this.label11.Text = "Рост:";
             // 
-            // profileTextHeight
+            // UserInfoSportType
             // 
-            this.profileTextHeight.AutoSize = true;
-            this.profileTextHeight.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.profileTextHeight.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.profileTextHeight.Location = new System.Drawing.Point(153, 622);
-            this.profileTextHeight.Name = "profileTextHeight";
-            this.profileTextHeight.Size = new System.Drawing.Size(354, 97);
-            this.profileTextHeight.TabIndex = 6;
-            this.profileTextHeight.Text = "Рост:";
-            this.profileTextHeight.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.UserInfoSportType.AutoSize = true;
+            this.UserInfoSportType.Location = new System.Drawing.Point(228, 169);
+            this.UserInfoSportType.Name = "UserInfoSportType";
+            this.UserInfoSportType.Size = new System.Drawing.Size(30, 35);
+            this.UserInfoSportType.TabIndex = 7;
+            this.UserInfoSportType.Text = "...";
             // 
-            // profileTextWeight
+            // label7
             // 
-            this.profileTextWeight.AutoSize = true;
-            this.profileTextWeight.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.profileTextWeight.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.profileTextWeight.Location = new System.Drawing.Point(153, 719);
-            this.profileTextWeight.Name = "profileTextWeight";
-            this.profileTextWeight.Size = new System.Drawing.Size(354, 97);
-            this.profileTextWeight.TabIndex = 7;
-            this.profileTextWeight.Text = "Вес:";
-            this.profileTextWeight.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(24, 169);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(149, 35);
+            this.label7.TabIndex = 6;
+            this.label7.Text = "Вид спорта:";
             // 
-            // profileInfoSurname
+            // UserInfoNationality
             // 
-            this.profileInfoSurname.AutoSize = true;
-            this.profileInfoSurname.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.profileInfoSurname.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.profileInfoSurname.Location = new System.Drawing.Point(513, 40);
-            this.profileInfoSurname.Name = "profileInfoSurname";
-            this.profileInfoSurname.Size = new System.Drawing.Size(534, 97);
-            this.profileInfoSurname.TabIndex = 8;
-            this.profileInfoSurname.Text = "label9";
-            this.profileInfoSurname.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.UserInfoNationality.AutoSize = true;
+            this.UserInfoNationality.Location = new System.Drawing.Point(228, 122);
+            this.UserInfoNationality.Name = "UserInfoNationality";
+            this.UserInfoNationality.Size = new System.Drawing.Size(30, 35);
+            this.UserInfoNationality.TabIndex = 5;
+            this.UserInfoNationality.Text = "...";
             // 
-            // profileInfoName
+            // label5
             // 
-            this.profileInfoName.AutoSize = true;
-            this.profileInfoName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.profileInfoName.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.profileInfoName.Location = new System.Drawing.Point(513, 137);
-            this.profileInfoName.Name = "profileInfoName";
-            this.profileInfoName.Size = new System.Drawing.Size(534, 97);
-            this.profileInfoName.TabIndex = 9;
-            this.profileInfoName.Text = "label10";
-            this.profileInfoName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(24, 122);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(170, 35);
+            this.label5.TabIndex = 4;
+            this.label5.Text = "Гражданство:";
             // 
-            // profileInfoPatronymic
+            // UserInfoAge
             // 
-            this.profileInfoPatronymic.AutoSize = true;
-            this.profileInfoPatronymic.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.profileInfoPatronymic.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.profileInfoPatronymic.Location = new System.Drawing.Point(513, 234);
-            this.profileInfoPatronymic.Name = "profileInfoPatronymic";
-            this.profileInfoPatronymic.Size = new System.Drawing.Size(534, 97);
-            this.profileInfoPatronymic.TabIndex = 10;
-            this.profileInfoPatronymic.Text = "label11";
-            this.profileInfoPatronymic.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.UserInfoAge.AutoSize = true;
+            this.UserInfoAge.Location = new System.Drawing.Point(587, 69);
+            this.UserInfoAge.Name = "UserInfoAge";
+            this.UserInfoAge.Size = new System.Drawing.Size(30, 35);
+            this.UserInfoAge.TabIndex = 3;
+            this.UserInfoAge.Text = "...";
             // 
-            // profileInfoBirthDate
+            // label3
             // 
-            this.profileInfoBirthDate.AutoSize = true;
-            this.profileInfoBirthDate.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.profileInfoBirthDate.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.profileInfoBirthDate.Location = new System.Drawing.Point(513, 331);
-            this.profileInfoBirthDate.Name = "profileInfoBirthDate";
-            this.profileInfoBirthDate.Size = new System.Drawing.Size(534, 97);
-            this.profileInfoBirthDate.TabIndex = 11;
-            this.profileInfoBirthDate.Text = "label12";
-            this.profileInfoBirthDate.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(471, 69);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(110, 35);
+            this.label3.TabIndex = 2;
+            this.label3.Text = "Возраст:";
             // 
-            // profileInfoGender
+            // UserInfoBirthDate
             // 
-            this.profileInfoGender.AutoSize = true;
-            this.profileInfoGender.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.profileInfoGender.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.profileInfoGender.Location = new System.Drawing.Point(513, 428);
-            this.profileInfoGender.Name = "profileInfoGender";
-            this.profileInfoGender.Size = new System.Drawing.Size(534, 97);
-            this.profileInfoGender.TabIndex = 12;
-            this.profileInfoGender.Text = "label13";
-            this.profileInfoGender.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.UserInfoBirthDate.AutoSize = true;
+            this.UserInfoBirthDate.Location = new System.Drawing.Point(228, 69);
+            this.UserInfoBirthDate.Name = "UserInfoBirthDate";
+            this.UserInfoBirthDate.Size = new System.Drawing.Size(30, 35);
+            this.UserInfoBirthDate.TabIndex = 1;
+            this.UserInfoBirthDate.Text = "...";
             // 
-            // profileInfoEmail
+            // label1
             // 
-            this.profileInfoEmail.AutoSize = true;
-            this.profileInfoEmail.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.profileInfoEmail.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.profileInfoEmail.Location = new System.Drawing.Point(513, 525);
-            this.profileInfoEmail.Name = "profileInfoEmail";
-            this.profileInfoEmail.Size = new System.Drawing.Size(534, 97);
-            this.profileInfoEmail.TabIndex = 13;
-            this.profileInfoEmail.Text = "label14";
-            this.profileInfoEmail.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(24, 69);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(198, 35);
+            this.label1.TabIndex = 0;
+            this.label1.Text = "Дата рождения:";
             // 
-            // profileInfoHeight
+            // UserInfoGender
             // 
-            this.profileInfoHeight.AutoSize = true;
-            this.profileInfoHeight.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.profileInfoHeight.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.profileInfoHeight.Location = new System.Drawing.Point(513, 622);
-            this.profileInfoHeight.Name = "profileInfoHeight";
-            this.profileInfoHeight.Size = new System.Drawing.Size(534, 97);
-            this.profileInfoHeight.TabIndex = 14;
-            this.profileInfoHeight.Text = "label15";
-            this.profileInfoHeight.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.UserInfoGender.AutoSize = true;
+            this.UserInfoGender.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.UserInfoGender.Location = new System.Drawing.Point(346, 388);
+            this.UserInfoGender.Name = "UserInfoGender";
+            this.UserInfoGender.Size = new System.Drawing.Size(30, 35);
+            this.UserInfoGender.TabIndex = 5;
+            this.UserInfoGender.Text = "...";
             // 
-            // profileInfoWeight
+            // UserInfoPatronymic
             // 
-            this.profileInfoWeight.AutoSize = true;
-            this.profileInfoWeight.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.profileInfoWeight.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.profileInfoWeight.Location = new System.Drawing.Point(513, 719);
-            this.profileInfoWeight.Name = "profileInfoWeight";
-            this.profileInfoWeight.Size = new System.Drawing.Size(534, 97);
-            this.profileInfoWeight.TabIndex = 15;
-            this.profileInfoWeight.Text = "label16";
-            this.profileInfoWeight.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.UserInfoPatronymic.AutoSize = true;
+            this.UserInfoPatronymic.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.UserInfoPatronymic.Font = new System.Drawing.Font("Segoe UI", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.UserInfoPatronymic.Location = new System.Drawing.Point(346, 251);
+            this.UserInfoPatronymic.Name = "UserInfoPatronymic";
+            this.UserInfoPatronymic.Size = new System.Drawing.Size(64, 69);
+            this.UserInfoPatronymic.TabIndex = 4;
+            this.UserInfoPatronymic.Text = "...";
+            // 
+            // UserInfoName
+            // 
+            this.UserInfoName.AutoSize = true;
+            this.UserInfoName.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.UserInfoName.Font = new System.Drawing.Font("Segoe UI", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.UserInfoName.Location = new System.Drawing.Point(346, 146);
+            this.UserInfoName.Name = "UserInfoName";
+            this.UserInfoName.Size = new System.Drawing.Size(64, 69);
+            this.UserInfoName.TabIndex = 3;
+            this.UserInfoName.Text = "...";
+            // 
+            // UserInfoSurname
+            // 
+            this.UserInfoSurname.AutoSize = true;
+            this.UserInfoSurname.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.UserInfoSurname.Font = new System.Drawing.Font("Segoe UI", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.UserInfoSurname.Location = new System.Drawing.Point(346, 40);
+            this.UserInfoSurname.Name = "UserInfoSurname";
+            this.UserInfoSurname.Size = new System.Drawing.Size(64, 69);
+            this.UserInfoSurname.TabIndex = 2;
+            this.UserInfoSurname.Text = "...";
+            // 
+            // UserInfoPhoto
+            // 
+            this.UserInfoPhoto.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.UserInfoPhoto.Location = new System.Drawing.Point(24, 23);
+            this.UserInfoPhoto.Name = "UserInfoPhoto";
+            this.UserInfoPhoto.Size = new System.Drawing.Size(300, 400);
+            this.UserInfoPhoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.UserInfoPhoto.TabIndex = 1;
+            this.UserInfoPhoto.TabStop = false;
+            // 
+            // panelControls
+            // 
+            this.panelControls.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panelControls.Controls.Add(this.panel3);
+            this.panelControls.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panelControls.Location = new System.Drawing.Point(835, 746);
+            this.panelControls.Name = "panelControls";
+            this.panelControls.Size = new System.Drawing.Size(665, 100);
+            this.panelControls.TabIndex = 1;
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.EditAchivement);
+            this.panel3.Controls.Add(this.DeleteAchivementBtn);
+            this.panel3.Controls.Add(this.AddAchivementBtn);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel3.Location = new System.Drawing.Point(23, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(638, 96);
+            this.panel3.TabIndex = 0;
+            // 
+            // EditAchivement
+            // 
+            this.EditAchivement.BackColor = System.Drawing.Color.Black;
+            this.EditAchivement.BackColorAdditional = System.Drawing.Color.Gray;
+            this.EditAchivement.BackColorGradientEnabled = false;
+            this.EditAchivement.BackColorGradientMode = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
+            this.EditAchivement.BorderColor = System.Drawing.Color.Tomato;
+            this.EditAchivement.BorderColorEnabled = false;
+            this.EditAchivement.BorderColorOnHover = System.Drawing.Color.Tomato;
+            this.EditAchivement.BorderColorOnHoverEnabled = false;
+            this.EditAchivement.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.EditAchivement.ForeColor = System.Drawing.Color.White;
+            this.EditAchivement.Location = new System.Drawing.Point(239, 21);
+            this.EditAchivement.Name = "EditAchivement";
+            this.EditAchivement.RippleColor = System.Drawing.Color.Black;
+            this.EditAchivement.Rounding = 50;
+            this.EditAchivement.RoundingEnable = true;
+            this.EditAchivement.Size = new System.Drawing.Size(174, 57);
+            this.EditAchivement.TabIndex = 2;
+            this.EditAchivement.Text = "Редактировать достижение";
+            this.EditAchivement.TextHover = null;
+            this.EditAchivement.UseDownPressEffectOnClick = false;
+            this.EditAchivement.UseRippleEffect = true;
+            this.EditAchivement.UseZoomEffectOnHover = true;
+            // 
+            // DeleteAchivementBtn
+            // 
+            this.DeleteAchivementBtn.BackColor = System.Drawing.Color.Black;
+            this.DeleteAchivementBtn.BackColorAdditional = System.Drawing.Color.Gray;
+            this.DeleteAchivementBtn.BackColorGradientEnabled = false;
+            this.DeleteAchivementBtn.BackColorGradientMode = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
+            this.DeleteAchivementBtn.BorderColor = System.Drawing.Color.Tomato;
+            this.DeleteAchivementBtn.BorderColorEnabled = false;
+            this.DeleteAchivementBtn.BorderColorOnHover = System.Drawing.Color.Tomato;
+            this.DeleteAchivementBtn.BorderColorOnHoverEnabled = false;
+            this.DeleteAchivementBtn.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.DeleteAchivementBtn.ForeColor = System.Drawing.Color.White;
+            this.DeleteAchivementBtn.Location = new System.Drawing.Point(438, 21);
+            this.DeleteAchivementBtn.Name = "DeleteAchivementBtn";
+            this.DeleteAchivementBtn.RippleColor = System.Drawing.Color.Black;
+            this.DeleteAchivementBtn.Rounding = 50;
+            this.DeleteAchivementBtn.RoundingEnable = true;
+            this.DeleteAchivementBtn.Size = new System.Drawing.Size(174, 57);
+            this.DeleteAchivementBtn.TabIndex = 1;
+            this.DeleteAchivementBtn.Text = "Удалить достижение";
+            this.DeleteAchivementBtn.TextHover = "";
+            this.DeleteAchivementBtn.UseDownPressEffectOnClick = false;
+            this.DeleteAchivementBtn.UseRippleEffect = true;
+            this.DeleteAchivementBtn.UseZoomEffectOnHover = true;
+            // 
+            // AddAchivementBtn
+            // 
+            this.AddAchivementBtn.BackColor = System.Drawing.Color.Black;
+            this.AddAchivementBtn.BackColorAdditional = System.Drawing.Color.Gray;
+            this.AddAchivementBtn.BackColorGradientEnabled = false;
+            this.AddAchivementBtn.BackColorGradientMode = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
+            this.AddAchivementBtn.BorderColor = System.Drawing.Color.Tomato;
+            this.AddAchivementBtn.BorderColorEnabled = false;
+            this.AddAchivementBtn.BorderColorOnHover = System.Drawing.Color.Tomato;
+            this.AddAchivementBtn.BorderColorOnHoverEnabled = false;
+            this.AddAchivementBtn.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.AddAchivementBtn.ForeColor = System.Drawing.Color.White;
+            this.AddAchivementBtn.Location = new System.Drawing.Point(32, 21);
+            this.AddAchivementBtn.Name = "AddAchivementBtn";
+            this.AddAchivementBtn.RippleColor = System.Drawing.Color.Black;
+            this.AddAchivementBtn.Rounding = 50;
+            this.AddAchivementBtn.RoundingEnable = true;
+            this.AddAchivementBtn.Size = new System.Drawing.Size(174, 57);
+            this.AddAchivementBtn.TabIndex = 0;
+            this.AddAchivementBtn.Text = "Добавить достижение";
+            this.AddAchivementBtn.TextHover = null;
+            this.AddAchivementBtn.UseDownPressEffectOnClick = false;
+            this.AddAchivementBtn.UseRippleEffect = true;
+            this.AddAchivementBtn.UseZoomEffectOnHover = true;
+            // 
+            // panelAchivements
+            // 
+            this.panelAchivements.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panelAchivements.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelAchivements.Location = new System.Drawing.Point(835, 0);
+            this.panelAchivements.Name = "panelAchivements";
+            this.panelAchivements.Size = new System.Drawing.Size(665, 746);
+            this.panelAchivements.TabIndex = 2;
             // 
             // ProfileForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(28)))), ((int)(((byte)(34)))), ((int)(((byte)(48)))));
-            this.ClientSize = new System.Drawing.Size(1200, 900);
-            this.Controls.Add(this.tableLayoutPanel1);
-            this.Controls.Add(this.panel1);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(229)))), ((int)(((byte)(85)))));
+            this.ClientSize = new System.Drawing.Size(1500, 846);
+            this.Controls.Add(this.panelAchivements);
+            this.Controls.Add(this.panelControls);
+            this.Controls.Add(this.panelInfo);
+            this.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ProfileForm";
             this.Text = "ProfileForm";
             this.Load += new System.EventHandler(this.ProfileForm_Load);
+            this.panelInfo.ResumeLayout(false);
+            this.panelInfo.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            this.tableLayoutPanel1.ResumeLayout(false);
-            this.tableLayoutPanel1.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.UserInfoPhoto)).EndInit();
+            this.panelControls.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
+        private System.Windows.Forms.Panel panelInfo;
+        private System.Windows.Forms.PictureBox UserInfoPhoto;
+        private System.Windows.Forms.Panel panelControls;
+        private System.Windows.Forms.Panel panelAchivements;
+        private System.Windows.Forms.Label UserInfoPatronymic;
+        private System.Windows.Forms.Label UserInfoName;
+        private System.Windows.Forms.Label UserInfoSurname;
+        private System.Windows.Forms.Label UserInfoGender;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button Close;
-        private System.Windows.Forms.Label Header;
-        private System.Windows.Forms.TableLayoutPanel tableLayoutPanel1;
-        private System.Windows.Forms.Label profileTextSurname;
-        private System.Windows.Forms.Label profileTextName;
-        private System.Windows.Forms.Label profileTextPatronymic;
-        private System.Windows.Forms.Label profileTextBirthDate;
-        private System.Windows.Forms.Label profileTextGender;
-        private System.Windows.Forms.Label profileTextEmail;
-        private System.Windows.Forms.Label profileTextHeight;
-        private System.Windows.Forms.Label profileTextWeight;
-        private System.Windows.Forms.Label profileInfoSurname;
-        private System.Windows.Forms.Label profileInfoName;
-        private System.Windows.Forms.Label profileInfoPatronymic;
-        private System.Windows.Forms.Label profileInfoBirthDate;
-        private System.Windows.Forms.Label profileInfoGender;
-        private System.Windows.Forms.Label profileInfoEmail;
-        private System.Windows.Forms.Label profileInfoHeight;
-        private System.Windows.Forms.Label profileInfoWeight;
+        private System.Windows.Forms.Label UserInfoSportType;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label UserInfoNationality;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label UserInfoAge;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label UserInfoBirthDate;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label UserInfoRating;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label UserInfoEmail;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label UserInfoWeight;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label UserInfoHeight;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Panel panel3;
+        private yt_DesignUI.yt_Button EditAchivement;
+        private yt_DesignUI.yt_Button DeleteAchivementBtn;
+        private yt_DesignUI.yt_Button AddAchivementBtn;
     }
 }

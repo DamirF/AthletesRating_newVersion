@@ -33,3 +33,5 @@ D:\Projects\SportsmensRating\MainApplication\obj\Debug\netcoreapp3.1\MainApplica
 D:\Projects\SportsmensRating\MainApplication\obj\Debug\netcoreapp3.1\MainApplication.ChildForms.Admin.View.AccountsViewForm.resources
 D:\Projects\SportsmensRating\MainApplication\obj\Debug\netcoreapp3.1\MainApplication.ChildForms.Admin.Edit.AccountsEditForm.resources
 D:\Projects\SportsmensRating\MainApplication\obj\Debug\netcoreapp3.1\MainApplication.Properties.Resources.resources
+D:\Projects\SportsmensRating\MainApplication\obj\Debug\netcoreapp3.1\MainApplication.TestElement.Form1.resources
+D:\Projects\SportsmensRating\MainApplication\obj\Debug\netcoreapp3.1\MainApplication.TestElement.Form2.resources

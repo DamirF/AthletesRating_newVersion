@@ -8,7 +8,7 @@ namespace AthletesRating.Models
 		#region Fields and Options
 		public int Place { get; private set; }
 		public string Name { get; private set; }
-		public string Lavel { get; private set; }
+		public string Level { get; private set; }
 		public DateTime ReceiveYear { get; private set; }
 		#endregion
 
@@ -16,10 +16,10 @@ namespace AthletesRating.Models
 		{
 			Place = place;
 			Name = name;
-			Lavel = level;
+			Level = level;
 			ReceiveYear = receiveYear;
 		}
-
+        
 		public static List<Medal> ToList(Medal[] medals)
         {
 			List<Medal> list = new List<Medal>();

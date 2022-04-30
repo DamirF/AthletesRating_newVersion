@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "y5h8+wdDjqI9OB9rg2iUkFKiJTd7YjYkEFPdOB7GOei2LbIrYU4eArL81tVC1lOIzrbVdI9t6daHIjqXB0MT/g==",
+  "dgSpecHash": "Us6wbf2K9saiAB/78SAE992n/9FANdKHrgarnXzgihdH3bGQjupNVxN7TJwiQRPZk75/LkpcH0KHt50gC0YMeA==",
   "success": true,
   "projectFilePath": "D:\\Projects\\SportsmensRating\\MainApplication\\MainApplication.csproj",
   "expectedPackageFiles": [
@@ -13,11 +13,7 @@
     "C:\\Users\\dfatk\\.nuget\\packages\\runtime.win-x86.runtime.native.system.data.sqlclient.sni\\4.4.0\\runtime.win-x86.runtime.native.system.data.sqlclient.sni.4.4.0.nupkg.sha512",
     "C:\\Users\\dfatk\\.nuget\\packages\\system.data.sqlclient\\4.8.3\\system.data.sqlclient.4.8.3.nupkg.sha512",
     "C:\\Users\\dfatk\\.nuget\\packages\\system.security.accesscontrol\\4.7.0\\system.security.accesscontrol.4.7.0.nupkg.sha512",
-    "C:\\Users\\dfatk\\.nuget\\packages\\system.security.principal.windows\\4.7.0\\system.security.principal.windows.4.7.0.nupkg.sha512",
-    "C:\\Users\\dfatk\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.22\\microsoft.netcore.app.host.win-x64.3.1.22.nupkg.sha512",
-    "C:\\Users\\dfatk\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.10\\microsoft.aspnetcore.app.ref.3.1.10.nupkg.sha512",
-    "C:\\Users\\dfatk\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\3.1.0\\microsoft.windowsdesktop.app.ref.3.1.0.nupkg.sha512",
-    "C:\\Users\\dfatk\\.nuget\\packages\\microsoft.netcore.app.ref\\3.1.0\\microsoft.netcore.app.ref.3.1.0.nupkg.sha512"
+    "C:\\Users\\dfatk\\.nuget\\packages\\system.security.principal.windows\\4.7.0\\system.security.principal.windows.4.7.0.nupkg.sha512"
   ],
   "logs": []
 }

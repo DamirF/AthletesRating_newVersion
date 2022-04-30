@@ -22,16 +22,18 @@ namespace MainApplication.Forms
     {
         AthleteCard athlete;
         Panel[] submenu;
+        Button[] menuBtns;
         public MainForm()
         {
             InitializeComponent();
             athlete = AuthorizationForm.GetAthlete();
-            submenu = new Panel[] { panelAchivementsSubmenu, submenuAccountsAdministration};
-            Submenu.customizeDesign(submenu);
+            submenu = new Panel[] { submenuAccountsAdministration};
+            menuBtns = new Button[] { menuAccountsAdministration };
+            Submenu.customizeDesign(ref menuBtns, submenu);
             athlete = Functionality.GetAtheleteInfo(athlete);
             if (Functionality.connection.State == ConnectionState.Closed) Functionality.connection.Open();
 
-            if (!athlete.accountInfo.IsAdmin()) menuAccountsAdministration.Visible = false;
+            if (!athlete.accountInfo.isAdmin) menuAccountsAdministration.Visible = false;
 
             if (athlete == null)
             {
@@ -46,47 +48,42 @@ namespace MainApplication.Forms
         public MainForm(string withoutAccountMode)
         {
             InitializeComponent();
-            submenu = new Panel[] { panelAchivementsSubmenu, submenuAccountsAdministration };
-            Submenu.customizeDesign(submenu);
+            submenu = new Panel[] { submenuAccountsAdministration };
+            menuBtns = new Button[] { menuAccountsAdministration };
+            Submenu.customizeDesign(ref menuBtns, submenu);
             if (Functionality.connection.State == ConnectionState.Closed) Functionality.connection.Open();
             menuProfile.Visible = false;
             menuSettings.Visible = false;
-            menuAchivements.Visible = false;
             menuAccountsAdministration.Visible = false;
-        }
-
-        private void menuAchivements_Click(object sender, EventArgs e)
-        {
-            Submenu.showSubmenu(panelAchivementsSubmenu, submenu);
         }
 
         private void menuProfile_Click(object sender, EventArgs e)
         {
-            Submenu.hideSubmenu(submenu);
+            Submenu.hideSubmenu(ref menuBtns, submenu);
             ChildForm.openChildForm(new ProfileForm(athlete), panelChildForm);
         }
 
         private void nemuSettings_Click(object sender, EventArgs e)
         {
-            Submenu.hideSubmenu(submenu);
+            Submenu.hideSubmenu(ref menuBtns, submenu);
             ChildForm.openChildForm(new AccountSettingsForm(athlete), panelChildForm);
         }
 
         private void submenuAchivementsView_Click(object sender, EventArgs e)
         {
-            Submenu.hideSubmenu(submenu);
+            Submenu.hideSubmenu(ref menuBtns, submenu);
             ChildForm.openChildForm(new AchivementsViewForm(), panelChildForm);
         }
 
         private void submenuAchivementsAdd_Click(object sender, EventArgs e)
         {
-            Submenu.hideSubmenu(submenu);
+            Submenu.hideSubmenu(ref menuBtns, submenu);
             ChildForm.openChildForm(new AchivementAddForm(), panelChildForm);
         }
 
         private void Search_Click(object sender, EventArgs e)
         {
-            Submenu.hideSubmenu(submenu);
+            Submenu.hideSubmenu(ref menuBtns, submenu);
             ChildForm.openChildForm(new AthletesSearchForm(), panelChildForm);
         }
 
@@ -102,18 +99,18 @@ namespace MainApplication.Forms
 
         private void menuAccountsAdministration_Click(object sender, EventArgs e)
         {
-            Submenu.showSubmenu(submenuAccountsAdministration, submenu);
+            Submenu.showSubmenu((Button)sender, ref menuBtns, submenuAccountsAdministration, submenu);
         }
 
         private void AccountsAdministrationView_Click(object sender, EventArgs e)
         {
-            Submenu.hideSubmenu(submenu);
+            Submenu.hideSubmenu(ref menuBtns, submenu);
             ChildForm.openChildForm(new AccountsViewForm(), panelChildForm);
         }
 
         private void AccountsAdministrationEdit_Click(object sender, EventArgs e)
         {
-            Submenu.hideSubmenu(submenu);
+            Submenu.hideSubmenu(ref menuBtns, submenu);
             ChildForm.openChildForm(new AccountsEditForm(), panelChildForm);
         }
     }

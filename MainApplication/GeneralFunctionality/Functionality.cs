@@ -203,5 +203,31 @@ namespace AthletesRating.GeneralFunctionality
             
             return card;
         }
+
+        public static AthleteCard NationalityChange(AthleteCard card, ComboBox comboBox)
+        {
+            if (connection.State == ConnectionState.Closed) connection.Open();
+
+            SqlCommand birthDateChange = new SqlCommand("UPDATE Athletes SET Nationality = @nationality WHERE Login = @log", connection);
+            birthDateChange.Parameters.AddWithValue("nationality", comboBox.Items[comboBox.SelectedIndex].ToString());
+            birthDateChange.Parameters.AddWithValue("@log", card.accountInfo.Login);
+            birthDateChange.ExecuteNonQuery();
+            card.SetNationality(comboBox.Items[comboBox.SelectedIndex].ToString());
+
+            return card;
+        }
+
+        public static AthleteCard SportTypeChange(AthleteCard card, ComboBox comboBox)
+        {
+            if (connection.State == ConnectionState.Closed) connection.Open();
+
+            SqlCommand birthDateChange = new SqlCommand("UPDATE Athletes SET SportType = @sportType WHERE Login = @log", connection);
+            birthDateChange.Parameters.AddWithValue("sportType", comboBox.Items[comboBox.SelectedIndex].ToString());
+            birthDateChange.Parameters.AddWithValue("@log", card.accountInfo.Login);
+            birthDateChange.ExecuteNonQuery();
+            card.SetSportType(comboBox.Items[comboBox.SelectedIndex].ToString());
+
+            return card;
+        }
     }
 }
