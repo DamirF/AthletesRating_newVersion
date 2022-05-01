@@ -32,7 +32,7 @@
             this.InfPanel = new System.Windows.Forms.Panel();
             this.EventDate = new System.Windows.Forms.Label();
             this.Place = new System.Windows.Forms.Label();
-            this.EventLevel = new System.Windows.Forms.Label();
+            this.EvenInfo = new System.Windows.Forms.Label();
             this.EventName = new System.Windows.Forms.Label();
             this.EventCard.SuspendLayout();
             this.InfPanel.SuspendLayout();
@@ -44,7 +44,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.EventCard.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.EventCard.Controls.Add(this.InfPanel);
-            this.EventCard.Controls.Add(this.EventLevel);
+            this.EventCard.Controls.Add(this.EvenInfo);
             this.EventCard.Controls.Add(this.EventName);
             this.EventCard.Location = new System.Drawing.Point(59, 36);
             this.EventCard.Name = "EventCard";
@@ -80,16 +80,16 @@
             this.Place.TabIndex = 0;
             this.Place.Text = "12";
             // 
-            // EventLevel
+            // EvenInfo
             // 
-            this.EventLevel.AutoSize = true;
-            this.EventLevel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.EventLevel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
-            this.EventLevel.Location = new System.Drawing.Point(12, 57);
-            this.EventLevel.Name = "EventLevel";
-            this.EventLevel.Size = new System.Drawing.Size(95, 30);
-            this.EventLevel.TabIndex = 1;
-            this.EventLevel.Text = "Меж/нар";
+            this.EvenInfo.AutoSize = true;
+            this.EvenInfo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.EvenInfo.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
+            this.EvenInfo.Location = new System.Drawing.Point(12, 57);
+            this.EvenInfo.Name = "EvenInfo";
+            this.EvenInfo.Size = new System.Drawing.Size(95, 30);
+            this.EvenInfo.TabIndex = 1;
+            this.EvenInfo.Text = "Меж/нар";
             // 
             // EventName
             // 
@@ -122,7 +122,7 @@
         private System.Windows.Forms.Panel EventCard;
         private System.Windows.Forms.Panel InfPanel;
         private System.Windows.Forms.Label Place;
-        private System.Windows.Forms.Label EventLevel;
+        private System.Windows.Forms.Label EvenInfo;
         private System.Windows.Forms.Label EventName;
         private System.Windows.Forms.Label EventDate;
     }

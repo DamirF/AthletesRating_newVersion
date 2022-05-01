@@ -119,6 +119,8 @@
             this.menuSettings.Text = "Настройки";
             this.menuSettings.UseVisualStyleBackColor = true;
             this.menuSettings.Click += new System.EventHandler(this.nemuSettings_Click);
+            this.menuSettings.MouseLeave += new System.EventHandler(this.menuProfile_MouseLeave);
+            this.menuSettings.MouseHover += new System.EventHandler(this.menuProfile_MouseHover);
             // 
             // submenuAccountsAdministration
             // 
@@ -145,6 +147,8 @@
             this.AccountsAdministrationEdit.Text = "Управление";
             this.AccountsAdministrationEdit.UseVisualStyleBackColor = true;
             this.AccountsAdministrationEdit.Click += new System.EventHandler(this.AccountsAdministrationEdit_Click);
+            this.AccountsAdministrationEdit.MouseLeave += new System.EventHandler(this.menuProfile_MouseLeave);
+            this.AccountsAdministrationEdit.MouseHover += new System.EventHandler(this.menuProfile_MouseHover);
             // 
             // AccountsAdministrationView
             // 
@@ -160,6 +164,8 @@
             this.AccountsAdministrationView.Text = "Просмотр";
             this.AccountsAdministrationView.UseVisualStyleBackColor = true;
             this.AccountsAdministrationView.Click += new System.EventHandler(this.AccountsAdministrationView_Click);
+            this.AccountsAdministrationView.MouseLeave += new System.EventHandler(this.menuProfile_MouseLeave);
+            this.AccountsAdministrationView.MouseHover += new System.EventHandler(this.menuProfile_MouseHover);
             // 
             // menuAccountsAdministration
             // 
@@ -174,6 +180,8 @@
             this.menuAccountsAdministration.Text = "Аккаунты";
             this.menuAccountsAdministration.UseVisualStyleBackColor = true;
             this.menuAccountsAdministration.Click += new System.EventHandler(this.menuAccountsAdministration_Click);
+            this.menuAccountsAdministration.MouseLeave += new System.EventHandler(this.menuProfile_MouseLeave);
+            this.menuAccountsAdministration.MouseHover += new System.EventHandler(this.menuProfile_MouseHover);
             // 
             // Search
             // 
@@ -189,6 +197,8 @@
             this.Search.Text = "Поиск по спортсменам";
             this.Search.UseVisualStyleBackColor = true;
             this.Search.Click += new System.EventHandler(this.Search_Click);
+            this.Search.MouseLeave += new System.EventHandler(this.menuProfile_MouseLeave);
+            this.Search.MouseHover += new System.EventHandler(this.menuProfile_MouseHover);
             // 
             // menuProfile
             // 
@@ -204,6 +214,8 @@
             this.menuProfile.Text = "Профиль";
             this.menuProfile.UseVisualStyleBackColor = true;
             this.menuProfile.Click += new System.EventHandler(this.menuProfile_Click);
+            this.menuProfile.MouseLeave += new System.EventHandler(this.menuProfile_MouseLeave);
+            this.menuProfile.MouseHover += new System.EventHandler(this.menuProfile_MouseHover);
             // 
             // panelChildForm
             // 

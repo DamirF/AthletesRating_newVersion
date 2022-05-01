@@ -26,8 +26,6 @@ D:\Projects\SportsmensRating\MainApplication\obj\Debug\netcoreapp3.1\MainApplica
 D:\Projects\SportsmensRating\MainApplication\obj\Debug\netcoreapp3.1\MainApplication.pdb
 D:\Projects\SportsmensRating\MainApplication\obj\Debug\netcoreapp3.1\MainApplication.genruntimeconfig.cache
 D:\Projects\SportsmensRating\MainApplication\obj\Debug\netcoreapp3.1\MainApplication.ChildForms.Profile.ProfileForm.resources
-D:\Projects\SportsmensRating\MainApplication\obj\Debug\netcoreapp3.1\MainApplication.ChildForms.Achivements.Add.AchivementAddForm.resources
-D:\Projects\SportsmensRating\MainApplication\obj\Debug\netcoreapp3.1\MainApplication.ChildForms.Achivements.View.AchivementsViewForm.resources
 D:\Projects\SportsmensRating\MainApplication\obj\Debug\netcoreapp3.1\MainApplication.ChildForms.Search.AthletesSearchForm.resources
 D:\Projects\SportsmensRating\MainApplication\obj\Debug\netcoreapp3.1\MainApplication.ChildForms.Settings.AccountSettingsForm.resources
 D:\Projects\SportsmensRating\MainApplication\obj\Debug\netcoreapp3.1\MainApplication.ChildForms.Admin.View.AccountsViewForm.resources
@@ -35,3 +33,6 @@ D:\Projects\SportsmensRating\MainApplication\obj\Debug\netcoreapp3.1\MainApplica
 D:\Projects\SportsmensRating\MainApplication\obj\Debug\netcoreapp3.1\MainApplication.Properties.Resources.resources
 D:\Projects\SportsmensRating\MainApplication\obj\Debug\netcoreapp3.1\MainApplication.TestElement.Form1.resources
 D:\Projects\SportsmensRating\MainApplication\obj\Debug\netcoreapp3.1\MainApplication.TestElement.Form2.resources
+D:\Projects\SportsmensRating\MainApplication\obj\Debug\netcoreapp3.1\MainApplication.ChildForms.Achivement.Add.AchivementAddForm.resources
+D:\Projects\SportsmensRating\MainApplication\obj\Debug\netcoreapp3.1\MainApplication.ChildForms.Achivement.Delete.AchivementDeleteForm.resources
+D:\Projects\SportsmensRating\MainApplication\obj\Debug\netcoreapp3.1\MainApplication.ChildForms.Achivement.Edit.AchivementEditForm.resources

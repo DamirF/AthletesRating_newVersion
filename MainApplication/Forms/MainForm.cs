@@ -6,8 +6,6 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 using AthletesRating.GeneralFunctionality;
-using MainApplication.ChildForms.Achivements.Add;
-using MainApplication.ChildForms.Achivements.View;
 using MainApplication.ChildForms.Profile;
 using MainApplication.ChildForms.Search;
 using MainApplication.ChildForms.Settings;
@@ -69,18 +67,6 @@ namespace MainApplication.Forms
             ChildForm.openChildForm(new AccountSettingsForm(athlete), panelChildForm);
         }
 
-        private void submenuAchivementsView_Click(object sender, EventArgs e)
-        {
-            Submenu.hideSubmenu(ref menuBtns, submenu);
-            ChildForm.openChildForm(new AchivementsViewForm(), panelChildForm);
-        }
-
-        private void submenuAchivementsAdd_Click(object sender, EventArgs e)
-        {
-            Submenu.hideSubmenu(ref menuBtns, submenu);
-            ChildForm.openChildForm(new AchivementAddForm(), panelChildForm);
-        }
-
         private void Search_Click(object sender, EventArgs e)
         {
             Submenu.hideSubmenu(ref menuBtns, submenu);
@@ -111,7 +97,17 @@ namespace MainApplication.Forms
         private void AccountsAdministrationEdit_Click(object sender, EventArgs e)
         {
             Submenu.hideSubmenu(ref menuBtns, submenu);
-            ChildForm.openChildForm(new AccountsEditForm(), panelChildForm);
+            ChildForm.openChildForm(new AccountsEditForm(athlete), panelChildForm);
+        }
+
+        private void menuProfile_MouseHover(object sender, EventArgs e)
+        {
+            ((Button)sender).Font = new Font(((Button)sender).Font, FontStyle.Underline);
+        }
+
+        private void menuProfile_MouseLeave(object sender, EventArgs e)
+        {
+            ((Button)sender).Font = new Font(((Button)sender).Font, FontStyle.Bold);
         }
     }
 }

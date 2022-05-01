@@ -1,5 +1,6 @@
 ﻿using AthletesRating.GeneralFunctionality;
 using AthletesRating.Models;
+using MainApplication.GeneralFunctionality;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,13 +14,43 @@ namespace MainApplication.ChildForms.Admin.Edit
 {
     public partial class AccountsEditForm : Form
     {
-        AthleteCard athlete;
-        private Label[] labels;
-        public AccountsEditForm()
+        private const string makeAdminCommand = "UPDATE Accounts SET IsAdmin = 1 WHERE Login = @log";
+        private const string deleteAdminCommand = "UPDATE Accounts SET IsAdmin = 0 WHERE Login = @log";
+        private const string deleteUserFromAccountsCommand = "DELETE FROM Accounts WHERE Login = @log";
+        private const string deleteUserFromAthletesCommand = "DELETE FROM Athletes WHERE Login = @log";
+
+        private AthleteCard athlete;
+        private AthleteCard admin;
+
+        public AccountsEditForm(AthleteCard admin)
         {
+            this.admin = admin;
             InitializeComponent();
-            labels = new Label[] { profileInfoSurname, profileInfoName, profileInfoPatronymic, profileInfoBirthDate, profileInfoGender, profileInfoEmail, profileInfoDateReg, profileInfoDateOnlain, profileInfoIsAdmin };
             AthletesComboBoxStuff();
+        }
+
+        private void FillAccountInfo(ref AthleteCard account)
+        {
+            ProfilePicture.ProfilePictureSet(ref InfoProfilePhoto, ref account);
+            InfoSurname.Text = account.fullName.Surname;
+            InfoName.Text = account.fullName.Name;
+            InfoPatronymic.Text = account.fullName.Patronymic; 
+            InfoGender.Text = account.Gender;
+            InfoBirthDate.Text = account.BirthDate.ToShortDateString() + ", (" +account.CalculateAge().ToString() + ")";
+            InfoNationality.Text = account.nationality; 
+            InfoEmail.Text = account.accountInfo.Email;
+            InfoLogin.Text = account.accountInfo.Login;
+            switch(account.accountInfo.isAdmin)
+            {
+                case true:
+                    InfoStature.Text = "Администратор";
+                    break;
+                case false:
+                    InfoStature.Text = "Пользователь";
+                    break;
+            }
+            if (String.IsNullOrEmpty(InfoPatronymic.Text)) InfoPatronymic.Text = "не указано";
+            if (String.IsNullOrEmpty(InfoNationality.Text)) InfoNationality.Text = "не указано";
         }
 
         private void Close_Click(object sender, EventArgs e)
@@ -29,17 +60,80 @@ namespace MainApplication.ChildForms.Admin.Edit
 
         private void MakeAdminBut_Click(object sender, EventArgs e)
         {
+            if (athlete == null) return;
 
+            if (athlete.accountInfo.Email == Constants.MAIN_ADMIN
+                || (admin.accountInfo.Email != Constants.MAIN_ADMIN && athlete.accountInfo.isAdmin))
+            {
+                MessageBox.Show("У Вас недостаточно прав для данного действия!");
+                return;
+            }
+
+            if (!athlete.accountInfo.isAdmin)
+            {
+                if (Functionality.connection.State == ConnectionState.Closed) Functionality.connection.Open();
+                athlete.accountInfo.SetAdmin();
+
+                SqlCommand makeAdmin = new SqlCommand(makeAdminCommand, Functionality.connection);
+                makeAdmin.Parameters.AddWithValue("log", athlete.accountInfo.Login);
+                makeAdmin.ExecuteNonQuery();
+
+                FillAccountInfo(ref athlete);
+            }
+            else
+            {
+                MessageBox.Show("Пользователь уже является админом!");
+            }
         }
 
         private void DelAdminBut_Click(object sender, EventArgs e)
         {
+            if (athlete == null) return;
 
+            if(athlete.accountInfo.Email == Constants.MAIN_ADMIN
+                || (admin.accountInfo.Email != Constants.MAIN_ADMIN && athlete.accountInfo.isAdmin))
+            {
+                MessageBox.Show("У Вас недостаточно прав для данного действия!");
+                return;
+            }
+            if (athlete.accountInfo.isAdmin)
+            {
+                if (Functionality.connection.State == ConnectionState.Closed) Functionality.connection.Open();
+                athlete.accountInfo.DelAdmin();
+
+                SqlCommand deleteAdmin = new SqlCommand(deleteAdminCommand, Functionality.connection);
+                deleteAdmin.Parameters.AddWithValue("log", athlete.accountInfo.Login);
+                deleteAdmin.ExecuteNonQuery();
+
+                FillAccountInfo(ref athlete);
+            }
+            else
+            {
+                MessageBox.Show("Пользователь не является админом");
+            }
         }
 
         private void DeleteUserBut_Click(object sender, EventArgs e)
         {
+            if (athlete == null) return;
 
+            if (athlete.accountInfo.Email == Constants.MAIN_ADMIN || athlete.accountInfo.isAdmin)
+            {
+                MessageBox.Show("У Вас недостаточно прав для данного действия!");
+                return;
+            }
+
+            if (Functionality.connection.State == ConnectionState.Closed) Functionality.connection.Open();
+
+            SqlCommand delFromAccounts = new SqlCommand(deleteUserFromAccountsCommand, Functionality.connection);
+            delFromAccounts.Parameters.AddWithValue("log", athlete.accountInfo.Login);
+            delFromAccounts.ExecuteNonQuery();
+
+            SqlCommand delFromAthletes = new SqlCommand(deleteUserFromAthletesCommand, Functionality.connection);
+            delFromAthletes.Parameters.AddWithValue("log", athlete.accountInfo.Login);
+            delFromAthletes.ExecuteNonQuery();
+
+            AthletesComboBox.Items.RemoveAt(AthletesComboBox.SelectedIndex);
         }
 
         private void AthletesComboBoxStuff()
@@ -86,7 +180,7 @@ namespace MainApplication.ChildForms.Admin.Edit
                 dataReader.Close();
 
                 athlete = Functionality.GetAtheleteInfo(athlete);
-                Functionality.FillUserInfo(athlete, labels);
+                FillAccountInfo(ref athlete);
             }
         }
     }

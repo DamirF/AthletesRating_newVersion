@@ -1,10 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="Current" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Compile Update="ChildForms\Achivements\Add\AchivementAddForm.cs">
+    <Compile Update="ChildForms\Achivement\Add\AchivementAddForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Update="ChildForms\Achivements\View\AchivementsViewForm.cs">
+    <Compile Update="ChildForms\Achivement\Delete\AchivementDeleteForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="ChildForms\Achivement\Edit\AchivementEditForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="ChildForms\Admin\Edit\AccountsEditForm.cs">

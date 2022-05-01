@@ -37,6 +37,14 @@
         public const int CHANGEPASSWORD_NEWPASS = 1;
         public const int CHANGEPASSWORD_CONNEWPASS = 2;
 
+        public const int WORLDLEVEL_ACHIEVEMENT = 4;
+        public const int OLYMPICLEVEL_ACHIEVEMENT = 3;
+        public const int LOCALLEVEL_ACHIEVEMENT = 1;
+
+        public const string WORLDLEVEL = "Международный";
+        public const string OLYMPICLEVEL = "Олимпиада";
+        public const string LOCALLEVEL = "Локальный";
+
         public const string MAIN_ADMIN = "d.fatkhullin@mail.ru";
 
         public static string[] SportTypes = new string[]

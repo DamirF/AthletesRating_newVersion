@@ -6,18 +6,13 @@ using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 
-namespace MainApplication.ChildForms.Achivements.Add
+namespace MainApplication.ChildForms.Achivement.Add
 {
     public partial class AchivementAddForm : Form
     {
         public AchivementAddForm()
         {
             InitializeComponent();
-        }
-
-        private void Close_Click(object sender, EventArgs e)
-        {
-            Close();
         }
     }
 }

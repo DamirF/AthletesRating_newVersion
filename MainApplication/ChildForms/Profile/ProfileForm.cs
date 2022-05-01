@@ -35,6 +35,7 @@ namespace MainApplication.ChildForms.Profile
             UserInfoSportType.Text = athlete.sportType;
             UserInfoHeight.Text = athlete.Height.ToString() + " см";
             UserInfoWeight.Text = athlete.Weight.ToString() +" кг";
+            UserInfoRating.Text = athlete.CalculateRating();
 
             AchivementCard.FillContent(ref panelAchivements, ref athlete);
 

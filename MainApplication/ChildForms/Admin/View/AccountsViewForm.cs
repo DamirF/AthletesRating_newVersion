@@ -18,28 +18,23 @@ namespace MainApplication.ChildForms.Admin.View
             FillTable();
         }
 
-        private void Close_Click(object sender, EventArgs e)
-        {
-            Close();
-        }
-
         private void FillTable()
         {
             if(Functionality.connection.State != ConnectionState.Open) Functionality.connection.Open();
             DataSet ds1 = new DataSet();
             DataSet ds2 = new DataSet();
-            SqlDataAdapter readFromAccounts = new SqlDataAdapter("SELECT Id, Email, Login, IsAdmin FROM Accounts", Functionality.connection);
-            SqlDataAdapter readFromAthletes = new SqlDataAdapter("SELECT Id, Surname, Name, Patronymic, BirthDate, Gender FROM Athletes", Functionality.connection);
+            SqlDataAdapter readFromAccounts = new SqlDataAdapter("SELECT Email, Login, IsAdmin FROM Accounts", Functionality.connection);
+            SqlDataAdapter readFromAthletes = new SqlDataAdapter("SELECT Surname, Name, Patronymic, Gender, BirthDate, Nationality, SportType, Login FROM Athletes", Functionality.connection);
             readFromAccounts.Fill(ds1);
             readFromAthletes.Fill(ds2);
-            UsersAccountData.DataSource = ds1.Tables[0];
-            UsersPersonalData.DataSource = ds2.Tables[0];
+            dataGridAccounts.DataSource = ds1.Tables[0];
+            dataGridAthletes.DataSource = ds2.Tables[0];
 
-            UsersAccountData.ReadOnly = true;
-            UsersAccountData.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            dataGridAccounts.ReadOnly = true;
+            dataGridAccounts.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
 
-            UsersPersonalData.ReadOnly = true;
-            UsersPersonalData.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            dataGridAthletes.ReadOnly = true;
+            dataGridAthletes.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
         }
     }
 }

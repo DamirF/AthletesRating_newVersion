@@ -57,19 +57,6 @@ namespace AthletesRating.GeneralFunctionality
             return card;
         }
 
-        public static void FillUserInfo(AthleteCard athlete, params Label[] labels)
-        {
-            if (athlete == null || labels.Length < 8) return;
-            labels[Constants.LABEL_USERINFO_SURNAME].Text = athlete.fullName.Surname;
-            labels[Constants.LABEL_USERINFO_NAME].Text = athlete.fullName.Name;
-            labels[Constants.LABEL_USERINFO_PATRONYMIC].Text = athlete.fullName.Patronymic;
-            labels[Constants.LABEL_USERINFO_BIRTHDATE].Text = athlete.BirthDate.ToShortDateString();
-            labels[Constants.LABEL_USERINFO_GENDER].Text = athlete.Gender;
-            labels[Constants.LABEL_USERINFO_EMAIL].Text = athlete.accountInfo.Email;
-            labels[Constants.LABEL_USERINFO_HEIGHT].Text = athlete.Height.ToString() + " см";
-            labels[Constants.LABEL_USERINFO_WEIGHT].Text = athlete.Weight.ToString() + " кг";
-        }
-
         public static AthleteCard ChangeFullName(AthleteCard card, params TextBox[] boxes)
         {
             if (connection.State == ConnectionState.Closed) connection.Open();

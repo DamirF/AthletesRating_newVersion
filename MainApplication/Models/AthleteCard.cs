@@ -142,6 +142,28 @@ public class AthleteCard
 
 	public List<Medal> DeserializeAchievements(string obj) => JsonConvert.DeserializeObject<List<Medal>>(obj);
 
+	public string CalculateRating()
+	{
+		double rating = 0;
+
+		for (int i = 0; i < AthleteMedals.Count; i++)
+		{
+			switch(AthleteMedals[i].Level)
+            {
+				case Constants.WORLDLEVEL:
+					rating += Constants.WORLDLEVEL_ACHIEVEMENT / AthleteMedals[i].Place;
+					break;
+				case Constants.OLYMPICLEVEL:
+					rating += Constants.OLYMPICLEVEL_ACHIEVEMENT / AthleteMedals[i].Place;
+					break;
+				case Constants.LOCALLEVEL:
+					rating += Constants.LOCALLEVEL_ACHIEVEMENT / AthleteMedals[i].Place;
+					break;
+			}
+		}
+		return Math.Round(rating, 2).ToString();
+	}
+
 	public void NewUserRegistration(SqlConnection connection)
     {
 		SqlCommand registrationAccounts = new SqlCommand("INSERT INTO [Accounts] (Email, Login, Password, IsAdmin) VALUES (@email, @login, @password, @isAdmin)", connection);
