@@ -491,24 +491,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\dfatk\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\bulat\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Projects\\SportsmensRating\\MainApplication\\MainApplication.csproj",
+      "projectUniqueName": "B:\\Bulat\\Projects\\AthletesRating_newVersion\\MainApplication\\MainApplication.csproj",
       "projectName": "MainApplication",
-      "projectPath": "D:\\Projects\\SportsmensRating\\MainApplication\\MainApplication.csproj",
-      "packagesPath": "C:\\Users\\dfatk\\.nuget\\packages\\",
-      "outputPath": "D:\\Projects\\SportsmensRating\\MainApplication\\obj\\",
+      "projectPath": "B:\\Bulat\\Projects\\AthletesRating_newVersion\\MainApplication\\MainApplication.csproj",
+      "packagesPath": "C:\\Users\\bulat\\.nuget\\packages\\",
+      "outputPath": "B:\\Bulat\\Projects\\AthletesRating_newVersion\\MainApplication\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\dfatk\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\bulat\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -561,7 +556,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.300-preview.22154.4\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
       }
     }
   }
