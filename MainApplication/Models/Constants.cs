@@ -49,6 +49,7 @@
 
         public static string[] SportTypes = new string[]
         {
+            "<не указан>",
             "Баскетбол",
             "Футбол",
             "Волейбол",
@@ -64,6 +65,7 @@
 
         public static string[] Countries = new string[]
         {
+            "<не указан>",
             "Австралия (AU)",
             "Австрия (AT)",
             "Азербайджан (AZ)",

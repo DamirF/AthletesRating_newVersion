@@ -1,5 +1,6 @@
 ﻿using AthletesRating.GeneralFunctionality;
 using AthletesRating.Models;
+using SportsmansRating;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -31,25 +32,16 @@ namespace MainApplication.ChildForms.Settings
             if (this.athlete.accountInfo.Email == Constants.MAIN_ADMIN) 
                 deleteAccountBut.Enabled = false;
 
-            ComboBoxStuff(ref natCB, ref Constants.Countries);
-            if(!String.IsNullOrEmpty(athlete.nationality))natCB.SelectedIndex = natCB.Items.IndexOf(athlete.nationality);
+            Functionality.ComboBoxStuff(ref natCB, ref Constants.Countries);
+            if(athlete.nationality != 0) natCB.SelectedIndex = natCB.Items.IndexOf(Constants.Countries[athlete.nationality]);
             else natCB.SelectedIndex = 0;
 
-            ComboBoxStuff(ref STCB, ref Constants.SportTypes);
-            if (!String.IsNullOrEmpty(athlete.sportType)) STCB.SelectedIndex = STCB.Items.IndexOf(athlete.sportType);
+            Functionality.ComboBoxStuff(ref STCB, ref Constants.SportTypes);
+            if (athlete.sportType != 0) STCB.SelectedIndex = STCB.Items.IndexOf(Constants.SportTypes[athlete.sportType]);
             else STCB.SelectedIndex = 0;
 
             natCB.Text = natCB.Items[natCB.SelectedIndex].ToString();
             STCB.Text = STCB.Items[STCB.SelectedIndex].ToString();
-        }
-
-        private void ComboBoxStuff(ref ComboBox cb, ref string[] data)
-        {
-            cb.Items.Clear();
-            for(int i = 0; i < data.Length; i++)
-            {
-                cb.Items.Add(data[i]);
-            }
         }
 
         private void Close_Click(object sender, EventArgs e)
@@ -68,7 +60,10 @@ namespace MainApplication.ChildForms.Settings
             if (athlete.accountInfo.Password + Security.AddSult() == Security.GenerateHash(deleteAccountPassTB.Text) + Security.AddSult())
             {
                 Functionality.DeleteAccount(athlete);
-                Application.Exit();
+                Close();
+                AuthorizationForm authorization = new AuthorizationForm();
+                authorization.Show();
+                
             }
             else
             {

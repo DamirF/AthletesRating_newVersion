@@ -117,7 +117,7 @@ namespace yt_DesignUI
 
             Cursor = Cursors.Hand;
 
-            BackColor = Color.Tomato;
+            BackColor = Color.Black;
             BorderColor = BackColor;
             ForeColor = Color.White;
 
@@ -374,11 +374,15 @@ namespace yt_DesignUI
         {
             base.OnMouseUp(e);
 
+            Color start = BackColor; 
+
             MousePressed = false;
 
             Invalidate();
 
             if (UseDownPressEffectOnClick) Location = new Point(Location.X, Location.Y - 2);
+
+            BackColor = start;
         }
 
         protected override void OnTextChanged(EventArgs e)

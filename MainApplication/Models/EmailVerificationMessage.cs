@@ -24,7 +24,7 @@ namespace AthletesRating.Models
             }
         }
 
-        public static void SendMessage(string to_Address, string VerCode)
+        public static async void SendMessage(string to_Address, string VerCode)
         {
             MailAddress from = new MailAddress("d.fatkhullin@mail.ru", "Athletes Rating Programm (admin)");
             MailAddress to = new MailAddress(to_Address);
@@ -38,7 +38,7 @@ namespace AthletesRating.Models
             smtp.Credentials = new NetworkCredential("d.fatkhullin@mail.ru", "tUAbJSTMqxY8HKDRsK8U");
             smtp.EnableSsl = true;
 
-            smtp.Send(message);
+            await smtp.SendMailAsync(message);
         }
     }
 }

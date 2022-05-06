@@ -37,7 +37,7 @@ namespace MainApplication.ChildForms.Admin.Edit
             InfoPatronymic.Text = account.fullName.Patronymic; 
             InfoGender.Text = account.Gender;
             InfoBirthDate.Text = account.BirthDate.ToShortDateString() + ", (" +account.CalculateAge().ToString() + ")";
-            InfoNationality.Text = account.nationality; 
+            InfoNationality.Text = Constants.Countries[account.nationality]; 
             InfoEmail.Text = account.accountInfo.Email;
             InfoLogin.Text = account.accountInfo.Login;
             switch(account.accountInfo.isAdmin)

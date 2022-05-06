@@ -3,7 +3,6 @@ using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Data.SqlClient;
-using System.Globalization;
 
 /// <summary>
 /// Athlete information card
@@ -19,8 +18,8 @@ public class AthleteCard
 	public int Height { get; private set; }
 	public int Weight { get; private set; }
 	private List<Medal> AthleteMedals;
-	public string sportType { get; private set; }
-	public string nationality { get; private set; }
+	public int sportType { get; private set; }
+	public int nationality { get; private set; }
 	#endregion
 
 	#region Constructors
@@ -75,7 +74,7 @@ public class AthleteCard
 	/// <param name="login"></param>
 	/// <param name="password"></param>
 	/// <param name="isAdmin"></param>
-	public AthleteCard(string surname, string name, string patronymic, string gender, DateTime birthDate, int height, int weight, string medals, string nationality, string sportType, string email, string login, string password, bool isAdmin)
+	public AthleteCard(string surname, string name, string patronymic, string gender, DateTime birthDate, int height, int weight, string medals, int nationality, int sportType, string email, string login, string password, bool isAdmin)
 	{
 		accountInfo = new Account(email, login, password, isAdmin);
 		fullName = new FullName(surname, name, patronymic);
@@ -101,7 +100,7 @@ public class AthleteCard
 	/// <param name="medals"></param>
 	/// <param name="nationality"></param>
 	/// <param name="sportType"></param>
-	public AthleteCard(string surname, string name, string patronymic, string gender, DateTime birthDate, int height, int weight, string medals, string nationality, string sportType)
+	public AthleteCard(string surname, string name, string patronymic, string gender, DateTime birthDate, int height, int weight, string medals, int nationality, int sportType)
     {
 		accountInfo = new Account("", "", "", false);
 		fullName = new FullName(surname, name, patronymic);
@@ -123,8 +122,8 @@ public class AthleteCard
 	public void SetBirthDate(DateTime newBirthDate) => BirthDate = newBirthDate;
 	public void SetHeight(int height) => Height = height;
 	public void SetWeight(int weight) => Weight = weight;
-	public void SetSportType(string _sportType) => sportType = _sportType;
-	public void SetNationality(string _nationality) => nationality = _nationality;
+	public void SetSportType(int _sportType) => sportType = _sportType;
+	public void SetNationality(int _nationality) => nationality = _nationality;
 
     #endregion
     public List<Medal> GetAchievements() => AthleteMedals;

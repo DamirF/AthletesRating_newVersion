@@ -220,7 +220,7 @@
             // panelChildForm
             // 
             this.panelChildForm.AutoScroll = true;
-            this.panelChildForm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(229)))), ((int)(((byte)(85)))));
+            this.panelChildForm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(240)))), ((int)(((byte)(168)))));
             this.panelChildForm.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelChildForm.Location = new System.Drawing.Point(0, 54);
             this.panelChildForm.Name = "panelChildForm";

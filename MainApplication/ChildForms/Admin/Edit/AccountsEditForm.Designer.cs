@@ -333,7 +333,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(229)))), ((int)(((byte)(85)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(240)))), ((int)(((byte)(168)))));
             this.ClientSize = new System.Drawing.Size(1200, 900);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel3);

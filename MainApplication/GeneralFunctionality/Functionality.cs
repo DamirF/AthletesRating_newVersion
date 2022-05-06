@@ -37,8 +37,8 @@ namespace AthletesRating.GeneralFunctionality
                         (int)reader.GetValue(Constants.ATHLETES_TABLE_HEIGHT),
                         (int)reader.GetValue(Constants.ATHLETES_TABLE_WEIGHT),
                         (string)reader.GetValue(Constants.ATHLETES_TABLE_ACHIEVEMENTS),
-                        (string)reader.GetValue(Constants.ATHLETES_TABLE_NATIONALITY),
-                        (string)reader.GetValue(Constants.ATHLETES_TABLE_SPORT_TYPE),
+                        (int)reader.GetValue(Constants.ATHLETES_TABLE_NATIONALITY),
+                        (int)reader.GetValue(Constants.ATHLETES_TABLE_SPORT_TYPE),
                         card.accountInfo.Email,
                         card.accountInfo.Login,
                         card.accountInfo.Password,
@@ -199,7 +199,7 @@ namespace AthletesRating.GeneralFunctionality
             birthDateChange.Parameters.AddWithValue("nationality", comboBox.Items[comboBox.SelectedIndex].ToString());
             birthDateChange.Parameters.AddWithValue("@log", card.accountInfo.Login);
             birthDateChange.ExecuteNonQuery();
-            card.SetNationality(comboBox.Items[comboBox.SelectedIndex].ToString());
+            card.SetNationality(comboBox.SelectedIndex);
 
             return card;
         }
@@ -212,9 +212,18 @@ namespace AthletesRating.GeneralFunctionality
             birthDateChange.Parameters.AddWithValue("sportType", comboBox.Items[comboBox.SelectedIndex].ToString());
             birthDateChange.Parameters.AddWithValue("@log", card.accountInfo.Login);
             birthDateChange.ExecuteNonQuery();
-            card.SetSportType(comboBox.Items[comboBox.SelectedIndex].ToString());
+            card.SetSportType(comboBox.SelectedIndex);
 
             return card;
+        }
+
+        public static void ComboBoxStuff(ref ComboBox cb, ref string[] data)
+        {
+            cb.Items.Clear();
+            for (int i = 0; i < data.Length; i++)
+            {
+                cb.Items.Add(data[i]);
+            }
         }
     }
 }

@@ -388,7 +388,7 @@
             // AddAchivementBtn
             // 
             this.AddAchivementBtn.BackColor = System.Drawing.Color.Black;
-            this.AddAchivementBtn.BackColorAdditional = System.Drawing.Color.Gray;
+            this.AddAchivementBtn.BackColorAdditional = System.Drawing.Color.Black;
             this.AddAchivementBtn.BackColorGradientEnabled = false;
             this.AddAchivementBtn.BackColorGradientMode = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
             this.AddAchivementBtn.BorderColor = System.Drawing.Color.Tomato;
@@ -409,6 +409,7 @@
             this.AddAchivementBtn.UseDownPressEffectOnClick = false;
             this.AddAchivementBtn.UseRippleEffect = true;
             this.AddAchivementBtn.UseZoomEffectOnHover = true;
+            this.AddAchivementBtn.Click += new System.EventHandler(this.AddAchivementBtn_Click);
             // 
             // panelAchivements
             // 
@@ -423,7 +424,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(245)))), ((int)(((byte)(229)))), ((int)(((byte)(85)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(240)))), ((int)(((byte)(168)))));
             this.ClientSize = new System.Drawing.Size(1500, 846);
             this.Controls.Add(this.panelAchivements);
             this.Controls.Add(this.panelControls);

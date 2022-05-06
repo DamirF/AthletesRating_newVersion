@@ -98,12 +98,15 @@
             // 
             // UserSurname
             // 
+            this.UserSurname.BackColor = System.Drawing.Color.Black;
+            this.UserSurname.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.UserSurname.Font = new System.Drawing.Font("Microsoft YaHei", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.UserSurname.ForeColor = System.Drawing.Color.White;
             this.UserSurname.Location = new System.Drawing.Point(15, 43);
             this.UserSurname.Margin = new System.Windows.Forms.Padding(2);
             this.UserSurname.MaxLength = 50;
             this.UserSurname.Name = "UserSurname";
-            this.UserSurname.Size = new System.Drawing.Size(527, 38);
+            this.UserSurname.Size = new System.Drawing.Size(527, 31);
             this.UserSurname.TabIndex = 3;
             // 
             // EmailTB
@@ -411,6 +414,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(240)))), ((int)(((byte)(168)))));
             this.ClientSize = new System.Drawing.Size(591, 817);
             this.Controls.Add(this.PasswordPanel);
             this.Controls.Add(this.UserInfoPanel);

@@ -1,13 +1,8 @@
-﻿using AthletesRating.GeneralFunctionality;
+﻿using AthletesRating.Models;
+using MainApplication.ChildForms.Achivement.Add;
 using MainApplication.GeneralFunctionality;
 using MainApplication.Models;
-using SportsmansRating;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Text;
 using System.Windows.Forms;
 
 namespace MainApplication.ChildForms.Profile
@@ -31,16 +26,23 @@ namespace MainApplication.ChildForms.Profile
             UserInfoEmail.Text = athlete.accountInfo.Email;
             UserInfoBirthDate.Text = athlete.BirthDate.ToShortDateString();
             UserInfoAge.Text = athlete.CalculateAge().ToString();
-            UserInfoNationality.Text = athlete.nationality;
-            UserInfoSportType.Text = athlete.sportType;
+            UserInfoNationality.Text = Constants.Countries[athlete.nationality];
+            UserInfoSportType.Text = Constants.SportTypes[athlete.sportType];
             UserInfoHeight.Text = athlete.Height.ToString() + " см";
-            UserInfoWeight.Text = athlete.Weight.ToString() +" кг";
+            UserInfoWeight.Text = athlete.Weight.ToString() + " кг";
             UserInfoRating.Text = athlete.CalculateRating();
 
             AchivementCard.FillContent(ref panelAchivements, ref athlete);
 
             if (String.IsNullOrEmpty(UserInfoNationality.Text)) UserInfoNationality.Text = "не указан";
             if (String.IsNullOrEmpty(UserInfoSportType.Text)) UserInfoSportType.Text = "не указан";
+        }
+
+        private void AddAchivementBtn_Click(object sender, EventArgs e)
+        {
+            AchivementAddForm add = new AchivementAddForm();
+            add.ShowDialog();
+            Invalidate();
         }
     }
 }

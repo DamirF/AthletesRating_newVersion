@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace AthletesRating.Models
 {
@@ -14,7 +12,7 @@ namespace AthletesRating.Models
                 hash = hash * p + c;
             return hash;
         }
-
+        
         public static string AddSult() => GenerateHash(DateTime.Now.ToString()).ToString();
     }
 }

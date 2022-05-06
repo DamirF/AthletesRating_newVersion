@@ -116,9 +116,9 @@
             this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.label2);
             this.panel2.ForeColor = System.Drawing.Color.White;
-            this.panel2.Location = new System.Drawing.Point(424, 109);
+            this.panel2.Location = new System.Drawing.Point(500, 110);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(522, 422);
+            this.panel2.Size = new System.Drawing.Size(501, 422);
             this.panel2.TabIndex = 33;
             // 
             // yt_Button1
@@ -139,7 +139,7 @@
             this.yt_Button1.Name = "yt_Button1";
             this.yt_Button1.RippleColor = System.Drawing.Color.Black;
             this.yt_Button1.RoundingEnable = true;
-            this.yt_Button1.Size = new System.Drawing.Size(488, 38);
+            this.yt_Button1.Size = new System.Drawing.Size(467, 38);
             this.yt_Button1.TabIndex = 16;
             this.yt_Button1.Text = "Применить";
             this.yt_Button1.TextHover = null;
@@ -155,7 +155,7 @@
             this.patronymicChangeTB.BackColor = System.Drawing.Color.Silver;
             this.patronymicChangeTB.Location = new System.Drawing.Point(13, 207);
             this.patronymicChangeTB.Name = "patronymicChangeTB";
-            this.patronymicChangeTB.Size = new System.Drawing.Size(488, 36);
+            this.patronymicChangeTB.Size = new System.Drawing.Size(467, 36);
             this.patronymicChangeTB.TabIndex = 14;
             // 
             // label16
@@ -177,7 +177,7 @@
             this.nameChangeConfirmTB.MaxLength = 10;
             this.nameChangeConfirmTB.Name = "nameChangeConfirmTB";
             this.nameChangeConfirmTB.PasswordChar = '*';
-            this.nameChangeConfirmTB.Size = new System.Drawing.Size(488, 36);
+            this.nameChangeConfirmTB.Size = new System.Drawing.Size(467, 36);
             this.nameChangeConfirmTB.TabIndex = 12;
             // 
             // label9
@@ -197,7 +197,7 @@
             this.firstNameChangeTB.BackColor = System.Drawing.Color.Silver;
             this.firstNameChangeTB.Location = new System.Drawing.Point(13, 123);
             this.firstNameChangeTB.Name = "firstNameChangeTB";
-            this.firstNameChangeTB.Size = new System.Drawing.Size(488, 36);
+            this.firstNameChangeTB.Size = new System.Drawing.Size(467, 36);
             this.firstNameChangeTB.TabIndex = 0;
             // 
             // lastNameChangeTB
@@ -207,7 +207,7 @@
             this.lastNameChangeTB.BackColor = System.Drawing.Color.Silver;
             this.lastNameChangeTB.Location = new System.Drawing.Point(13, 46);
             this.lastNameChangeTB.Name = "lastNameChangeTB";
-            this.lastNameChangeTB.Size = new System.Drawing.Size(488, 36);
+            this.lastNameChangeTB.Size = new System.Drawing.Size(467, 36);
             this.lastNameChangeTB.TabIndex = 1;
             // 
             // label1
@@ -242,9 +242,9 @@
             this.panel4.Controls.Add(this.label23);
             this.panel4.Controls.Add(this.label22);
             this.panel4.ForeColor = System.Drawing.Color.White;
-            this.panel4.Location = new System.Drawing.Point(425, 1092);
+            this.panel4.Location = new System.Drawing.Point(500, 1092);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(523, 272);
+            this.panel4.Size = new System.Drawing.Size(502, 272);
             this.panel4.TabIndex = 39;
             // 
             // yt_Button3
@@ -265,7 +265,7 @@
             this.yt_Button3.Name = "yt_Button3";
             this.yt_Button3.RippleColor = System.Drawing.Color.Black;
             this.yt_Button3.RoundingEnable = true;
-            this.yt_Button3.Size = new System.Drawing.Size(489, 38);
+            this.yt_Button3.Size = new System.Drawing.Size(468, 38);
             this.yt_Button3.TabIndex = 5;
             this.yt_Button3.Text = "Применить";
             this.yt_Button3.TextHover = null;
@@ -281,7 +281,7 @@
             this.WeightChangeTB.BackColor = System.Drawing.Color.Silver;
             this.WeightChangeTB.Location = new System.Drawing.Point(13, 139);
             this.WeightChangeTB.Name = "WeightChangeTB";
-            this.WeightChangeTB.Size = new System.Drawing.Size(489, 36);
+            this.WeightChangeTB.Size = new System.Drawing.Size(468, 36);
             this.WeightChangeTB.TabIndex = 4;
             this.WeightChangeTB.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.HeightChangeTB_KeyPress);
             // 
@@ -292,7 +292,7 @@
             this.HeightChangeTB.BackColor = System.Drawing.Color.Silver;
             this.HeightChangeTB.Location = new System.Drawing.Point(13, 57);
             this.HeightChangeTB.Name = "HeightChangeTB";
-            this.HeightChangeTB.Size = new System.Drawing.Size(489, 36);
+            this.HeightChangeTB.Size = new System.Drawing.Size(468, 36);
             this.HeightChangeTB.TabIndex = 3;
             this.HeightChangeTB.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.HeightChangeTB_KeyPress);
             // 
@@ -319,9 +319,9 @@
             this.panel5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel5.Controls.Add(this.ConfirmNewBirthDate);
-            this.panel5.Location = new System.Drawing.Point(300, 21164);
+            this.panel5.Location = new System.Drawing.Point(300, 21951);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(174, 131);
+            this.panel5.Size = new System.Drawing.Size(153, 131);
             this.panel5.TabIndex = 41;
             // 
             // ConfirmNewBirthDate
@@ -347,9 +347,9 @@
             this.panel6.Controls.Add(this.label14);
             this.panel6.Controls.Add(this.deleteAccountPassTB);
             this.panel6.ForeColor = System.Drawing.Color.White;
-            this.panel6.Location = new System.Drawing.Point(424, 2222);
+            this.panel6.Location = new System.Drawing.Point(500, 2222);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(524, 198);
+            this.panel6.Size = new System.Drawing.Size(503, 198);
             this.panel6.TabIndex = 43;
             // 
             // deleteAccountBut
@@ -370,7 +370,7 @@
             this.deleteAccountBut.Name = "deleteAccountBut";
             this.deleteAccountBut.RippleColor = System.Drawing.Color.Black;
             this.deleteAccountBut.RoundingEnable = true;
-            this.deleteAccountBut.Size = new System.Drawing.Size(489, 38);
+            this.deleteAccountBut.Size = new System.Drawing.Size(468, 38);
             this.deleteAccountBut.TabIndex = 4;
             this.deleteAccountBut.Text = "Удалить";
             this.deleteAccountBut.TextHover = null;
@@ -398,7 +398,7 @@
             this.deleteAccountPassTB.MaxLength = 10;
             this.deleteAccountPassTB.Name = "deleteAccountPassTB";
             this.deleteAccountPassTB.PasswordChar = '*';
-            this.deleteAccountPassTB.Size = new System.Drawing.Size(490, 36);
+            this.deleteAccountPassTB.Size = new System.Drawing.Size(469, 36);
             this.deleteAccountPassTB.TabIndex = 2;
             // 
             // panel3
@@ -417,9 +417,9 @@
             this.panel3.Controls.Add(this.newPassConfirmTB);
             this.panel3.Controls.Add(this.label4);
             this.panel3.ForeColor = System.Drawing.Color.White;
-            this.panel3.Location = new System.Drawing.Point(424, 636);
+            this.panel3.Location = new System.Drawing.Point(500, 636);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(524, 352);
+            this.panel3.Size = new System.Drawing.Size(503, 352);
             this.panel3.TabIndex = 45;
             // 
             // yt_Button2
@@ -440,7 +440,7 @@
             this.yt_Button2.Name = "yt_Button2";
             this.yt_Button2.RippleColor = System.Drawing.Color.Black;
             this.yt_Button2.RoundingEnable = true;
-            this.yt_Button2.Size = new System.Drawing.Size(490, 38);
+            this.yt_Button2.Size = new System.Drawing.Size(469, 38);
             this.yt_Button2.TabIndex = 15;
             this.yt_Button2.Text = "Сохранить";
             this.yt_Button2.TextHover = null;
@@ -491,7 +491,7 @@
             this.oldPassTB.MaxLength = 10;
             this.oldPassTB.Name = "oldPassTB";
             this.oldPassTB.PasswordChar = '*';
-            this.oldPassTB.Size = new System.Drawing.Size(490, 36);
+            this.oldPassTB.Size = new System.Drawing.Size(469, 36);
             this.oldPassTB.TabIndex = 3;
             // 
             // newPassTB
@@ -504,7 +504,7 @@
             this.newPassTB.MaxLength = 10;
             this.newPassTB.Name = "newPassTB";
             this.newPassTB.PasswordChar = '*';
-            this.newPassTB.Size = new System.Drawing.Size(490, 36);
+            this.newPassTB.Size = new System.Drawing.Size(469, 36);
             this.newPassTB.TabIndex = 4;
             this.newPassTB.TextChanged += new System.EventHandler(this.newPassTB_TextChanged);
             // 
@@ -528,7 +528,7 @@
             this.newPassConfirmTB.MaxLength = 10;
             this.newPassConfirmTB.Name = "newPassConfirmTB";
             this.newPassConfirmTB.PasswordChar = '*';
-            this.newPassConfirmTB.Size = new System.Drawing.Size(490, 36);
+            this.newPassConfirmTB.Size = new System.Drawing.Size(469, 36);
             this.newPassConfirmTB.TabIndex = 5;
             this.newPassConfirmTB.TextChanged += new System.EventHandler(this.newPassConfirmTB_TextChanged);
             // 
@@ -550,9 +550,9 @@
             this.panel7.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel7.Controls.Add(this.yt_Button4);
             this.panel7.Controls.Add(this.BirthDateChange);
-            this.panel7.Location = new System.Drawing.Point(424, 1471);
+            this.panel7.Location = new System.Drawing.Point(500, 1471);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(524, 126);
+            this.panel7.Size = new System.Drawing.Size(503, 126);
             this.panel7.TabIndex = 47;
             // 
             // yt_Button4
@@ -573,7 +573,7 @@
             this.yt_Button4.Name = "yt_Button4";
             this.yt_Button4.RippleColor = System.Drawing.Color.Black;
             this.yt_Button4.RoundingEnable = true;
-            this.yt_Button4.Size = new System.Drawing.Size(491, 38);
+            this.yt_Button4.Size = new System.Drawing.Size(470, 38);
             this.yt_Button4.TabIndex = 1;
             this.yt_Button4.Text = "Применить";
             this.yt_Button4.TextHover = null;
@@ -590,7 +590,7 @@
             this.BirthDateChange.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.BirthDateChange.Location = new System.Drawing.Point(13, 22);
             this.BirthDateChange.Name = "BirthDateChange";
-            this.BirthDateChange.Size = new System.Drawing.Size(490, 32);
+            this.BirthDateChange.Size = new System.Drawing.Size(469, 32);
             this.BirthDateChange.TabIndex = 0;
             // 
             // panel8
@@ -598,9 +598,9 @@
             this.panel8.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel8.Controls.Add(this.label15);
-            this.panel8.Location = new System.Drawing.Point(424, 2151);
+            this.panel8.Location = new System.Drawing.Point(500, 2151);
             this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(524, 65);
+            this.panel8.Size = new System.Drawing.Size(503, 65);
             this.panel8.TabIndex = 48;
             // 
             // label15
@@ -609,7 +609,7 @@
             this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label15.Location = new System.Drawing.Point(0, 0);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(524, 65);
+            this.label15.Size = new System.Drawing.Size(503, 65);
             this.label15.TabIndex = 45;
             this.label15.Text = "Удаление учетной записи";
             this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -619,9 +619,9 @@
             this.panel9.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel9.Controls.Add(this.label7);
-            this.panel9.Location = new System.Drawing.Point(424, 39);
+            this.panel9.Location = new System.Drawing.Point(500, 39);
             this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(524, 65);
+            this.panel9.Size = new System.Drawing.Size(503, 65);
             this.panel9.TabIndex = 49;
             // 
             // label7
@@ -630,7 +630,7 @@
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label7.Location = new System.Drawing.Point(0, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(524, 65);
+            this.label7.Size = new System.Drawing.Size(503, 65);
             this.label7.TabIndex = 35;
             this.label7.Text = "Смена имени";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -640,9 +640,9 @@
             this.panel10.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel10.Controls.Add(this.label8);
-            this.panel10.Location = new System.Drawing.Point(425, 561);
+            this.panel10.Location = new System.Drawing.Point(500, 561);
             this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(523, 65);
+            this.panel10.Size = new System.Drawing.Size(502, 65);
             this.panel10.TabIndex = 50;
             // 
             // label8
@@ -651,7 +651,7 @@
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label8.Location = new System.Drawing.Point(0, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(523, 65);
+            this.label8.Size = new System.Drawing.Size(502, 65);
             this.label8.TabIndex = 47;
             this.label8.Text = "Смена пароля";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -661,9 +661,9 @@
             this.panel11.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel11.Controls.Add(this.label21);
-            this.panel11.Location = new System.Drawing.Point(425, 1021);
+            this.panel11.Location = new System.Drawing.Point(500, 1021);
             this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(523, 65);
+            this.panel11.Size = new System.Drawing.Size(502, 65);
             this.panel11.TabIndex = 51;
             // 
             // label21
@@ -672,7 +672,7 @@
             this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label21.Location = new System.Drawing.Point(0, 0);
             this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(523, 65);
+            this.label21.Size = new System.Drawing.Size(502, 65);
             this.label21.TabIndex = 41;
             this.label21.Text = "Изменить характеристики";
             this.label21.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -682,9 +682,9 @@
             this.panel12.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel12.Controls.Add(this.label24);
-            this.panel12.Location = new System.Drawing.Point(424, 1400);
+            this.panel12.Location = new System.Drawing.Point(500, 1400);
             this.panel12.Name = "panel12";
-            this.panel12.Size = new System.Drawing.Size(524, 65);
+            this.panel12.Size = new System.Drawing.Size(503, 65);
             this.panel12.TabIndex = 52;
             // 
             // label24
@@ -693,7 +693,7 @@
             this.label24.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label24.Location = new System.Drawing.Point(0, 0);
             this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(524, 65);
+            this.label24.Size = new System.Drawing.Size(503, 65);
             this.label24.TabIndex = 43;
             this.label24.Text = "Изменить дату рождения";
             this.label24.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -707,9 +707,9 @@
             this.panel13.Controls.Add(this.natChangeBut);
             this.panel13.Controls.Add(this.natCB);
             this.panel13.ForeColor = System.Drawing.Color.White;
-            this.panel13.Location = new System.Drawing.Point(424, 1709);
+            this.panel13.Location = new System.Drawing.Point(500, 1709);
             this.panel13.Name = "panel13";
-            this.panel13.Size = new System.Drawing.Size(524, 140);
+            this.panel13.Size = new System.Drawing.Size(503, 140);
             this.panel13.TabIndex = 53;
             // 
             // natChangeBut
@@ -730,7 +730,7 @@
             this.natChangeBut.Name = "natChangeBut";
             this.natChangeBut.RippleColor = System.Drawing.Color.Black;
             this.natChangeBut.RoundingEnable = true;
-            this.natChangeBut.Size = new System.Drawing.Size(491, 38);
+            this.natChangeBut.Size = new System.Drawing.Size(470, 38);
             this.natChangeBut.TabIndex = 1;
             this.natChangeBut.Text = "Применить";
             this.natChangeBut.TextHover = null;
@@ -747,7 +747,7 @@
             this.natCB.FormattingEnabled = true;
             this.natCB.Location = new System.Drawing.Point(12, 26);
             this.natCB.Name = "natCB";
-            this.natCB.Size = new System.Drawing.Size(491, 38);
+            this.natCB.Size = new System.Drawing.Size(470, 38);
             this.natCB.TabIndex = 0;
             this.natCB.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.natCB_KeyPress);
             // 
@@ -756,9 +756,9 @@
             this.panel14.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel14.Controls.Add(this.label6);
-            this.panel14.Location = new System.Drawing.Point(424, 1638);
+            this.panel14.Location = new System.Drawing.Point(500, 1638);
             this.panel14.Name = "panel14";
-            this.panel14.Size = new System.Drawing.Size(524, 65);
+            this.panel14.Size = new System.Drawing.Size(503, 65);
             this.panel14.TabIndex = 54;
             // 
             // label6
@@ -767,7 +767,7 @@
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label6.Location = new System.Drawing.Point(0, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(524, 65);
+            this.label6.Size = new System.Drawing.Size(503, 65);
             this.label6.TabIndex = 0;
             this.label6.Text = "Гражданство";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -777,9 +777,9 @@
             this.panel15.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panel15.Controls.Add(this.label10);
-            this.panel15.Location = new System.Drawing.Point(424, 1896);
+            this.panel15.Location = new System.Drawing.Point(500, 1896);
             this.panel15.Name = "panel15";
-            this.panel15.Size = new System.Drawing.Size(524, 65);
+            this.panel15.Size = new System.Drawing.Size(503, 65);
             this.panel15.TabIndex = 56;
             // 
             // label10
@@ -788,7 +788,7 @@
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.label10.Location = new System.Drawing.Point(0, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(524, 65);
+            this.label10.Size = new System.Drawing.Size(503, 65);
             this.label10.TabIndex = 0;
             this.label10.Text = "Вид спорта";
             this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -802,9 +802,9 @@
             this.panel16.Controls.Add(this.spChangeBut);
             this.panel16.Controls.Add(this.STCB);
             this.panel16.ForeColor = System.Drawing.Color.White;
-            this.panel16.Location = new System.Drawing.Point(424, 1967);
+            this.panel16.Location = new System.Drawing.Point(500, 1967);
             this.panel16.Name = "panel16";
-            this.panel16.Size = new System.Drawing.Size(522, 140);
+            this.panel16.Size = new System.Drawing.Size(501, 140);
             this.panel16.TabIndex = 55;
             // 
             // spChangeBut
@@ -825,7 +825,7 @@
             this.spChangeBut.Name = "spChangeBut";
             this.spChangeBut.RippleColor = System.Drawing.Color.Black;
             this.spChangeBut.RoundingEnable = true;
-            this.spChangeBut.Size = new System.Drawing.Size(489, 38);
+            this.spChangeBut.Size = new System.Drawing.Size(468, 38);
             this.spChangeBut.TabIndex = 1;
             this.spChangeBut.Text = "Применить";
             this.spChangeBut.TextHover = null;
@@ -842,7 +842,7 @@
             this.STCB.FormattingEnabled = true;
             this.STCB.Location = new System.Drawing.Point(12, 26);
             this.STCB.Name = "STCB";
-            this.STCB.Size = new System.Drawing.Size(489, 38);
+            this.STCB.Size = new System.Drawing.Size(468, 38);
             this.STCB.TabIndex = 0;
             this.STCB.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.natCB_KeyPress);
             // 
@@ -851,7 +851,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 30F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(217)))), ((int)(((byte)(135)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(240)))), ((int)(((byte)(168)))));
             this.ClientSize = new System.Drawing.Size(1500, 846);
             this.Controls.Add(this.panel15);
             this.Controls.Add(this.panel16);

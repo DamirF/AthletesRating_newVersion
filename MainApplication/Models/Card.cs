@@ -1,7 +1,6 @@
-﻿using MainApplication.GeneralFunctionality;
-using System;
+﻿using AthletesRating.Models;
+using MainApplication.GeneralFunctionality;
 using System.Collections.Generic;
-using System.Text;
 using System.Windows.Forms;
 
 namespace MainApplication.Models
@@ -186,8 +185,8 @@ namespace MainApplication.Models
             AthleteName.Text = athlete.fullName.Name;
             AthletePatronymic.Text = athlete.fullName.Patronymic;
             BirthDate.Text = $"{athlete.BirthDate.ToShortDateString()}, ({athlete.CalculateAge()})";
-            sportTypeLabel.Text = athlete.sportType;
-            nationality.Text = athlete.nationality;
+            sportTypeLabel.Text = Constants.SportTypes[athlete.sportType];
+            nationality.Text = Constants.Countries[athlete.nationality];
             AchivementCard.FillContent(ref Achivements, ref athlete);
         }
 
