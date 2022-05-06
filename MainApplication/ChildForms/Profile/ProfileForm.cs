@@ -1,4 +1,7 @@
 ﻿using AthletesRating.GeneralFunctionality;
+using MainApplication.ChildForms.Achivement.Add;
+using MainApplication.ChildForms.Achivement.Delete;
+using MainApplication.ChildForms.Achivement.Edit;
 using MainApplication.GeneralFunctionality;
 using MainApplication.Models;
 using SportsmansRating;
@@ -41,6 +44,24 @@ namespace MainApplication.ChildForms.Profile
 
             if (String.IsNullOrEmpty(UserInfoNationality.Text)) UserInfoNationality.Text = "не указан";
             if (String.IsNullOrEmpty(UserInfoSportType.Text)) UserInfoSportType.Text = "не указан";
+        }
+
+        private void AddAchivementBtn_Click(object sender, EventArgs e)
+        {
+            AchivementAddForm achivementAddForm = new AchivementAddForm(ref athlete);
+            achivementAddForm.ShowDialog();
+        }
+
+        private void EditAchivement_Click(object sender, EventArgs e)
+        {
+            AchivementEditForm achivementEditForm = new AchivementEditForm(ref athlete);
+            achivementEditForm.ShowDialog();
+        }
+
+        private void DeleteAchivementBtn_Click(object sender, EventArgs e)
+        {
+            AchivementDeleteForm achivementDeleteForm = new AchivementDeleteForm(ref athlete);
+            achivementDeleteForm.ShowDialog();
         }
     }
 }

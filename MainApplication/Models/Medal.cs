@@ -10,7 +10,6 @@ namespace AthletesRating.Models
 		public string Name { get; private set; }
 		public string Level { get; private set; }
 		public DateTime ReceiveYear { get; private set; }
-		public static List<Medal> Medals { get; private set; }
 		#endregion
 
 		public Medal(int place, string name, string level, DateTime receiveYear)
@@ -21,9 +20,14 @@ namespace AthletesRating.Models
 			ReceiveYear = receiveYear;
 		}
         
-		public static void ToList(Medal medal)
+		public static List<Medal> ToList(Medal[] medal)
         {
-			Medals.Add(medal);
+			List<Medal> list = new List<Medal>();
+			for(int i = 0; i < medal.Length; i++)
+            {
+				list.Add(medal[i]);
+            }
+			return list;
         }
 	}
 }

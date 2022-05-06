@@ -18,6 +18,7 @@ public class AthleteCard
 	public DateTime BirthDate { get; private set; }
 	public int Height { get; private set; }
 	public int Weight { get; private set; }
+
 	private List<Medal> AthleteMedals;
 	public string sportType { get; private set; }
 	public string nationality { get; private set; }

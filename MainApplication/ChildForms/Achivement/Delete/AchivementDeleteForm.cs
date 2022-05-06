@@ -11,22 +11,25 @@ namespace MainApplication.ChildForms.Achivement.Delete
 {
     public partial class AchivementDeleteForm : Form
     {
-        public AchivementDeleteForm()
+        public AchivementDeleteForm(ref AthleteCard card)
         {
             InitializeComponent();
-            for (int i = 0; i < Medal.Medals.Count; i++)
+            this.card = card;
+            for (int i = 0; i < card.GetAchievements().Count; i++)
             {
-                AchievementDeleteSelect.Items.Add(Medal.Medals[i].Name);
+                AchievementDeleteSelect.Items.Add(card.GetAchievements()[i].Name);
             }
         }
 
+        AthleteCard card;
+
         private void AchievementDeleteBut_Click(object sender, EventArgs e)
         {
-            for(int i = 0; i < Medal.Medals.Count; i++)
+            for(int i = 0; i < card.GetAchievements().Count; i++)
             {
-                if(AchievementDeleteSelect.SelectedIndex.ToString() == Medal.Medals[i].Name)
+                if(AchievementDeleteSelect.SelectedIndex.ToString() == card.GetAchievements()[i].Name)
                 {
-                    Medal.Medals.Remove(Medal.Medals[i]);
+                    card.GetAchievements().RemoveAt(i);
                     AchievementDeleteSelect.Items.Remove(AchievementDeleteSelect.SelectedItem);
                 }
             }
@@ -34,14 +37,14 @@ namespace MainApplication.ChildForms.Achivement.Delete
 
         private void AchievementDeleteSelect_SelectedIndexChanged(object sender, EventArgs e)
         {
-            for (int i = 0; i < Medal.Medals.Count; i++)
+            for (int i = 0; i < card.GetAchievements().Count; i++)
             {
-                if (AchievementDeleteSelect.SelectedItem.ToString() == Medal.Medals[i].Name)
+                if (AchievementDeleteSelect.SelectedItem.ToString() == card.GetAchievements()[i].Name)
                 {
-                    AchievementName.Text = Medal.Medals[i].Name;
-                    AchievementPlace.Text = Convert.ToString(Medal.Medals[i].Place);
-                    AchievementLevel.Text = Medal.Medals[i].Level;
-                    AchievementDate.Text = Medal.Medals[i].ReceiveYear.ToString();
+                    AchievementName.Text = card.GetAchievements()[i].Name;
+                    AchievementPlace.Text = Convert.ToString(card.GetAchievements()[i].Place);
+                    AchievementLevel.Text = card.GetAchievements()[i].Level;
+                    AchievementDate.Text = card.GetAchievements()[i].ReceiveYear.ToString();
                 }
             }
         }

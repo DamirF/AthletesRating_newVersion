@@ -11,36 +11,39 @@ namespace MainApplication.ChildForms.Achivement.Edit
 {
     public partial class AchivementEditForm : Form
     {
-        public AchivementEditForm()
+        public AchivementEditForm(ref AthleteCard card)
         {
+            this.card = card;
             InitializeComponent();
-            for(int i = 0; i < Medal.Medals.Count; i++)
+            for(int i = 0; i < card.GetAchievements().Count; i++)
             {
-                AchievementEditSelect.Items.Add(Medal.Medals[i].Name);
+                AchievementEditSelect.Items.Add(card.GetAchievements()[i].Name);
             }
         }
 
+        AthleteCard card;
+
         private void AchievementEditBut_Click(object sender, EventArgs e)
         {
-            for(int i = 0; i < Medal.Medals.Count; i++)
+            for(int i = 0; i < card.GetAchievements().Count; i++)
             {
-                if (AchievementEditSelect.SelectedItem.ToString() == Medal.Medals[i].Name)
+                if (AchievementEditSelect.SelectedItem.ToString() == card.GetAchievements()[i].Name)
                 {
-                    Medal.Medals[i] = new Medal(int.Parse(AchievementPlaceEditTextBox.Text), AchievementNameEditTextBox.Text, AchievementLvlEditTextBox.Text, AchievementDateEdit.Value);
+                    card.GetAchievements()[i] = new Medal(int.Parse(AchievementPlaceEditTextBox.Text), AchievementNameEditTextBox.Text, AchievementLvlEditTextBox.Text, AchievementDateEdit.Value);
                 }
             }
         }
 
         private void AchievementEditSelect_SelectedIndexChanged(object sender, EventArgs e)
         {
-            for(int i = 0; i < Medal.Medals.Count; i++)
+            for(int i = 0; i < card.GetAchievements().Count; i++)
             {
-                if(AchievementEditSelect.SelectedItem.ToString() == Medal.Medals[i].Name)
+                if(AchievementEditSelect.SelectedItem.ToString() == card.GetAchievements()[i].Name)
                 {
-                    AchievementNameEditTextBox.Text = Medal.Medals[i].Name;
-                    AchievementPlaceEditTextBox.Text = Convert.ToString(Medal.Medals[i].Place);
-                    AchievementLvlEditTextBox.Text = Medal.Medals[i].Level;
-                    AchievementDateEdit.Text = Medal.Medals[i].ReceiveYear.ToString();
+                    AchievementNameEditTextBox.Text = card.GetAchievements()[i].Name;
+                    AchievementPlaceEditTextBox.Text = Convert.ToString(card.GetAchievements()[i].Place);
+                    AchievementLvlEditTextBox.Text = card.GetAchievements()[i].Level;
+                    AchievementDateEdit.Text = card.GetAchievements()[i].ReceiveYear.ToString();
                 }
             }
         }

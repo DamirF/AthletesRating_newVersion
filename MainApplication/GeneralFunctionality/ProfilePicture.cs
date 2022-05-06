@@ -13,7 +13,7 @@ namespace MainApplication.GeneralFunctionality
     internal class ProfilePicture
     {
         private static OpenFileDialog openFileDialog;
-        private static readonly string path = "D:/Projects/SportsmensRating/MainApplication/bin/Debug/netcoreapp3.1/resourses";
+        private static readonly string path = @"B:/Bulat/Projects/AthletesRating_newVersion/MainApplication/bin/Debug/netcoreapp3.1/resourses";
 
         public static void ProfilePictureSet(ref PictureBox PB, ref AthleteCard athlete)
         {
