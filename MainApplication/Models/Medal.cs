@@ -20,12 +20,12 @@ namespace AthletesRating.Models
 			ReceiveYear = receiveYear;
 		}
         
-		public static List<Medal> ToList(Medal[] medals)
+		public static List<Medal> ToList(Medal[] medal)
         {
 			List<Medal> list = new List<Medal>();
-			for(int i = 0; i < medals.Length; i++)
+			for(int i = 0; i < medal.Length; i++)
             {
-				list.Add(medals[i]);
+				list.Add(medal[i]);
             }
 			return list;
         }
