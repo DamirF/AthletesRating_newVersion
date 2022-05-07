@@ -7,7 +7,6 @@ using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
 using System.Data.SqlClient;
-using System.Text;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
 
@@ -191,30 +190,42 @@ namespace AthletesRating.GeneralFunctionality
             return card;
         }
 
-        public static AthleteCard NationalityChange(AthleteCard card, ComboBox comboBox)
+        public static AthleteCard NationalityChange(AthleteCard card, int index)
         {
             if (connection.State == ConnectionState.Closed) connection.Open();
 
             SqlCommand birthDateChange = new SqlCommand("UPDATE Athletes SET Nationality = @nationality WHERE Login = @log", connection);
-            birthDateChange.Parameters.AddWithValue("nationality", comboBox.Items[comboBox.SelectedIndex].ToString());
+            birthDateChange.Parameters.AddWithValue("nationality", index);
             birthDateChange.Parameters.AddWithValue("@log", card.accountInfo.Login);
             birthDateChange.ExecuteNonQuery();
-            card.SetNationality(comboBox.SelectedIndex);
+            card.SetNationality(index);
 
             return card;
         }
 
-        public static AthleteCard SportTypeChange(AthleteCard card, ComboBox comboBox)
+        public static AthleteCard SportTypeChange(AthleteCard card, int index)
         {
             if (connection.State == ConnectionState.Closed) connection.Open();
 
             SqlCommand birthDateChange = new SqlCommand("UPDATE Athletes SET SportType = @sportType WHERE Login = @log", connection);
-            birthDateChange.Parameters.AddWithValue("sportType", comboBox.Items[comboBox.SelectedIndex].ToString());
+            birthDateChange.Parameters.AddWithValue("sportType", index);
             birthDateChange.Parameters.AddWithValue("@log", card.accountInfo.Login);
             birthDateChange.ExecuteNonQuery();
-            card.SetSportType(comboBox.SelectedIndex);
+            card.SetSportType(index);
+            connection.Close();
 
             return card;
+        }
+
+        public static void RecordAchivements(AthleteCard athlete)
+        {
+            if (connection.State == ConnectionState.Closed) connection.Open();
+
+            SqlCommand command = new SqlCommand("UPDATE Athletes SET Achievements = @list WHERE Login = @log", connection);
+            command.Parameters.AddWithValue("@list", athlete.SerializeAchievements());
+            command.Parameters.AddWithValue("@log", athlete.accountInfo.Login);
+            command.ExecuteNonQuery();
+
         }
 
         public static void ComboBoxStuff(ref ComboBox cb, ref string[] data)

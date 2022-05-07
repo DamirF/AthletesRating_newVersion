@@ -4,11 +4,6 @@ using MainApplication.GeneralFunctionality;
 using MainApplication.Models;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Data.SqlClient;
-using System.Drawing;
-using System.Text;
 using System.Windows.Forms;
 
 namespace MainApplication.ChildForms.Search
@@ -35,8 +30,19 @@ namespace MainApplication.ChildForms.Search
         private void SearchBtn_Click(object sender, EventArgs e)
         {
             Content.Controls.Clear();
-            cards = AthleteSearchFunctionality.SewrchWithParameters(ref searchControls);
+            cards = AthleteSearchFunctionality.SearchWithParameters(ref searchControls);
             Card.FillContent(ref Content, ref cards);
+            if (cards.Count == 0) MessageBox.Show("Поиск не дал результатов!");
+        }
+
+        private void sportTypeCB_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
+        }
+
+        private void nationalityCB_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled=true;
         }
     }
 }

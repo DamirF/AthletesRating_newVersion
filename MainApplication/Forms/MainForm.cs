@@ -1,9 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
-using System.Text;
 using System.Windows.Forms;
 using AthletesRating.GeneralFunctionality;
 using MainApplication.ChildForms.Profile;
@@ -13,6 +10,7 @@ using MainApplication.GeneralFunctionality;
 using MainApplication.ChildForms.Admin.View;
 using SportsmansRating;
 using MainApplication.ChildForms.Admin.Edit;
+using MainApplication.ChildForms.HomePage;
 
 namespace MainApplication.Forms
 {
@@ -58,19 +56,19 @@ namespace MainApplication.Forms
         private void menuProfile_Click(object sender, EventArgs e)
         {
             Submenu.hideSubmenu(ref menuBtns, submenu);
-            ChildForm.openChildForm(new ProfileForm(athlete), panelChildForm);
+            ChildForm.Open(new ProfileForm(athlete), panelChildForm);
         }
 
         private void nemuSettings_Click(object sender, EventArgs e)
         {
             Submenu.hideSubmenu(ref menuBtns, submenu);
-            ChildForm.openChildForm(new AccountSettingsForm(athlete), panelChildForm);
+            ChildForm.Open(new AccountSettingsForm(athlete), panelChildForm);
         }
 
         private void Search_Click(object sender, EventArgs e)
         {
             Submenu.hideSubmenu(ref menuBtns, submenu);
-            ChildForm.openChildForm(new AthletesSearchForm(), panelChildForm);
+            ChildForm.Open(new AthletesSearchForm(), panelChildForm);
         }
 
         private void MainForm_FormClosed(object sender, FormClosedEventArgs e)
@@ -91,13 +89,13 @@ namespace MainApplication.Forms
         private void AccountsAdministrationView_Click(object sender, EventArgs e)
         {
             Submenu.hideSubmenu(ref menuBtns, submenu);
-            ChildForm.openChildForm(new AccountsViewForm(), panelChildForm);
+            ChildForm.Open(new AccountsViewForm(), panelChildForm);
         }
 
         private void AccountsAdministrationEdit_Click(object sender, EventArgs e)
         {
             Submenu.hideSubmenu(ref menuBtns, submenu);
-            ChildForm.openChildForm(new AccountsEditForm(athlete), panelChildForm);
+            ChildForm.Open(new AccountsEditForm(athlete), panelChildForm);
         }
 
         private void menuProfile_MouseHover(object sender, EventArgs e)
@@ -108,6 +106,16 @@ namespace MainApplication.Forms
         private void menuProfile_MouseLeave(object sender, EventArgs e)
         {
             ((Button)sender).Font = new Font(((Button)sender).Font, FontStyle.Bold);
+        }
+
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+            ChildForm.Open(new HomePage(), panelChildForm);
+        }
+
+        private void HomePageBtn_Click(object sender, EventArgs e)
+        {
+            ChildForm.Open(new HomePage(), panelChildForm);
         }
     }
 }

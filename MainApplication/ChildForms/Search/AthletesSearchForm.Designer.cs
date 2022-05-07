@@ -30,8 +30,6 @@
         {
             this.Header = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
-            this.sortTypeCBL = new System.Windows.Forms.CheckedListBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.nationalityCB = new System.Windows.Forms.ComboBox();
@@ -62,8 +60,6 @@
             // 
             this.panel2.AutoScroll = true;
             this.panel2.BackColor = System.Drawing.Color.Black;
-            this.panel2.Controls.Add(this.label4);
-            this.panel2.Controls.Add(this.sortTypeCBL);
             this.panel2.Controls.Add(this.label3);
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.nationalityCB);
@@ -75,32 +71,6 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(1350, 120);
             this.panel2.TabIndex = 3;
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Black;
-            this.label4.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(1402, 32);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(118, 35);
-            this.label4.TabIndex = 16;
-            this.label4.Text = "Рейтинг:";
-            // 
-            // sortTypeCBL
-            // 
-            this.sortTypeCBL.BackColor = System.Drawing.Color.Black;
-            this.sortTypeCBL.CheckOnClick = true;
-            this.sortTypeCBL.ForeColor = System.Drawing.Color.White;
-            this.sortTypeCBL.FormattingEnabled = true;
-            this.sortTypeCBL.Items.AddRange(new object[] {
-            "По возрастанию",
-            "По убыванию"});
-            this.sortTypeCBL.Location = new System.Drawing.Point(1549, 31);
-            this.sortTypeCBL.Name = "sortTypeCBL";
-            this.sortTypeCBL.Size = new System.Drawing.Size(150, 48);
-            this.sortTypeCBL.TabIndex = 15;
             // 
             // label3
             // 
@@ -132,6 +102,7 @@
             this.nationalityCB.Name = "nationalityCB";
             this.nationalityCB.Size = new System.Drawing.Size(498, 43);
             this.nationalityCB.TabIndex = 12;
+            this.nationalityCB.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.nationalityCB_KeyPress);
             // 
             // sportTypeCB
             // 
@@ -141,6 +112,7 @@
             this.sportTypeCB.Name = "sportTypeCB";
             this.sportTypeCB.Size = new System.Drawing.Size(350, 43);
             this.sportTypeCB.TabIndex = 11;
+            this.sportTypeCB.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.sportTypeCB_KeyPress);
             // 
             // label1
             // 
@@ -199,7 +171,7 @@
             // Content
             // 
             this.Content.AutoScroll = true;
-            this.Content.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(240)))), ((int)(((byte)(168)))));
+            this.Content.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(216)))), ((int)(((byte)(130)))));
             this.Content.Dock = System.Windows.Forms.DockStyle.Fill;
             this.Content.ForeColor = System.Drawing.Color.Black;
             this.Content.Location = new System.Drawing.Point(0, 0);
@@ -230,8 +202,6 @@
 
         private System.Windows.Forms.Panel Header;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.CheckedListBox sortTypeCBL;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox nationalityCB;

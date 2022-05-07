@@ -1,14 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Windows.Forms;
+﻿using System.Windows.Forms;
 
 namespace MainApplication.GeneralFunctionality
 {
     internal class ChildForm
     {
         private static Form activeForm = null;
-        public static void openChildForm(Form childForm, Panel panelChildForm)
+        public static void Open(Form childForm, Panel panelChildForm)
         {
             if (activeForm != null)
                 activeForm.Close();

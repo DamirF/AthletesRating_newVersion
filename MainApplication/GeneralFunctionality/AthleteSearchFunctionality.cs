@@ -1,11 +1,9 @@
 ﻿using AthletesRating.GeneralFunctionality;
 using AthletesRating.Models;
-using MainApplication.Models;
 using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
-using System.Text;
 using System.Windows.Forms;
 
 namespace MainApplication.GeneralFunctionality
@@ -47,7 +45,7 @@ namespace MainApplication.GeneralFunctionality
             return list;
         }
 
-        public static List<AthleteCard> SewrchWithParameters(ref Control[] controls)
+        public static List<AthleteCard> SearchWithParameters(ref Control[] controls)
         {
             TextBox fullName = (TextBox)controls[0];
             ComboBox sportType = (ComboBox)controls[1];
@@ -104,8 +102,8 @@ namespace MainApplication.GeneralFunctionality
                 string fullname;
                 for(int i = 0; i < tempList.Count; i++)
                 {
-                    fullname = tempList[i].fullName.Surname + " " + tempList[i].fullName.Name + " " + tempList[i].fullName.Patronymic;
-                    if (fullname.Contains(fullName.Text)) list.Add(tempList[i]);
+                    fullname = (tempList[i].fullName.Surname + " " + tempList[i].fullName.Name + " " + tempList[i].fullName.Patronymic).ToUpper();
+                    if (fullname.Contains(fullName.Text.ToUpper())) list.Add(tempList[i]);
                 }
                 return list;
             }

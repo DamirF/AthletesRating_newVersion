@@ -30,7 +30,7 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.panelMainMenu = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
+            this.HomePageBtn = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.yt_Button1 = new yt_DesignUI.yt_Button();
             this.menuSettings = new System.Windows.Forms.Button();
@@ -49,7 +49,7 @@
             // panelMainMenu
             // 
             this.panelMainMenu.BackColor = System.Drawing.Color.Black;
-            this.panelMainMenu.Controls.Add(this.panel2);
+            this.panelMainMenu.Controls.Add(this.HomePageBtn);
             this.panelMainMenu.Controls.Add(this.panel1);
             this.panelMainMenu.Controls.Add(this.menuSettings);
             this.panelMainMenu.Controls.Add(this.submenuAccountsAdministration);
@@ -62,15 +62,16 @@
             this.panelMainMenu.Size = new System.Drawing.Size(1500, 54);
             this.panelMainMenu.TabIndex = 1;
             // 
-            // panel2
+            // HomePageBtn
             // 
-            this.panel2.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel2.BackgroundImage")));
-            this.panel2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel2.Location = new System.Drawing.Point(1259, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(54, 54);
-            this.panel2.TabIndex = 13;
+            this.HomePageBtn.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("HomePageBtn.BackgroundImage")));
+            this.HomePageBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.HomePageBtn.Dock = System.Windows.Forms.DockStyle.Right;
+            this.HomePageBtn.Location = new System.Drawing.Point(1259, 0);
+            this.HomePageBtn.Name = "HomePageBtn";
+            this.HomePageBtn.Size = new System.Drawing.Size(54, 54);
+            this.HomePageBtn.TabIndex = 13;
+            this.HomePageBtn.Click += new System.EventHandler(this.HomePageBtn_Click);
             // 
             // panel1
             // 
@@ -220,7 +221,7 @@
             // panelChildForm
             // 
             this.panelChildForm.AutoScroll = true;
-            this.panelChildForm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(240)))), ((int)(((byte)(168)))));
+            this.panelChildForm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(216)))), ((int)(((byte)(130)))));
             this.panelChildForm.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelChildForm.Location = new System.Drawing.Point(0, 54);
             this.panelChildForm.Name = "panelChildForm";
@@ -240,6 +241,7 @@
             this.Name = "MainForm";
             this.Text = "MainForm";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.MainForm_FormClosed);
+            this.Load += new System.EventHandler(this.MainForm_Load);
             this.panelMainMenu.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.submenuAccountsAdministration.ResumeLayout(false);
@@ -259,6 +261,6 @@
         private System.Windows.Forms.Panel panel1;
         private yt_DesignUI.yt_Button yt_Button1;
         private System.Windows.Forms.Panel submenuAccountsAdministration;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel HomePageBtn;
     }
 }

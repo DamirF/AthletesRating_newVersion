@@ -1,5 +1,7 @@
 ﻿using AthletesRating.Models;
 using MainApplication.ChildForms.Achivement.Add;
+using MainApplication.ChildForms.Achivement.Delete;
+using MainApplication.ChildForms.Achivement.Edit;
 using MainApplication.GeneralFunctionality;
 using MainApplication.Models;
 using System;
@@ -40,9 +42,24 @@ namespace MainApplication.ChildForms.Profile
 
         private void AddAchivementBtn_Click(object sender, EventArgs e)
         {
-            AchivementAddForm add = new AchivementAddForm();
-            add.ShowDialog();
-            Invalidate();
+            AchivementAddForm achivementAddForm = new AchivementAddForm(ref athlete);
+            achivementAddForm.ShowDialog();
+            AchivementCard.FillContent(ref panelAchivements, ref athlete);
+        }
+
+        private void EditAchivement_Click(object sender, EventArgs e)
+        {
+            AchivementEditForm achivementEditForm = new AchivementEditForm(ref athlete);
+            achivementEditForm.ShowDialog();
+            AchivementCard.FillContent(ref panelAchivements, ref athlete);
+
+        }
+
+        private void DeleteAchivementBtn_Click(object sender, EventArgs e)
+        {
+            AchivementDeleteForm achivementDeleteForm = new AchivementDeleteForm(ref athlete);
+            achivementDeleteForm.ShowDialog();
+            AchivementCard.FillContent(ref panelAchivements, ref athlete);
         }
     }
 }

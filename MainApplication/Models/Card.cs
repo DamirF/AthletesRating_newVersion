@@ -24,7 +24,7 @@ namespace MainApplication.Models
         private static PictureBox ProfilePhoto;
         #endregion
 
-        public static void CreateCard(AthleteCard athlete, int index)
+        public static void CreateCard(AthleteCard athlete, int index, int width)
         {
             #region Create
             AthCard = new Panel();
@@ -52,7 +52,7 @@ namespace MainApplication.Models
             AthCard.Controls.Add(panelRating);
             AthCard.Controls.Add(Info);
             AthCard.Controls.Add(Achivements);
-            AthCard.Size = new System.Drawing.Size(1400, 320);
+            AthCard.Size = new System.Drawing.Size(width - 100, 320);
             AthCard.Location = new System.Drawing.Point(50, index * AthCard.Size.Height + margin * (index + 1));
             AthCard.Name = "AthCard";
             AthCard.TabIndex = 0;
@@ -61,9 +61,10 @@ namespace MainApplication.Models
             // 
             panelRating.Controls.Add(Rating);
             panelRating.Dock = DockStyle.Right;
-            panelRating.Location = new System.Drawing.Point(1304, 0);
-            panelRating.Name = "panelRating";
             panelRating.Size = new System.Drawing.Size(94, 318);
+            panelRating.Location = new System.Drawing.Point(AthCard.Width - panelRating.Width - 5, 0);
+            panelRating.Name = "panelRating";
+            
             panelRating.TabIndex = 7;
             // 
             // Rating
@@ -169,7 +170,7 @@ namespace MainApplication.Models
             Achivements.BorderStyle = BorderStyle.FixedSingle;
             Achivements.Location = new System.Drawing.Point(596, 10);
             Achivements.Name = "Achivements";
-            Achivements.Size = new System.Drawing.Size(702, 300);
+            Achivements.Size = new System.Drawing.Size(AthCard.Width - Achivements.Location.X - panelRating.Width - 15, 300);
             Achivements.TabIndex = 4;
             #endregion
 
@@ -188,6 +189,7 @@ namespace MainApplication.Models
             sportTypeLabel.Text = Constants.SportTypes[athlete.sportType];
             nationality.Text = Constants.Countries[athlete.nationality];
             AchivementCard.FillContent(ref Achivements, ref athlete);
+            Rating.Text = athlete.CalculateRating();
         }
 
         public static void FillContent(ref Panel content, ref List<AthleteCard> athletes)
@@ -196,7 +198,7 @@ namespace MainApplication.Models
             content.Controls.Clear();
             for(int i = 0; i < athletes.Count; i++)
             {
-                CreateCard(athletes[i], i);
+                CreateCard(athletes[i], i , content.Width);
                 content.Controls.Add(AthCard);
             }
         }

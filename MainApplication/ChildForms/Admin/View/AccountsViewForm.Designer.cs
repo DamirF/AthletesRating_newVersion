@@ -49,7 +49,7 @@
             // 
             // dataGridAccounts
             // 
-            this.dataGridAccounts.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(240)))), ((int)(((byte)(168)))));
+            this.dataGridAccounts.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(216)))), ((int)(((byte)(130)))));
             this.dataGridAccounts.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridAccounts.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridAccounts.GridColor = System.Drawing.SystemColors.ActiveCaptionText;
@@ -71,7 +71,7 @@
             // 
             // dataGridAthletes
             // 
-            this.dataGridAthletes.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(240)))), ((int)(((byte)(168)))));
+            this.dataGridAthletes.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(216)))), ((int)(((byte)(130)))));
             this.dataGridAthletes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridAthletes.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridAthletes.Location = new System.Drawing.Point(0, 0);
@@ -85,7 +85,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(240)))), ((int)(((byte)(168)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(216)))), ((int)(((byte)(130)))));
             this.ClientSize = new System.Drawing.Size(1500, 846);
             this.Controls.Add(this.panelAthletes);
             this.Controls.Add(this.panelAccounts);

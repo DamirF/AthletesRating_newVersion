@@ -15,7 +15,7 @@ namespace MainApplication.Models
         private static Label EventName;
         private static Label EventDate;
 
-        public static void CreateCard(Medal medal, int index)
+        public static void CreateCard(Medal medal, int index, int width)
         {
             #region Create
             EventCard = new Panel();
@@ -31,11 +31,12 @@ namespace MainApplication.Models
             // 
             // EventCard
             // 
+            EventCard.Anchor = ((AnchorStyles)(((AnchorStyles.Top | AnchorStyles.Left) | AnchorStyles.Right)));
             EventCard.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             EventCard.Controls.Add(InfPanel);
             EventCard.Controls.Add(EventLevel);
             EventCard.Controls.Add(EventName);
-            EventCard.Size = new System.Drawing.Size(670, 100);
+            EventCard.Size = new System.Drawing.Size(width - 32, 100);
             EventCard.Location = new System.Drawing.Point(16, index * EventCard.Size.Height + margin * (index + 1));
             EventCard.Name = "EventCard";
             EventCard.TabIndex = 0;
@@ -109,7 +110,7 @@ namespace MainApplication.Models
             List<Medal> medals = athlete.GetAchievements();
             for (int i = 0; i < medals.Count; i++)
             {
-                CreateCard(medals[i], i);
+                CreateCard(medals[i], i, content.Width);
                 content.Controls.Add(EventCard);
             }
         }

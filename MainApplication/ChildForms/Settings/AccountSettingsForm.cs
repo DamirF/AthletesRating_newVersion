@@ -2,12 +2,6 @@
 using AthletesRating.Models;
 using SportsmansRating;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Configuration;
-using System.Data;
-using System.Drawing;
-using System.Text;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
 
@@ -106,13 +100,13 @@ namespace MainApplication.ChildForms.Settings
         private void natChangeBut_Click(object sender, EventArgs e)
         {
             if (natCB.SelectedIndex == -1) return;
-            athlete = Functionality.NationalityChange(athlete, natCB);
+            athlete = Functionality.NationalityChange(athlete, natCB.SelectedIndex);
         }
 
         private void spChangeBut_Click(object sender, EventArgs e)
         {
             if (STCB.SelectedIndex == -1) return;
-            athlete = Functionality.SportTypeChange(athlete, STCB);
+            athlete = Functionality.SportTypeChange(athlete, STCB.SelectedIndex);
         }
         #endregion
 

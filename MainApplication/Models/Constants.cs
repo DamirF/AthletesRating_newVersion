@@ -47,6 +47,13 @@
 
         public const string MAIN_ADMIN = "d.fatkhullin@mail.ru";
 
+        public static string[] Levels = new string[]
+        {
+            "Локальный",
+            "Олимпиада",
+            "Международный"
+        };
+
         public static string[] SportTypes = new string[]
         {
             "<не указан>",

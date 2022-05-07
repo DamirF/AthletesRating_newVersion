@@ -98,10 +98,10 @@
             // 
             // UserSurname
             // 
-            this.UserSurname.BackColor = System.Drawing.Color.Black;
+            this.UserSurname.BackColor = System.Drawing.Color.White;
             this.UserSurname.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.UserSurname.Font = new System.Drawing.Font("Microsoft YaHei", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.UserSurname.ForeColor = System.Drawing.Color.White;
+            this.UserSurname.ForeColor = System.Drawing.Color.Black;
             this.UserSurname.Location = new System.Drawing.Point(15, 43);
             this.UserSurname.Margin = new System.Windows.Forms.Padding(2);
             this.UserSurname.MaxLength = 50;
@@ -414,7 +414,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(5)))), ((int)(((byte)(240)))), ((int)(((byte)(168)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(240)))), ((int)(((byte)(216)))), ((int)(((byte)(130)))));
             this.ClientSize = new System.Drawing.Size(591, 817);
             this.Controls.Add(this.PasswordPanel);
             this.Controls.Add(this.UserInfoPanel);

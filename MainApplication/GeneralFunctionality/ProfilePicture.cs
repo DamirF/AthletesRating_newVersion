@@ -1,11 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 using System.IO;
 using System.Windows.Forms;
 using AthletesRating.GeneralFunctionality;
 using System.Data;
-using SportsmansRating;
 using System.Drawing;
 
 namespace MainApplication.GeneralFunctionality
@@ -13,7 +10,7 @@ namespace MainApplication.GeneralFunctionality
     internal class ProfilePicture
     {
         private static OpenFileDialog openFileDialog;
-        private static readonly string path = "D:/Projects/SportsmensRating/MainApplication/bin/Debug/netcoreapp3.1/resourses";
+        private static readonly string path = @"D:\Projects\SportsmensRating\MainApplication\bin\Debug\netcoreapp3.1\resourses";
 
         public static void ProfilePictureSet(ref PictureBox PB, ref AthleteCard athlete)
         {
