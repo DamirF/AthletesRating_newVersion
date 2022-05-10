@@ -180,10 +180,36 @@ public class AthleteCard
 		registrationAthletes.Parameters.AddWithValue("@birthDate", BirthDate);
 		registrationAthletes.Parameters.AddWithValue("@null", 0);
 		registrationAthletes.Parameters.AddWithValue("@nullList", SerializeAchievements());
-		registrationAthletes.Parameters.AddWithValue("@nullstr", "");
+		registrationAthletes.Parameters.AddWithValue("@nullstr", 0);
 		registrationAthletes.Parameters.AddWithValue("@log", accountInfo.Login);
 
 		registrationAccounts.ExecuteNonQuery();
 		registrationAthletes.ExecuteNonQuery();
     }
+
+	public void NewUserRegistration(SqlConnection connection, string gen)
+	{
+		Random rnd = new Random();
+		SqlCommand registrationAccounts = new SqlCommand("INSERT INTO [Accounts] (Email, Login, Password, IsAdmin) VALUES (@email, @login, @password, @isAdmin)", connection);
+		registrationAccounts.Parameters.AddWithValue("@email", accountInfo.Email);
+		registrationAccounts.Parameters.AddWithValue("@login", accountInfo.Login);
+		registrationAccounts.Parameters.AddWithValue("@password", accountInfo.Password);
+		registrationAccounts.Parameters.AddWithValue("@isAdmin", Convert.ToInt32(accountInfo.isAdmin));
+
+		SqlCommand registrationAthletes = new SqlCommand("INSERT INTO [Athletes] (Surname, Name, Patronymic, Gender, BirthDate, Height, Weight, Achievements, Nationality, SportType, Login) VALUES (@surname, @name, @patronymic, @gender, @birthDate, @height, @weight, @nullList, @nat, @st, @log)", connection);
+		registrationAthletes.Parameters.AddWithValue("@surname", fullName.Surname);
+		registrationAthletes.Parameters.AddWithValue("@name", fullName.Name);
+		registrationAthletes.Parameters.AddWithValue("@patronymic", fullName.Patronymic);
+		registrationAthletes.Parameters.AddWithValue("@gender", Gender);
+		registrationAthletes.Parameters.AddWithValue("@birthDate", BirthDate);
+		registrationAthletes.Parameters.AddWithValue("@height", rnd.Next(165, 200));
+		registrationAthletes.Parameters.AddWithValue("@weight", rnd.Next(70, 100));
+		registrationAthletes.Parameters.AddWithValue("@nullList", SerializeAchievements());
+		registrationAthletes.Parameters.AddWithValue("@nat", rnd.Next(1, Constants.Countries.Length));
+		registrationAthletes.Parameters.AddWithValue("@st", rnd.Next(1, Constants.SportTypes.Length));
+		registrationAthletes.Parameters.AddWithValue("@log", accountInfo.Login);
+
+		registrationAccounts.ExecuteNonQuery();
+		registrationAthletes.ExecuteNonQuery();
+	}
 }

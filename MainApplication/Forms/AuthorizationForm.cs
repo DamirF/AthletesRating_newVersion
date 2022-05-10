@@ -35,6 +35,7 @@ namespace SportsmansRating
         
         private void AuthorizationForm_Load(object sender, EventArgs e)
         {
+            if (!Functionality.TryConnection()) return;
             if (Functionality.connection.State == ConnectionState.Closed) Functionality.connection.Open();
             RecoveryPanel.Visible = false;
             mailIsCorrect = false;

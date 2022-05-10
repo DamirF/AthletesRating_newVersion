@@ -50,6 +50,7 @@
             this.Create.TabIndex = 1;
             this.Create.Text = "Создать";
             this.Create.UseVisualStyleBackColor = true;
+            this.Create.Click += new System.EventHandler(this.Create_Click);
             // 
             // StuffScr
             // 

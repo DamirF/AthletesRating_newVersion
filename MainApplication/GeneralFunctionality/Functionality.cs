@@ -14,9 +14,23 @@ namespace AthletesRating.GeneralFunctionality
 {
     internal class Functionality
     {
-        public static SqlConnection connection = new SqlConnection(ConfigurationManager.ConnectionStrings["UsersDataBase"].ConnectionString);
+        public static SqlConnection connection;
         private static Regex passCheck = new Regex(@"^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[a-zA-Z0-9]{6,}$");
         private static bool passCorrect;
+
+        public static bool TryConnection()
+        {
+            try
+            {
+                connection = new SqlConnection(ConfigurationManager.ConnectionStrings["UsersDataBase"].ConnectionString);
+                return true;
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("Не удалосб подключиться к базе данных! \n" + ex.Message);
+                return false;
+            }
+        }
 
         public static AthleteCard GetAtheleteInfo(AthleteCard card)
         {
