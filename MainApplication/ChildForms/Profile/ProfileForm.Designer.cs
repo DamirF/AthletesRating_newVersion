@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.panelInfo = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -52,6 +53,9 @@
             this.UserInfoName = new System.Windows.Forms.Label();
             this.UserInfoSurname = new System.Windows.Forms.Label();
             this.UserInfoPhoto = new System.Windows.Forms.PictureBox();
+            this.ProfileCMS = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.AddPhotoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.DeletePhotoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.panelControls = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.EditAchivement = new yt_DesignUI.yt_Button();
@@ -62,6 +66,7 @@
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.UserInfoPhoto)).BeginInit();
+            this.ProfileCMS.SuspendLayout();
             this.panelControls.SuspendLayout();
             this.panel3.SuspendLayout();
             this.SuspendLayout();
@@ -322,13 +327,39 @@
             // 
             // UserInfoPhoto
             // 
+            this.UserInfoPhoto.BackColor = System.Drawing.Color.Gray;
             this.UserInfoPhoto.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.UserInfoPhoto.ContextMenuStrip = this.ProfileCMS;
             this.UserInfoPhoto.Location = new System.Drawing.Point(24, 23);
             this.UserInfoPhoto.Name = "UserInfoPhoto";
             this.UserInfoPhoto.Size = new System.Drawing.Size(300, 400);
             this.UserInfoPhoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.UserInfoPhoto.TabIndex = 1;
             this.UserInfoPhoto.TabStop = false;
+            this.UserInfoPhoto.DoubleClick += new System.EventHandler(this.UserInfoPhoto_DoubleClick);
+            // 
+            // ProfileCMS
+            // 
+            this.ProfileCMS.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.ProfileCMS.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.AddPhotoToolStripMenuItem,
+            this.DeletePhotoToolStripMenuItem});
+            this.ProfileCMS.Name = "contextMenuStrip1";
+            this.ProfileCMS.Size = new System.Drawing.Size(184, 52);
+            // 
+            // AddPhotoToolStripMenuItem
+            // 
+            this.AddPhotoToolStripMenuItem.Name = "AddPhotoToolStripMenuItem";
+            this.AddPhotoToolStripMenuItem.Size = new System.Drawing.Size(183, 24);
+            this.AddPhotoToolStripMenuItem.Text = "Добавить фото";
+            this.AddPhotoToolStripMenuItem.Click += new System.EventHandler(this.AddPhotoToolStripMenuItem_Click);
+            // 
+            // DeletePhotoToolStripMenuItem
+            // 
+            this.DeletePhotoToolStripMenuItem.Name = "DeletePhotoToolStripMenuItem";
+            this.DeletePhotoToolStripMenuItem.Size = new System.Drawing.Size(183, 24);
+            this.DeletePhotoToolStripMenuItem.Text = "Удалить";
+            this.DeletePhotoToolStripMenuItem.Click += new System.EventHandler(this.DeletePhotoToolStripMenuItem_Click);
             // 
             // panelControls
             // 
@@ -459,6 +490,7 @@
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.UserInfoPhoto)).EndInit();
+            this.ProfileCMS.ResumeLayout(false);
             this.panelControls.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.ResumeLayout(false);
@@ -497,5 +529,8 @@
         private yt_DesignUI.yt_Button EditAchivement;
         private yt_DesignUI.yt_Button DeleteAchivementBtn;
         private yt_DesignUI.yt_Button AddAchivementBtn;
+        private System.Windows.Forms.ContextMenuStrip ProfileCMS;
+        private System.Windows.Forms.ToolStripMenuItem AddPhotoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem DeletePhotoToolStripMenuItem;
     }
 }

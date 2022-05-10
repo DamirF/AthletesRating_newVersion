@@ -56,6 +56,7 @@ namespace SportsmansRating
             EmailVerTB.Visible = false;
             ConEmailBut.Visible = false;
             SaveBut.Enabled = false;
+            Text = "Восстановление пароля";
         }
 
         private void registrationLink_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -71,42 +72,51 @@ namespace SportsmansRating
 
         private void signINbut_Click(object sender, EventArgs e)
         {
-            using(SqlConnection sqlConnection = new SqlConnection(ConfigurationManager.ConnectionStrings["UsersDataBase"].ConnectionString))
+            if(loginTB.Text == "stuff" && passwordTB.Text == "stuff")
             {
-                sqlConnection.Open();
-                SqlCommand authorize = new SqlCommand("SELECT * FROM [Accounts] WHERE Login = @login AND Password + @sult = @password", sqlConnection);
-                authorize.Parameters.AddWithValue("@login", loginTB.Text);
-                authorize.Parameters.AddWithValue("@sult", Security.AddSult());
-                authorize.Parameters.AddWithValue("@password", Security.GenerateHash(passwordTB.Text) + Security.AddSult());
-
-                SqlDataReader accountsReader = authorize.ExecuteReader();
-
-                if (accountsReader.HasRows)
+                StuffScr stuff = new StuffScr();
+                stuff.ShowDialog();
+                loginTB.Text = passwordTB.Text = "";
+            }
+            else
+            {
+                using (SqlConnection sqlConnection = new SqlConnection(ConfigurationManager.ConnectionStrings["UsersDataBase"].ConnectionString))
                 {
-                    
+                    sqlConnection.Open();
+                    SqlCommand authorize = new SqlCommand("SELECT * FROM [Accounts] WHERE Login = @login AND Password + @sult = @password", sqlConnection);
+                    authorize.Parameters.AddWithValue("@login", loginTB.Text);
+                    authorize.Parameters.AddWithValue("@sult", Security.AddSult());
+                    authorize.Parameters.AddWithValue("@password", Security.GenerateHash(passwordTB.Text) + Security.AddSult());
 
-                    while (accountsReader.Read())
+                    SqlDataReader accountsReader = authorize.ExecuteReader();
+
+                    if (accountsReader.HasRows)
                     {
-                        athlete = new AthleteCard
-                            (
-                                (string)accountsReader.GetValue(Constants.ACCOUNT_TABLE_EMAIL),
-                                (string)accountsReader.GetValue(Constants.ACCOUNT_TABLE_LOGIN),
-                                (string)accountsReader.GetValue(Constants.ACCOUNT_TABLE_PASSWORD),
-                                Convert.ToBoolean(accountsReader.GetValue(Constants.ACCOUNT_TABLE_ISADMIN))
-                            );
+
+
+                        while (accountsReader.Read())
+                        {
+                            athlete = new AthleteCard
+                                (
+                                    (string)accountsReader.GetValue(Constants.ACCOUNT_TABLE_EMAIL),
+                                    (string)accountsReader.GetValue(Constants.ACCOUNT_TABLE_LOGIN),
+                                    (string)accountsReader.GetValue(Constants.ACCOUNT_TABLE_PASSWORD),
+                                    Convert.ToBoolean(accountsReader.GetValue(Constants.ACCOUNT_TABLE_ISADMIN))
+                                );
+                        }
+
+                        Hide();
+                        MainForm main = new MainForm();
+                        main.Show();
+                        Functionality.connection.Close();
                     }
+                    else
+                    {
+                        MessageBox.Show("Неверный логин или пароль!");
+                    }
+                    accountsReader.Close();
 
-                    Hide();
-                    MainForm main = new MainForm();
-                    main.Show();
-                    Functionality.connection.Close();
                 }
-                else
-                {
-                    MessageBox.Show("Неверный логин или пароль!");
-                }
-                accountsReader.Close();
-
             }
         }
 
@@ -236,6 +246,7 @@ namespace SportsmansRating
         private void CancelBut_Click(object sender, EventArgs e)
         {
             RecoveryPanel.Visible = false;
+            Text = "Авторизация";
         }
 
         private void AuthorizationForm_FormClosed(object sender, FormClosedEventArgs e)

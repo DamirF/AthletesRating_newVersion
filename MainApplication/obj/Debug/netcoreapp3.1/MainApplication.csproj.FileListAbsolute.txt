@@ -31,8 +31,6 @@ D:\Projects\SportsmensRating\MainApplication\obj\Debug\netcoreapp3.1\MainApplica
 D:\Projects\SportsmensRating\MainApplication\obj\Debug\netcoreapp3.1\MainApplication.ChildForms.Admin.View.AccountsViewForm.resources
 D:\Projects\SportsmensRating\MainApplication\obj\Debug\netcoreapp3.1\MainApplication.ChildForms.Admin.Edit.AccountsEditForm.resources
 D:\Projects\SportsmensRating\MainApplication\obj\Debug\netcoreapp3.1\MainApplication.Properties.Resources.resources
-D:\Projects\SportsmensRating\MainApplication\obj\Debug\netcoreapp3.1\MainApplication.TestElement.Form1.resources
-D:\Projects\SportsmensRating\MainApplication\obj\Debug\netcoreapp3.1\MainApplication.TestElement.Form2.resources
 D:\Projects\SportsmensRating\MainApplication\obj\Debug\netcoreapp3.1\MainApplication.ChildForms.Achivement.Add.AchivementAddForm.resources
 D:\Projects\SportsmensRating\MainApplication\obj\Debug\netcoreapp3.1\MainApplication.ChildForms.Achivement.Delete.AchivementDeleteForm.resources
 D:\Projects\SportsmensRating\MainApplication\obj\Debug\netcoreapp3.1\MainApplication.ChildForms.Achivement.Edit.AchivementEditForm.resources
@@ -75,3 +73,4 @@ B:\Bulat\Projects\AthletesRating_newVersion\MainApplication\obj\Debug\netcoreapp
 B:\Bulat\Projects\AthletesRating_newVersion\MainApplication\obj\Debug\netcoreapp3.1\MainApplication.pdb
 B:\Bulat\Projects\AthletesRating_newVersion\MainApplication\obj\Debug\netcoreapp3.1\MainApplication.genruntimeconfig.cache
 D:\Projects\SportsmensRating\MainApplication\obj\Debug\netcoreapp3.1\MainApplication.ChildForms.HomePage.HomePage.resources
+D:\Projects\SportsmensRating\MainApplication\obj\Debug\netcoreapp3.1\MainApplication.Forms.StuffScr.resources

@@ -14,17 +14,22 @@ namespace MainApplication.GeneralFunctionality
 
         public static void ProfilePictureSet(ref PictureBox PB, ref AthleteCard athlete)
         {
-            PB.SizeMode = PictureBoxSizeMode.CenterImage;
-            if(File.Exists($"{path}/{athlete.accountInfo.Login}.jpg"))
+            PB.SizeMode = PictureBoxSizeMode.Zoom;
+            
+            if(File.Exists(@$"{path}/{athlete.accountInfo.Login}.jpg"))
             {
-                PB.Image = Image.FromFile($"{path}/{athlete.accountInfo.Login}.jpg");
+                using (Image img = Image.FromFile($"{path}/{athlete.accountInfo.Login}.jpg"))
+                {
+                    Bitmap bmp = new Bitmap(img);
+                    PB.Image = bmp;
+                }
             }
             else
             {
-                if(athlete.Gender == "Мужской   ")
-                    PB.Image = Image.FromFile($"{path}/maleIcon.png");
-                if (athlete.Gender == "Женский   ")
-                    PB.Image = Image.FromFile($"{path}/femaleIcon.png");
+                if (athlete.Gender.Trim() == "Мужской")
+                    PB.Image = Image.FromFile($"{path}/maleIcon.jpg");
+                if (athlete.Gender.Trim() == "Женский")
+                    PB.Image = Image.FromFile($"{path}/femaleIcon.jpg");
             }
         }
             
@@ -34,18 +39,36 @@ namespace MainApplication.GeneralFunctionality
         {
             openFileDialog = new OpenFileDialog();
             openFileDialog.Filter = "JPEG files (*.jpg)|*.jpg|All files (*.*)|*.*";
-            PB.SizeMode = PictureBoxSizeMode.CenterImage;
+            PB.SizeMode = PictureBoxSizeMode.Zoom;
             if (openFileDialog.ShowDialog() == DialogResult.OK)
             {
-                PB.Image = Image.FromFile(openFileDialog.FileName);
+                FileToResources(ref athlete);
             }
-            FileToResources(ref athlete);
+            ProfilePictureSet(ref PB, ref athlete);
         }
-        private static void FileToResources(ref AthleteCard athlete)
+
+        public static void ProfilePictureDelete(ref PictureBox PB, ref AthleteCard athlete)
         {
-            if (Functionality.connection.State == ConnectionState.Closed) Functionality.connection.Open();
             string fileName = athlete.accountInfo.Login;
             string fullPath = $"{path}/{fileName}.jpg";
+            try
+            {
+                if (File.Exists(fullPath))
+                {
+                    File.Delete(fullPath);
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            ProfilePictureSet(ref PB, ref athlete);
+        }
+
+        private static void FileToResources(ref AthleteCard athlete)
+        {
+            string fileName = athlete.accountInfo.Login;
+            string fullPath = @$"{path}/{fileName}.jpg";
             try
             {
                 if (File.Exists(fullPath))

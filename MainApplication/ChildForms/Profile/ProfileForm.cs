@@ -45,6 +45,7 @@ namespace MainApplication.ChildForms.Profile
             AchivementAddForm achivementAddForm = new AchivementAddForm(ref athlete);
             achivementAddForm.ShowDialog();
             AchivementCard.FillContent(ref panelAchivements, ref athlete);
+            UserInfoRating.Text = athlete.CalculateRating();
         }
 
         private void EditAchivement_Click(object sender, EventArgs e)
@@ -52,7 +53,7 @@ namespace MainApplication.ChildForms.Profile
             AchivementEditForm achivementEditForm = new AchivementEditForm(ref athlete);
             achivementEditForm.ShowDialog();
             AchivementCard.FillContent(ref panelAchivements, ref athlete);
-
+            UserInfoRating.Text = athlete.CalculateRating();
         }
 
         private void DeleteAchivementBtn_Click(object sender, EventArgs e)
@@ -60,6 +61,24 @@ namespace MainApplication.ChildForms.Profile
             AchivementDeleteForm achivementDeleteForm = new AchivementDeleteForm(ref athlete);
             achivementDeleteForm.ShowDialog();
             AchivementCard.FillContent(ref panelAchivements, ref athlete);
+            UserInfoRating.Text = athlete.CalculateRating();
+        }
+
+        private void UserInfoPhoto_DoubleClick(object sender, EventArgs e)
+        {
+            ProfilePicture.ProfilePictureLoad(ref UserInfoPhoto, ref athlete);
+        }
+
+        private void AddPhotoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            UserInfoPhoto.Image.Dispose();
+            ProfilePicture.ProfilePictureLoad(ref UserInfoPhoto, ref athlete);
+        }
+
+        private void DeletePhotoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            UserInfoPhoto.Image.Dispose();
+            ProfilePicture.ProfilePictureDelete(ref UserInfoPhoto, ref athlete);
         }
     }
 }

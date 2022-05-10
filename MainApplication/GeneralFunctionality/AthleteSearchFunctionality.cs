@@ -35,7 +35,8 @@ namespace MainApplication.GeneralFunctionality
                         (int)reader.GetValue(Constants.ATHLETES_TABLE_WEIGHT),
                         (string)reader.GetValue(Constants.ATHLETES_TABLE_ACHIEVEMENTS),
                         (int)reader.GetValue(Constants.ATHLETES_TABLE_NATIONALITY),
-                        (int)reader.GetValue(Constants.ATHLETES_TABLE_SPORT_TYPE)
+                        (int)reader.GetValue(Constants.ATHLETES_TABLE_SPORT_TYPE),
+                        (string)reader.GetValue(Constants.ATHLETES_TABLE_LOGIN)
                         );
                     list.Add(athlete);
                 }
@@ -85,7 +86,8 @@ namespace MainApplication.GeneralFunctionality
                         (int)reader.GetValue(Constants.ATHLETES_TABLE_WEIGHT),
                         (string)reader.GetValue(Constants.ATHLETES_TABLE_ACHIEVEMENTS),
                         (int)reader.GetValue(Constants.ATHLETES_TABLE_NATIONALITY),
-                        (int)reader.GetValue(Constants.ATHLETES_TABLE_SPORT_TYPE)
+                        (int)reader.GetValue(Constants.ATHLETES_TABLE_SPORT_TYPE),
+                        (string)reader.GetValue(Constants.ATHLETES_TABLE_LOGIN)
                         );
                     tempList.Add(athlete);
                 }

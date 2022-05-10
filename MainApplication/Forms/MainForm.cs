@@ -57,18 +57,21 @@ namespace MainApplication.Forms
         {
             Submenu.hideSubmenu(ref menuBtns, submenu);
             ChildForm.Open(new ProfileForm(athlete), panelChildForm);
+            Text = "SportRating | Профиль";
         }
 
         private void nemuSettings_Click(object sender, EventArgs e)
         {
             Submenu.hideSubmenu(ref menuBtns, submenu);
             ChildForm.Open(new AccountSettingsForm(athlete), panelChildForm);
+            Text = "SportRating | Настройки";
         }
 
         private void Search_Click(object sender, EventArgs e)
         {
             Submenu.hideSubmenu(ref menuBtns, submenu);
             ChildForm.Open(new AthletesSearchForm(), panelChildForm);
+            Text = "SportRating | Поиск";
         }
 
         private void MainForm_FormClosed(object sender, FormClosedEventArgs e)
@@ -90,12 +93,14 @@ namespace MainApplication.Forms
         {
             Submenu.hideSubmenu(ref menuBtns, submenu);
             ChildForm.Open(new AccountsViewForm(), panelChildForm);
+            Text = "SportRating | Аккаунты | Просмотр";
         }
 
         private void AccountsAdministrationEdit_Click(object sender, EventArgs e)
         {
             Submenu.hideSubmenu(ref menuBtns, submenu);
             ChildForm.Open(new AccountsEditForm(athlete), panelChildForm);
+            Text = "SportRating | Аккаунты | Управление";
         }
 
         private void menuProfile_MouseHover(object sender, EventArgs e)
@@ -111,11 +116,13 @@ namespace MainApplication.Forms
         private void MainForm_Load(object sender, EventArgs e)
         {
             ChildForm.Open(new HomePage(), panelChildForm);
+            Text = "SportRating | Домашняя страница";
         }
 
         private void HomePageBtn_Click(object sender, EventArgs e)
         {
             ChildForm.Open(new HomePage(), panelChildForm);
+            Text = "SportRating | Домашняя страница";
         }
     }
 }

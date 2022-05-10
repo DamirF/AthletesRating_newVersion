@@ -190,6 +190,7 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "AthletesSearchForm";
             this.Text = "AthletesSearchForm";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.AthletesSearchForm_FormClosed);
             this.Header.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();

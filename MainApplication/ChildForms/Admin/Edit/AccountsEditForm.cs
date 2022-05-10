@@ -73,8 +73,7 @@ namespace MainApplication.ChildForms.Admin.Edit
                 SqlCommand makeAdmin = new SqlCommand(makeAdminCommand, Functionality.connection);
                 makeAdmin.Parameters.AddWithValue("log", athlete.accountInfo.Login);
                 makeAdmin.ExecuteNonQuery();
-
-                FillAccountInfo(ref athlete);
+                InfoStature.Text = "Администратор";
             }
             else
             {
@@ -100,8 +99,7 @@ namespace MainApplication.ChildForms.Admin.Edit
                 SqlCommand deleteAdmin = new SqlCommand(deleteAdminCommand, Functionality.connection);
                 deleteAdmin.Parameters.AddWithValue("log", athlete.accountInfo.Login);
                 deleteAdmin.ExecuteNonQuery();
-
-                FillAccountInfo(ref athlete);
+                InfoStature.Text = "Пользователь";
             }
             else
             {

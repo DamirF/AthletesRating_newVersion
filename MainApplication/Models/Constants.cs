@@ -19,6 +19,7 @@
         public const int ATHLETES_TABLE_ACHIEVEMENTS = 8;
         public const int ATHLETES_TABLE_NATIONALITY = 9;
         public const int ATHLETES_TABLE_SPORT_TYPE = 10;
+        public const int ATHLETES_TABLE_LOGIN = 11;
 
         public const int LABEL_USERINFO_SURNAME = 0;
         public const int LABEL_USERINFO_NAME = 1;
@@ -37,9 +38,9 @@
         public const int CHANGEPASSWORD_NEWPASS = 1;
         public const int CHANGEPASSWORD_CONNEWPASS = 2;
 
-        public const int WORLDLEVEL_ACHIEVEMENT = 4;
-        public const int OLYMPICLEVEL_ACHIEVEMENT = 3;
-        public const int LOCALLEVEL_ACHIEVEMENT = 1;
+        public const double WORLDLEVEL_ACHIEVEMENT = 4;
+        public const double OLYMPICLEVEL_ACHIEVEMENT = 3;
+        public const double LOCALLEVEL_ACHIEVEMENT = 1;
 
         public const string WORLDLEVEL = "Международный";
         public const string OLYMPICLEVEL = "Олимпиада";

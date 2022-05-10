@@ -1,5 +1,4 @@
 using MainApplication.Forms;
-using MainApplication.TestElement;
 using SportsmansRating;
 using System;
 using System.Collections.Generic;

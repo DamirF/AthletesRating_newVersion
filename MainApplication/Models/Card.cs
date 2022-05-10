@@ -1,6 +1,7 @@
 ﻿using AthletesRating.Models;
 using MainApplication.GeneralFunctionality;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace MainApplication.Models
@@ -70,14 +71,15 @@ namespace MainApplication.Models
             // Rating
             // 
             Rating.Anchor = AnchorStyles.Top;
-            Rating.AutoSize = true;
+            Rating.AutoSize = false;
+            Rating.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             Rating.BorderStyle = BorderStyle.FixedSingle;
-            Rating.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            Rating.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             Rating.Location = new System.Drawing.Point(15, 10);
             Rating.Name = "Rating";
             Rating.Size = new System.Drawing.Size(69, 56);
             Rating.TabIndex = 6;
-            Rating.Text = "78";
+            Rating.Text = "";
             // 
             // Info
             // 
@@ -159,6 +161,7 @@ namespace MainApplication.Models
             ProfilePhoto.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             ProfilePhoto.Location = new System.Drawing.Point(14, 10);
             ProfilePhoto.Name = "ProfilePhoto";
+            ProfilePhoto.BackColor = Color.Gray;
             ProfilePhoto.Size = new System.Drawing.Size(225, 300);
             ProfilePhoto.TabIndex = 8;
             ProfilePhoto.TabStop = false;

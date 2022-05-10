@@ -4,6 +4,7 @@ using MainApplication.GeneralFunctionality;
 using MainApplication.Models;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Windows.Forms;
 
 namespace MainApplication.ChildForms.Search
@@ -43,6 +44,11 @@ namespace MainApplication.ChildForms.Search
         private void nationalityCB_KeyPress(object sender, KeyPressEventArgs e)
         {
             e.Handled=true;
+        }
+
+        private void AthletesSearchForm_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Dispose();
         }
     }
 }

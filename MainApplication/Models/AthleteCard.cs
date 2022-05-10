@@ -101,9 +101,9 @@ public class AthleteCard
 	/// <param name="medals"></param>
 	/// <param name="nationality"></param>
 	/// <param name="sportType"></param>
-	public AthleteCard(string surname, string name, string patronymic, string gender, DateTime birthDate, int height, int weight, string medals, int nationality, int sportType)
+	public AthleteCard(string surname, string name, string patronymic, string gender, DateTime birthDate, int height, int weight, string medals, int nationality, int sportType, string login)
     {
-		accountInfo = new Account("", "", "", false);
+		accountInfo = new Account("", login, "", false);
 		fullName = new FullName(surname, name, patronymic);
 		Gender = gender;
 		BirthDate = birthDate;
